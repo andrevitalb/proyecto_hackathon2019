@@ -1,9 +1,5 @@
 KIOSKO DIGITAL ZACATECAS
 
-El presente programa optimiza y reduce el nivel de complejidad y redundancia que requieren la mayoría de los trámites relacionados
-a los servicios en las dependencias de gobierno en Zacatecas; por medio de una plataforma implementada en forma de aplicación web 
-progresiva, logrando así que cualquier dispositivo, ya sea móvil o de escritorio, sin importar sua recursos, pueda acceder a la plataforma
-sin problemas.
-Como usuarios, al hacer cualquier trámite en línea, queremos eficacia y respuestas rápidas; es por eso que nuestra aplicación comienza con
-un sencillo buscador (ideal para las personas que conocen el exacto trámite a realizar), así como de un botón llamativo para ver los
-trámites disponibles. Al hacer click en dicho botón nos enviará a una nueva pantalla, la cual contendrá ...
+El presente programa optimiza y reduce el nivel de complejidad y redundancia que requieren la mayoría de los trámites relacionados a los servicios en las dependencias de gobierno en Zacatecas; por medio de una plataforma implementada en forma de aplicación web progresiva, logrando así que cualquier dispositivo, ya sea móvil o de escritorio, sin importar sus recursos, pueda acceder a la plataforma sin problemas.
+
+Como usuarios, al hacer cualquier trámite en línea, queremos eficacia y respuestas rápidas; es por eso que esta aplicación comienza con un sencillo buscador (ideal para las personas que conocen el exacto trámite a realizar), así como de un botón llamativo para ver los trámites disponibles. Al hacer click en dicho botón nos enviará a una nueva pantalla, la cual contendrá ...
