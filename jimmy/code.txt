@@ -1,0 +1,28 @@
+<div class="nav-cont">
+                <ul id="gn-menu" class="navbar gn-menu-main">
+                    <li>
+                        <a href="index.php" class="logo">
+                            <img src="img/logo.png" alt="Medestore">
+                            <img src="img/icono.png" alt="Medestore">
+                        </a>
+                    </li>
+                    <li class="container-fluid pull-right">
+                        <ul class="nav navbar-right right-menu">
+                            <li class="user_info">
+                                <p id = "user_name">
+                                    <strong><?php while($rowUser = mysqli_fetch_array($resultUser)):;?><?php echo $rowUser[0];?><?php endwhile;?></strong>
+                                </p>
+                                <div id = "spacer-header"></div>
+                                <a href = "cerrar.php" id = "log_out" style = "padding: 0;">Cerrar Sesión</a>
+                            </li>
+                            <li class="user_icon">
+                                <a href="#"><i class="mdi mdi-account"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gn-trigger">
+                        <a id="menu-toggle" class="menu-toggle gn-icon gn-icon-menu"></a>
+                        <nav class="gn-menu-wrapper"></nav>
+                    </li>
+                </ul>
+            </div>

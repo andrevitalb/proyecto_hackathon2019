@@ -1,6 +1,28 @@
 /*---------------------
+		Navbar
+---------------------*/
+
+::selection {
+	background-color: #21234A;
+	color: #fff;
+}
+
+
+/*---------------------
+		Navbar
+---------------------*/
+
+@media(min-width: 767px){
+	#showRightPush{ display: none; } 
+}
+
+/*---------------------
 		Header
 ---------------------*/
+
+#mainHeader{
+	background-image: url(../img/bg.jpg);
+}
 
 #main_searchContainer { background-color: rgba(26, 30, 75, .7); }
 
@@ -10,6 +32,7 @@
 	line-height: 65px;
 	font-weight: 600;
 	border: none;
+	display: inline-block;
 }
 
 #main_searchBar { 
@@ -18,13 +41,13 @@
 }
 
 #searchButton { 
-	color: #888;
+	color: #ddd;
 	transition: all .3s ease-in-out;
 	padding: 8px 15px;
 }
 
 #searchButton:hover { transform: scale(1.2); }
 
-@media(min-width: 767px){
-	#showRightPush{ display: none; } 
+@media(max-width: 767px){
+	#main_searchContainer { text-align: right; }
 }
