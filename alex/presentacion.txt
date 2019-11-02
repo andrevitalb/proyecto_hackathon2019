@@ -5,3 +5,11 @@ El presente programa optimiza y reduce el nivel de complejidad y redundancia que
 Al hacer cualquier trámite en línea, se busca eficacia y respuestas rápidas; es por eso que esta aplicación comienza con un sencillo buscador (ideal para las personas que conocen el exacto trámite a realizar), así como de un botónpara ver los trámites disponibles. Dichos trámites están catalogados por dependencia y tipo de servicio: Registro Civil, Servicios públicos, Seguridad y Vialidad. 
 
 Cada trámite contará con su propia página, con instrucciones precisas y campos obligatorios que permiten capturar los datos requeridos así como fotografías para solicitudes más elaboradas que requieran validez de identidad o escaneo de documentos.
+
+
+
+KIOSKO DIGITAL
+¡Bienvenido a Tu Kiosko Digtal!
+Con esta sencilla aplicación podrás buscar, solicitar o pagar cualquier trámite gubernamental que necesites; solo haz click en el buscador o en la sección de trámites para iniciar el proceso correspondiente.
+
+(Ej.: Pago de Agua)
