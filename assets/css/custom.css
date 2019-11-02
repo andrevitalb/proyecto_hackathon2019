@@ -71,10 +71,15 @@ Yellow:
 	   About Us
 ---------------------*/
 
-#about_us {
-
-}
-
 #about_us-infoHolder { background-color: #E16121; }
 #about_us-title { font-size: 30px; }
 #about_us-text { color: #EDEDED; }
+
+/*---------------------
+	   Services
+---------------------*/
+
+#services .btn i { 
+	margin-left: 0 !important; 
+	font-size: 20px;
+}
