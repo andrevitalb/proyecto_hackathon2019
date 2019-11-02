@@ -119,7 +119,7 @@
 						"Identificación Oficial",
 						"Copia de Identificación Oficial"
 					],
-					"duracion": .1
+					"duracion": 0.1
 				}
 			]
 		},
