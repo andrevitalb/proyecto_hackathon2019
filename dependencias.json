@@ -8,6 +8,7 @@
 				{
 					"nombre_tramite": "Expedición CURP",
 					"costo": 0,
+					"etiquetas": ["CURP, expedicion"],
 					"documentos_tramite":
 					[
 						"Acta de Nacimiento",
@@ -38,7 +39,8 @@
 					"duracion": 15
 				},
 				{
-					"nombre_tramite": "Expedición Copias Certificadas"
+					"nombre_tramite": "Expedición Copias Certificadas",
+					"etiquetas": ["copias", "copia", "certificacion", "certificadas", "certificada"]
 				}
 			]
 		},
@@ -49,6 +51,7 @@
 				{
 					"nombre_tramite": "Solicitud de Árboles",
 					"costo": 0,
+					"etiquetas": ["arboles", "solicitud" "arbol"],
 					"documentos_tramite":
 					[
 						"Carta Solicitud dirigida a la Secretaría de Agua y Medio Ambiente"
@@ -58,6 +61,7 @@
 				{
 					"nombre_tramite": "Posesión Legal de Predio",
 					"costo": 0,
+					"etiquetas": ["predio", "posesion", "legal", "agua"],
 					"documentos_tramite":
 					[
 						"Carta Solicitud de la Población en General"
