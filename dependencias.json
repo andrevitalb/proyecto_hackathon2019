@@ -73,17 +73,20 @@
 				{
 					"nombre_tramite": "Verificación y validación de locales para venta de alcohol",
 					"costo": 0,
+					"etiquetas": ["alcohol","venta", "permiso", "publico"],
 					"documentos_tramite":
 					[
 						"Copia de la Credencial de Elector del propietario",
 						"Licencia de funcionamiento expedida por la Dirección de Desarrollo Económico",
 						"Copia del Comprobante de domicilio del expendio"
+
 					],
 					"duracion": 3
 				},
 				{
 					"nombre_tramite": "Reparación de lámparas",
 					"costo": 0,
+					"etiquetas": ["reparacion","lamparas", "alumbrado", "publico"],
 					"documentos_tramite":
 					[
 						"Copia de la Credencial de Elector"
@@ -97,25 +100,26 @@
 			"tramites": 
 			[
 				{
-					"nombre_tramite": "Verificación y validación de locales para venta de alcohol",
+					"nombre_tramite": "Denuncia en contra de Servidor Público",
 					"costo": 0,
+					"etiquetas": ["denuncia","servidor", "publico", "queja"],
 					"documentos_tramite":
 					[
-						"Copia de la Credencial de Elector del propietario",
-						"Licencia de funcionamiento expedida por la Dirección de Desarrollo Económico",
-						"Copia del Comprobante de domicilio del expendio"
-
+						"Credencial de Elector",
+						"Documentación que acredite responsabilidad del Servidor Público"
 					],
-					"duracion": 3
+					"duracion": 0
 				},
 				{
-					"nombre_tramite": "Reparación de lámparas",
+					"nombre_tramite": "Atención a Víctimas del Delito",
 					"costo": 0,
+					"etiquetas": ["delito","victimas", "atención", "denuncia"],
 					"documentos_tramite":
 					[
-						"Copia de la Credencial de Elector"
+						"Identificación Oficial",
+						"Copia de Identificación Oficial"
 					],
-					"duracion": 8
+					"duracion": .1
 				}
 			]
 		},
@@ -126,6 +130,7 @@
 				{
 					"nombre_tramite": "Apoyos",
 					"costo": 0,
+					"etiquetas": ["apoyo","economico", "ayuda"],
 					"documentos_tramite":
 					[
 						"CURP",
@@ -140,6 +145,7 @@
 				{
 					"nombre_tramite": "Licencia para Construcción.",
 					"costo": 0,
+					"etiquetas": ["construccion", "licencia", "permiso","construccion"],
 					"documentos_tramite":
 					[
 						"Copia de la Credencial de Elector"
