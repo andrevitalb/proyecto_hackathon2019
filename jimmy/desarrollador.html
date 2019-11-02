@@ -9,34 +9,41 @@
 
   <title>DESARROLLADOR</title>
 
-  <link rel="stylesheet" href="../assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/bower_components/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../assets/bower_components/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="../assets/bower_components/metisMenu/dist/metisMenu.min.css">
-  <link rel="stylesheet" href="../assets/bower_components/Waves/dist/waves.min.css">
-  <link rel="stylesheet" href="../assets/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
-
-  <link rel="stylesheet" href="../assets/js/selects/cs-select.css">
-  <link rel="stylesheet" href="../assets/js/selects/cs-skin-elastic.css">
+  <!-- AÑADIR ELEMENTOS -->
+  
 
 
-  <link rel="stylesheet" href="../assets/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/bower_components/summernote/dist/summernote.css">
 
-  <link rel="stylesheet" href="../assets/js/selects/cs-skin-border.css">
-  <link rel="stylesheet" href="../assets/js/selects/cs-skin-rotate.css">
-  <link rel="stylesheet" href="../assets/js/selects/cs-skin-slide.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.min.css">
+  <link rel="stylesheet" href="bower_components/Waves/dist/waves.min.css">
+  <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
 
+  <link rel="stylesheet" href="js/selects/cs-select.css">
+  <link rel="stylesheet" href="js/selects/cs-skin-elastic.css">
 
-    <script src="../assets/js/menu/modernizr.custom.js"></script>
+ <!-- datatables -->
+  <link rel="stylesheet" href="bower_components/DataTables/media/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="bower_components/datatables-tabletools/css/dataTables.tableTools.css">
 
-  <link rel="stylesheet" href="../assets/css/dashboard_style.css">
+  <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/summernote/dist/summernote.css">
 
-  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="js/selects/cs-skin-border.css">
+  <link rel="stylesheet" href="js/selects/cs-skin-rotate.css">
+  <link rel="stylesheet" href="js/selects/cs-skin-slide.css">
+ 
+    <script src="js/menu/modernizr.custom.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
   <!--[if lt IE 9]>
-      <script src="../assets/bower_components/html5shiv/dist/html5shiv.min.js"></script>
-      <script src="../assets/bower_components/respondJs/dest/respond.min.js"></script>
+      <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+      <script src="bower_components/respondJs/dest/respond.min.js"></script>
     <![endif]-->
 </head>
 
@@ -57,23 +64,25 @@
 
 <!--BARRA ARRIBA-->
   <div id="main-wrapper" class="main-wrapper">
-    <ul id="gn-menu" class="navbar gn-menu-main"> 
-      <li>
-        <a  class="logo text-uppercase" >DESARROLLADOR</a>
-      </li>
-    </ul>
-  </div>  
-  
-<div id="content" class="content container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-           	
-          </div>
-        </div>
-      </div>             
+    <div class="nav-cont">
+                <ul id="gn-menu" class="navbar gn-menu-main">
+                   
+                     <li class="container-fluid pull-right">
+                        <ul class="nav navbar-right right-menu">
+                            
+                        </ul> 
+                    
+                    </li>
+                    <li class="gn-trigger">
+                        <a id="menu-toggle" class="menu-toggle gn-icon gn-icon-menu"></a>
+                        <nav class="gn-menu-wrapper"></nav> 
+                    </li>
+                </ul>
+            </div>  
 
-<div class="col-lg-12">
+    <div id="content" class="content container-fluid">            
+
+  <div class="col-lg-12">
           <div class="content-box big-box box-shadow">
             <h4><strong>Crear nuevo tipo de trámite</strong></h4>
             <form class="content-form form-horizontal">
@@ -88,12 +97,12 @@
                 <label for="dependencia" class="col-sm-2 control-label">Dependencia</label>
                 <div class="col-sm-4">
                   <select class="form-control example-item">
-		              <option>Coordinación General Jurídica</option>
-		              <option>Secretaría De Finanzas</option>
-		              <option>Secretaría Del Agua Y Medio Ambiente</option>
-		              <option>Presidencia Municipal de Zacatecas</option>
-		              <option>Fiscalía General de Justicia</option>
-	           	  </select>
+                  <option>Coordinación General Jurídica</option>
+                  <option>Secretaría De Finanzas</option>
+                  <option>Secretaría Del Agua Y Medio Ambiente</option>
+                  <option>Presidencia Municipal de Zacatecas</option>
+                  <option>Fiscalía General de Justicia</option>
+                </select>
                 </div>
               </div>
 
@@ -104,139 +113,134 @@
                 </div>
               </div>
 
-			  <div class="form-group">
+        <div class="form-group">
                 <label for="costo" class="col-sm-2 control-label">Docomuentos necesarios</label>
                 <div class="col-lg-6">
-	                <div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    Acta de Nacimiento
-	                  </label>
-	             	</div>    
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    FM2
-	                  </label>
-	             	</div>           
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    FM3
-	                  </label>
-	             	</div>           
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    FMM
-	                  </label>
-	             	</div>           
+                  <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      Acta de Nacimiento
+                    </label>
+                </div>    
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      FM2
+                    </label>
+                </div>           
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      FM3
+                    </label>
+                </div>           
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      FMM
+                    </label>
+                </div>           
 
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    Carta de Naturalización
-	                  </label>
-	             	</div>           
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      Carta de Naturalización
+                    </label>
+                </div>           
 
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    Recibos Originales
-	                  </label>
-	             	</div>      
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      Recibos Originales
+                    </label>
+                </div>      
 
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    Carta Solicitud
-	                  </label>
-	             	</div>
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      Carta Solicitud
+                    </label>
+                </div>
 
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    Carta Solicitud dirigida a la Secretaría de Agua y Medio Ambiente
-	                  </label>
-	             	</div>
-
-
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    Carta Solicitud de la Población en General
-	                  </label>
-	             	</div>
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      Carta Solicitud dirigida a la Secretaría de Agua y Medio Ambiente
+                    </label>
+                </div>
 
 
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    Copia de la Credencial de Elector del propietario
-	                  </label>
-	             	</div>
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      Carta Solicitud de la Población en General
+                    </label>
+                </div>
 
 
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    Licencia de funcionamiento expedida por la Dirección de Desarrollo Económico
-	                  </label>
-	             	</div>
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      Copia de la Credencial de Elector del propietario
+                    </label>
+                </div>
 
 
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    CURP
-	                  </label>
-	             	</div>
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      Licencia de funcionamiento expedida por la Dirección de Desarrollo Económico
+                    </label>
+                </div>
 
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    Teléfono
-	                   </label>
-	             	</div>
 
-	             	<div class="checkbox checkbox-danger">
-	                  <label>
-	                    <input type="checkbox">
-	                    <i></i>
-	                    RF
-	                  </label>
-	             	</div>
-              	</div>
-			</div>	
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      CURP
+                    </label>
+                </div>
 
-              
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      Teléfono
+                     </label>
+                </div>
 
-			
-			
+                <div class="checkbox checkbox-danger">
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                      RF
+                    </label>
+                </div>
+                </div>
+      </div>  
      
               <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-4	">
+                <div class="col-sm-offset-2 col-sm-4  ">
                    <p>
-		            <form>
-		                <input type="text" id="nuevo_li" class="form-control material" placeholder="Otro documento">
-		                <br><input type="submit" value="Agregar">
-		            </form>
-		          </p>
-		         <ul id="listaDesordenada">
-		        </ul>
+                <form>
+                    <input type="text" id="nuevo_li" class="form-control material" placeholder="Otro documento">
+                    <br><input type="submit" value="Agregar">
+                </form>
+              </p>
+             <ul id="listaDesordenada">
+            </ul>
                 </div>
               </div>
 
@@ -248,45 +252,115 @@
             </form>
           </div>
         </div>
-      </div>
 
-<div id="content" class="content container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
+    <div class="col-lg-12">
+      <div class="content-box big-box box-shadow">
+      <div class = "row">
+        <h4><strong >Ver Solicitudes</strong></h4>
+          <form class="content-form form-horizontal">
             
+            <div class="form-group">
+              <label for="dependencia" class="col-sm-2 control-label">Dependencia</label>
+              <div class="col-sm-4">
+          <select class="form-control example-item">
+            <option>Coordinación General Jurídica</option>
+            <option>Secretaría De Finanzas</option>
+            <option>Secretaría Del Agua Y Medio Ambiente</option>
+            <option>Presidencia Municipal de Zacatecas</option>
+            <option>Fiscalía General de Justicia</option>
+          </select>
+        </div>
           </div>
         </div>
-      </div>
+          <div class="table-responsive">
+            <table class="datatable display">
+              <thead>
+                <tr>
+                  <th>Tipo de trámite</th>
+                  <th>Solicitante</th>
+                  <th>Correo electrónico</th>
+                  <th>Número de teléfono</th>
+                  <th>Fecha de solicitud</th>
+                  <th>Resolución</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Expedición CURP</td>
+                  <td>Juanito Alimaña</td>
+                  <td>juanito@correo.com</td>
+                  <td>492000111</td>
+                  <td>dd/mm/aaaa</td>
+                  <td>Pendiente</td>
+                </tr>
+                
+              </tbody>
+            </table>
+        </div>
+    </div>
+      <!-- 2DA PARTE -->
+
+      </div>    
+ </div>    
+
+  
+
 
 
       
     <!--Scripts-->
-  <script src="../assets/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../assets/bower_components/metisMenu/dist/metisMenu.min.js"></script>
-  <script src="../assets/bower_components/Waves/dist/waves.min.js"></script>
-  <script src="../assets/bower_components/moment/min/moment.min.js"></script>
-  <script src="../assets/bower_components/jquery.nicescroll/jquery.nicescroll.min.js"></script>
-  <script src="../assets/bower_components/slimScroll/jquery.slimscroll.min.js"></script>
-  <script src="../assets/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
-  <script src="../assets/bower_components/cta/dist/cta.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+  <script src="bower_components/Waves/dist/waves.min.js"></script>
+  <script src="bower_components/moment/min/moment.min.js"></script>
+  <script src="bower_components/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+  <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+  <script src="bower_components/cta/dist/cta.min.js"></script>
   
   <!--Menu-->
-  <script src="../assets/js/menu/classie.js"></script>
-  <script src="../assets/js/menu/gnmenu.js"></script>
+  <script src="js/menu/classie.js"></script>
+  <script src="js/menu/gnmenu.js"></script>
 
   <!--Selects-->
-  <script src="../assets/js/selects/selectFx.js"></script>
+  <script src="js/selects/selectFx.js"></script>
 
   <!--Sparkline Charts-->
-  <script src="../assets/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-
+  <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+  
+  </div>  
+  
+<!--Data Tables-->
+  <script src="bower_components/DataTables/media/js/jquery.dataTables.js"></script>
+  <script src="bower_components/datatables.net-responsive/js/dataTables.responsive.js"></script>
+  <script src="bower_components/datatables-tabletools/js/dataTables.tableTools.js"></script>
 
     <!--Custom Scripts-->
-  <script src="../assets/js/common.js"></script>
+  <script src="js/common.js"></script>
 
-
+  <script>
+    $(function () {
+                $('.datatable').DataTable({
+                    "language": {
+                        "lengthMenu": 'Mostrar <select>'+
+                        '<option value="10">10</option>'+
+                        '<option value="25">25</option>'+
+                        '<option value="50">50</option>'+
+                        '<option value="100">100</option>'+
+                        '<option value="250">250</option>'+
+                        '<option value="500">500</option>'+
+                        '</select> entradas'
+                    },
+                    displayLength: 10,
+                    dom: 'T<"clear">lfrtip',
+                    tableTools: {
+                        "sSwfPath": "js/datatables/copy_csv_xls_pdf.swf"
+                    },
+                    responsive: true
+                });
+            });
+  </script>
 
 
   <script>
