@@ -1,0 +1,155 @@
+{
+	"dependencias":
+	[
+		{
+			"nombre": "coordinacion_general_publica",
+			"tramites": 
+			[
+				{
+					"nombre_tramite": "Expedición CURP",
+					"costo": 0,
+					"documentos_tramite":
+					[
+						"Acta de Nacimiento",
+						"FM2",
+						"FM3",
+						"FMM",
+						"Carta de Naturalización"
+					],
+					"duracion": 10
+				},
+				{
+					"nombre_tramite": "Expedición Copias Certificadas"
+				}
+			]
+		},
+		{
+			"nombre": "secretaria_de_finanzas",
+			"tramites": 
+			[
+				{
+					"nombre_tramite": "Devolución por pago indebido o duplicidad.",
+					"costo": 0,
+					"documentos_tramite":
+					[
+						"Recibos Originales",
+						"Carta Solicitud"
+					],
+					"duracion": 15
+				},
+				{
+					"nombre_tramite": "Expedición Copias Certificadas"
+				}
+			]
+		},
+		{
+			"nombre": "secretaria_de_agua_y_medio_ambiente",
+			"tramites": 
+			[
+				{
+					"nombre_tramite": "Solicitud de Árboles",
+					"costo": 0,
+					"documentos_tramite":
+					[
+						"Carta Solicitud dirigida a la Secretaría de Agua y Medio Ambiente"
+					],
+					"duracion": 30
+				},
+				{
+					"nombre_tramite": "Posesión Legal de Predio",
+					"costo": 0,
+					"documentos_tramite":
+					[
+						"Carta Solicitud de la Población en General"
+					],
+					"duracion": 10
+				}
+			]
+		},
+		{
+			"nombre": "presidencia_municipal_de_sombrerete",
+			"tramites": 
+			[
+				{
+					"nombre_tramite": "Verificación y validación de locales para venta de alcohol",
+					"costo": 0,
+					"documentos_tramite":
+					[
+						"Copia de la Credencial de Elector del propietario",
+						"Licencia de funcionamiento expedida por la Dirección de Desarrollo Económico",
+						"Copia del Comprobante de domicilio del expendio"
+					],
+					"duracion": 3
+				},
+				{
+					"nombre_tramite": "Reparación de lámparas",
+					"costo": 0,
+					"documentos_tramite":
+					[
+						"Copia de la Credencial de Elector"
+					],
+					"duracion": 8
+				}
+			]
+		},
+		{
+			"nombre": "fiscalia_general_de_justicia",
+			"tramites": 
+			[
+				{
+					"nombre_tramite": "Verificación y validación de locales para venta de alcohol",
+					"costo": 0,
+					"documentos_tramite":
+					[
+						"Copia de la Credencial de Elector del propietario",
+						"Licencia de funcionamiento expedida por la Dirección de Desarrollo Económico",
+						"Copia del Comprobante de domicilio del expendio"
+
+					],
+					"duracion": 3
+				},
+				{
+					"nombre_tramite": "Reparación de lámparas",
+					"costo": 0,
+					"documentos_tramite":
+					[
+						"Copia de la Credencial de Elector"
+					],
+					"duracion": 8
+				}
+			]
+		},
+		{
+			"nombre": "presidencia_municipal_de_zacatecas",
+			"tramites": 
+			[
+				{
+					"nombre_tramite": "Apoyos",
+					"costo": 0,
+					"documentos_tramite":
+					[
+						"CURP",
+						"Copia de la Credencial de Elector",
+						"Copia del Comprobante de domicilio",
+						"Teléfono",
+						"RFC"
+
+					],
+					"duracion": 15
+				},
+				{
+					"nombre_tramite": "Licencia para Construcción.",
+					"costo": 0,
+					"documentos_tramite":
+					[
+						"Copia de la Credencial de Elector"
+					],
+					"duracion": 8
+				}
+			]
+		}
+		
+	]
+
+}
+
