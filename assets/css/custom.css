@@ -1,5 +1,23 @@
+/*-------------------------------
+			Colors  
+
+Blue:
+	HEX: #21234A
+	RGBA: rgba(33, 35, 74, 1)
+
+Orange:
+	HEX: #CC6633
+	RGBA: rgba(204, 102, 51, 1)
+
+Yellow:
+	HEX: #FFCC33
+	RGBA: rgba(255, 204, 51, 1)
+
+--------------------------------*/
+
+
 /*---------------------
-		Navbar
+		General
 ---------------------*/
 
 ::selection {
@@ -20,10 +38,7 @@
 		Header
 ---------------------*/
 
-#mainHeader{
-	background-image: url(../img/bg.jpg);
-}
-
+#mainHeader{ background-image: url(../img/bg.jpg); }
 #main_searchContainer { background-color: rgba(26, 30, 75, .7); }
 
 #main_searchContainer * {
@@ -50,4 +65,16 @@
 
 @media(max-width: 767px){
 	#main_searchContainer { text-align: right; }
+}
+
+/*---------------------
+	   About Us
+---------------------*/
+
+#about_us {
+
+}
+
+#about_us-infoHolder {
+	background-color
 }
