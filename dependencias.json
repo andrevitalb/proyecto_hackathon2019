@@ -20,7 +20,11 @@
 					"duracion": 10
 				},
 				{
-					"nombre_tramite": "Expedición Copias Certificadas"
+					"nombre_tramite": "Expedición Copias Certificadas",
+					"costo": 83,
+					"etiquetas": ["copia", "certificacion", "certificada"],
+					"documentos_tramite": 
+					["Carta Solicitud", "Credencial de Elector", "Copia Credencial de Elector"]
 				}
 			]
 		},
@@ -29,7 +33,7 @@
 			"tramites": 
 			[
 				{
-					"nombre_tramite": "Devolución por pago indebido o duplicidad.",
+					"nombre_tramite": "Devolución por pago indedbido o duplicidad.",
 					"costo": 0,
 					"documentos_tramite":
 					[
