@@ -5,14 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="msapplication-tap-highlight" content="no">
 
   <title>DESARROLLADOR</title>
-
-  <!-- AÑADIR ELEMENTOS -->
-  
-
-
 
   <link rel="stylesheet" href="../assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/bower_components/font-awesome/css/font-awesome.min.css">
@@ -24,9 +19,6 @@
   <link rel="stylesheet" href="../assets/js/selects/cs-select.css">
   <link rel="stylesheet" href="../assets/js/selects/cs-skin-elastic.css">
 
- <!-- datatables -->
-  <link rel="stylesheet" href="../assets/bower_components/DataTables/media/css/jquery.dataTables.css">
-  <link rel="stylesheet" href="../assets/bower_components/datatables-tabletools/css/dataTables.tableTools.css">
 
   <link rel="stylesheet" href="../assets/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
   <link rel="stylesheet" href="../assets/bower_components/summernote/dist/summernote.css">
@@ -34,17 +26,19 @@
   <link rel="stylesheet" href="../assets/js/selects/cs-skin-border.css">
   <link rel="stylesheet" href="../assets/js/selects/cs-skin-rotate.css">
   <link rel="stylesheet" href="../assets/js/selects/cs-skin-slide.css">
- 
+
+
     <script src="../assets/js/menu/modernizr.custom.js"></script>
 
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard_style.css">
 
-  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
   <!--[if lt IE 9]>
       <script src="../assets/bower_components/html5shiv/dist/html5shiv.min.js"></script>
       <script src="../assets/bower_components/respondJs/dest/respond.min.js"></script>
     <![endif]-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;box-sizing: content-box;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>
 </head>
 
 
@@ -332,35 +326,31 @@
   </div>  
   
 <!--Data Tables-->
-  <script src="../assets/bower_components/DataTables/media/js/jquery.dataTables.js"></script>
-  <script src="../assets/bower_components/datatables.net-responsive/js/dataTables.responsive.js"></script>
-  <script src="../assets/bower_components/datatables-tabletools/js/dataTables.tableTools.js"></script>
+  <script src="../assets/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../assets/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+  <script src="../assets/bower_components/Waves/dist/waves.min.js"></script>
+  <script src="../assets/bower_components/moment/min/moment.min.js"></script>
+  <script src="../assets/bower_components/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="../assets/bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+  <script src="../assets/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+  <script src="../assets/bower_components/cta/dist/cta.min.js"></script>
+  
+  <!--Menu-->
+  <script src="../assets/js/menu/classie.js"></script>
+  <script src="../assets/js/menu/gnmenu.js"></script>
+
+  <!--Selects-->
+  <script src="../assets/js/selects/selectFx.js"></script>
+
+  <!--Sparkline Charts-->
+  <script src="../assets/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+
 
     <!--Custom Scripts-->
   <script src="../assets/js/common.js"></script>
 
-  <script>
-    $(function () {
-                $('.datatable').DataTable({
-                    "language": {
-                        "lengthMenu": 'Mostrar <select>'+
-                        '<option value="10">10</option>'+
-                        '<option value="25">25</option>'+
-                        '<option value="50">50</option>'+
-                        '<option value="100">100</option>'+
-                        '<option value="250">250</option>'+
-                        '<option value="500">500</option>'+
-                        '</select> entradas'
-                    },
-                    displayLength: 10,
-                    dom: 'T<"clear">lfrtip',
-                    tableTools: {
-                        "sSwfPath": "../assets/js/datatables/copy_csv_xls_pdf.swf"
-                    },
-                    responsive: true
-                });
-            });
-  </script>
+
 
 
   <script>

@@ -6,7 +6,7 @@ Blue:
 	RGBA: rgba(33, 35, 74, 1)
 
 Orange:
-	HEX: #CC6633
+	HEX: #E16121
 	RGBA: rgba(204, 102, 51, 1)
 
 Yellow:
@@ -75,6 +75,6 @@ Yellow:
 
 }
 
-#about_us-infoHolder {
-	background-color
-}
+#about_us-infoHolder { background-color: #E16121; }
+#about_us-title { font-size: 30px; }
+#about_us-text { color: #EDEDED; }
