@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <title>RENAISSANCE | Login</title>
+
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/Waves/dist/waves.min.css">
+
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <!--[if lt IE 9]>
+      <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+      <script src="bower_components/respondJs/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="table-wrapper">
+    <div class="table-row">
+      <div class="table-cell text-center">
+        <div class="login i-block">
+          <div class="content-box">
+            <div class="light-blue-bg biggest-box">
+
+              <h1 class="zero-m text-uppercase">Welcome</h1>
+
+            </div>
+            <div class="big-box text-left login-form">
+              <h4 class="text-center">Login</h4>
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control material" id="login" placeholder="Username">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control material" id="password" placeholder="Password">
+                </div>
+
+                <button type="submit" class="btn btn-block btn-info text-uppercase waves">Login</button>
+
+              </form>
+              <a href="#" class="green i-block">Forgot password?</a>
+              <p>Do not have an account?</p>
+              <a class="btn btn-block btn-warning text-uppercase waves waves-button">Create an account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/Waves/dist/waves.min.js"></script>
+  <script>
+    //Waves effect on buttons
+    Waves.attach('.waves', ['waves-float']);
+    Waves.init();
+  </script>
+
+</body>
+
+</html>

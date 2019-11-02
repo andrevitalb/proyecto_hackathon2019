@@ -1,0 +1,247 @@
+{
+    "name": "RENAISSANCE",
+    "version": "1.3.0",
+    "dependencies": {
+        "animate.css": "~3.4.0",
+        "bootstrap": "~3.3.6",
+        "c3": "~0.4.10",
+        "Chart.js": "~1.0.2",
+        "DataTables": "~1.10.9",
+        "datatables-tabletools": "~2.2.4",
+        "datatables.net-responsive": "~1.0.7",
+        "flot": "~0.8.3",
+        "flot.curvedlines": "~1.1.1",
+        "font-awesome": "~4.4.0",
+        "fullcalendar": "~2.4.0",
+        "google-material-color": "~1.2.6",
+        "html5shiv": "~3.7.3",
+        "ion.rangeslider": "ionrangeslider#~2.1.2",
+        "jasny-bootstrap": "~3.1.3",
+        "jquery-sparkline": "~2.1.3",
+        "jquery-validation": "~1.14.0",
+        "jquery.easy-pie-chart": "~2.1.6",
+        "jqvmap": "*",
+        "mdi": "~1.2.65",
+        "metisMenu": "~2.1.0",
+        "morris.js": "~0.5.1",
+        "respondJs": "~1.4.2",
+        "simpleWeather": "~3.0.2",
+        "slimScroll": "~1.3.6",
+        "smoke": "~2.2.4",
+        "summernote": "~0.6.16",
+        "sweetalert": "~1.1.3",
+        "twitter-bootstrap-wizard": "~1.0.0",
+        "Waves": "waves#~0.7.4",
+        "zabuto_calendar": "~1.2.2",
+        "jquery.nicescroll": "~3.6.0",
+        "cta": "~0.3.1",
+        "malihu-custom-scrollbar-plugin": "~3.1.1"
+    },
+    "overrides": {
+        "bootstrap": {
+            "main": [
+                "./dist/js/bootstrap.min.js",
+                "./dist/js/bootstrap.js",
+                "./dist/css/bootstrap.min.css",
+                "./dist/css/bootstrap.css",
+                "./dist/fonts/*.*"
+            ]
+        },
+        "jquery": {
+            "main": [
+                "dist/jquery.js",
+                "dist/jquery.min.js"
+            ]
+        },
+        "jquery-validation": {
+            "main": [
+                "dist/jquery.validate.js",
+                "dist/jquery.validate.min.js"
+            ]
+        },
+        "animate.css": {
+            "main": [
+                "./animate.css",
+                "./animate.min.css"
+            ]
+        },
+        "font-awesome": {
+            "main": [
+                "css/*.*",
+                "fonts/*.*"
+            ]
+        },
+        "google-material-color": {
+            "main": [
+                "dist/*.*"
+            ]
+        },
+        "html5shiv": {
+            "main": [
+                "dist/html5shiv.js",
+                "dist/html5shiv.min.js"
+            ]
+        },
+        "respond": {
+            "main": [
+                "dest/respond.min.js"
+            ]
+        },
+        "metisMenu": {
+            "main": [
+                "./dist/*.*"
+            ]
+        },
+        "fullcalendar": {
+            "main": [
+                "dist/fullcalendar.js",
+                "dist/fullcalendar.min.js",
+                "dist/fullcalendar.min.css",
+                "dist/fullcalendar.css"
+            ]
+        },
+        "moment": {
+            "main": [
+                "moment.js",
+                "min/moment.min.js"
+            ]
+        },
+        "datatables": {
+            "main": [
+                "./media/js/jquery.dataTables.js",
+                "./media/css/jquery.dataTables.css",
+                "./media/js/jquery.dataTables.min.js",
+                "./media/css/jquery.dataTables.min.css",
+                "./media/images/sort_asc.png",
+                "./media/images/sort_asc_disabled.png",
+                "./media/images/sort_both.png",
+                "./media/images/sort_desc.png",
+                "./media/images/sort_desc_disabled.png"
+            ]
+        },
+        "Flot": {
+            "main": [
+                "jquery.flot.js",
+                "jquery.flot.resize.js"
+            ]
+        },
+        "Chart.js": {
+            "main": [
+                "Chart.js",
+                "Chart.min.js"
+            ]
+        },
+        "jquery.easy-pie-chart": {
+            "main": [
+                "dist/jquery.easypiechart.js",
+                "dist/jquery.easypiechart.min.js"
+            ]
+        },
+        "c3": {
+            "main": [
+                "c3.css",
+                "c3.min.css",
+                "c3.min.js",
+                "c3.js"
+            ]
+        },
+        "d3": {
+            "main": [
+                "d3.min.js",
+                "d3.js"
+            ]
+        },
+        "morris.js": {
+            "main": [
+                "./morris.js",
+                "./morris.min.js",
+                "./morris.css"
+            ]
+        },
+        "raphael": {
+            "main": [
+                "raphael.js",
+                "raphael-min.js"
+            ]
+        },
+        "jquery-sparkline": {
+            "main": [
+                "dist/jquery.sparkline.js",
+                "dist/jquery.sparkline.min.js"
+            ]
+        },
+        "ion.rangeslider": {
+            "main": [
+                "js/ion.rangeSlider.js",
+                "js/ion.rangeSlider.min.js",
+                "css/ion.rangeSlider.css",
+                "css/ion.rangeSlider.skinModern.css"
+            ]
+        },
+        "jasny-bootstrap": {
+            "main": [
+                "./dist/css/*.*",
+                "./dist/js/*.*"
+            ]
+        },
+        "simpleWeather": {
+            "main": [
+                "jquery.simpleWeather.js",
+                "jquery.simpleWeather.min.js"
+            ]
+        },
+        "slimScroll": {
+            "main": [
+                "jquery.slimscroll.js",
+                "jquery.slimscroll.min.js"
+            ]
+        },
+        "smoke": {
+            "main": [
+                "dist/css/smoke.css",
+                "dist/css/smoke.min.css",
+                "dist/js/smoke.min.js",
+                "dist/js/smoke.js"
+            ]
+        },
+        "Waves": {
+            "main": [
+                "dist/*.*"
+            ]
+        },
+        "zabuto_calendar": {
+            "main": [
+                "zabuto_calendar.css",
+                "zabuto_calendar.min.css",
+                "zabuto_calendar.min.js",
+                "zabuto_calendar.js"
+            ]
+        },
+        "summernote": {
+            "main": [
+                "./dist/summernote.js",
+                "./dist/summernote.min.js",
+                "./dist/summernote.css"
+            ]
+        },
+        "jqvmap": {
+            "main": [
+                "./jqvmap/*.*",
+                "./jqvmap/data/*.*",
+                "./jqvmap/maps/*.*"
+            ]
+        },
+        "twitter-bootstrap-wizard": {
+            "main": [
+                "./jquery.bootstrap.wizard.js",
+                "./jquery.bootstrap.wizard.min.js"
+            ]
+        },
+        "jquery.nicescroll": {
+            "main": [
+                "./jquery.nicescroll.js",
+                "./jquery.nicescroll.min.js"
+            ]
+        }
+    }
+}

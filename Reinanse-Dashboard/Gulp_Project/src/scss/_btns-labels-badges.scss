@@ -1,0 +1,294 @@
+/*Buttons*/
+.btn{
+  border: 0;  
+}
+
+.btn, .btn-group{
+  border-radius: 3px;
+  box-shadow: 0 1px 1.5px 1px rgba(0,0,0,.12);  
+}
+
+.btn-group .btn, .btn-group .btn-group, .btn-group-vertical .btn, .btn-group-vertical .btn-group{
+  box-shadow: none;
+  margin-bottom: 0 !important;
+}
+
+.btn-group-lg>.btn, .btn-lg{
+  border-radius: 3px;
+}
+
+.btn-icon {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  i{
+    font-size: 18px;
+    line-height: 40px;
+  }
+}
+
+.btn.btn-warning, .open>.dropdown-toggle.btn-warning, .open>.dropdown-toggle.btn-warning:focus{
+  background-color: $yellow;
+  border-color: $yellow;
+  color: $white !important;
+  &:hover{
+    background-color: $yellow;
+  }
+  &:focus, &:active:focus{
+    background-color: $yellow;
+    border-color: $yellow;
+  }
+}
+
+.btn.btn-danger, .open>.dropdown-toggle.btn-danger, .open>.dropdown-toggle.btn-danger:focus{
+  background-color: $red;
+  border-color: $red;
+  color: $white !important;
+  &:hover{
+    background-color: $red;
+  }
+  &:focus, &:active:focus{
+    background-color: $red-orange;
+    border-color: $red-orange;
+  }
+}
+
+.btn.btn-primary, .open>.dropdown-toggle.btn-primary, .open>.dropdown-toggle.btn-primary:focus{
+  background-color: $blue;
+  border-color: $blue;
+  color: $white !important;
+  &:hover{
+    background-color: $blue;
+  }
+  &:focus, &:active:focus{
+    background-color: $blue;
+    border-color: $blue;
+  }
+}
+
+.btn.btn-success, .open>.dropdown-toggle.btn-success, .open>.dropdown-toggle.btn-success:focus{
+  background-color: $green;
+  border-color: $green;
+  color: $white !important;
+  &:hover{
+    background-color: $green;
+  }
+  &:focus, &:active:focus{
+    background-color: $green;
+    border-color: $green;
+  }
+}
+
+.btn.btn-info, .open>.dropdown-toggle.btn-info, .open>.dropdown-toggle.btn-info:focus{
+  background-color: $light-blue;
+  border-color: $light-blue;
+  color: $white !important;
+  &:hover{
+    background-color: $light-blue;
+  }
+  &:focus, &:active:focus{
+    background-color: $light-blue;
+    border-color: $light-blue;
+  }
+}
+
+.btn.btn-default, .open>.dropdown-toggle.btn-default, .open>.dropdown-toggle.btn-default:focus{
+  background-color: $white;
+  border-color: #e2e2e2;
+  color: $text-color;
+  &:hover{
+    background-color: $white;
+  }
+  &:focus, &:active:focus{
+    background-color: #e2e2e2;
+    border-color: #e2e2e2;
+  }
+}
+
+.btn.btn-dark, .open>.dropdown-toggle.btn-dark, .open>.dropdown-toggle.btn-dark:focus{
+  background-color: $gray;
+  border-color: $dark-gray;
+  color: $white;
+  &:hover{
+    background-color: $gray;
+  }
+  &:focus, &:active:focus{
+    background-color: $gray;
+    border-color: $gray;
+  }
+}
+
+.btn-rounded{
+  border-radius: 25px; 
+}
+
+.multiple-group .btn{
+  color: $green;
+}
+
+.btn-label {
+  position: relative;
+  left: -12px;
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 3px 0 0 3px;
+}
+
+.btn-lg .btn-label{
+  left: -16px; 
+}
+
+.btn-sm .btn-label{
+  left: -10px; 
+  padding: 4px 8px;
+}
+
+.btn-xs .btn-label{
+  left: -5px;
+  padding: 3px 6px;
+}
+
+.btn-labeled {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.btns .btn{
+  margin-bottom: 5px; 
+}
+
+.btns .btn-group-vertical .btn{
+  margin-bottom: 0; 
+}
+
+/*Panels*/
+.panel-box.panel-success{
+  border-top: 3px solid $green; 
+}
+
+.panel-box.panel-danger{
+  border-top: 3px solid $red;
+}
+
+.panel-box.panel-warning{
+  border-top: 3px solid $yellow; 
+}
+
+.panel-box.panel-primary{
+  border-top: 3px solid $blue;
+}
+
+.panel-box.panel-info{
+  border-top: 3px solid $light-blue;
+}
+
+.panel-box.panel-gray{
+  border-top: 3px solid $gray; 
+}
+
+.panel.panel-success{
+  border-color: $green;
+  >.panel-heading{
+    border-color: $green;
+    background: $green;
+    color: $white;
+  }
+}
+
+.panel.panel-danger{
+  border-color: $red;
+  >.panel-heading{
+    border-color: $red;
+    background: $red;
+    color: $white;
+  }
+}
+
+.panel.panel-warning{
+  border-color: $yellow;
+  >.panel-heading{
+    border-color: $yellow;
+    background: $yellow;
+    color: $white;
+  }
+}
+
+.panel.panel-primary{
+  border-color: $blue;
+  >.panel-heading{
+    border-color: $blue;
+    background: $blue;
+    color: $white;
+  }  
+}
+
+.panel.panel-info{
+  border-color: $light-blue;
+  >.panel-heading{
+    border-color: $light-blue;
+    background: $light-blue;
+    color: $white;
+  }
+}
+
+.panel.panel-gray{
+  border-color: $gray; 
+  >.panel-heading{
+    border-color: $gray; 
+    background: $gray;
+    color: $white;
+  }
+}
+
+//Badges
+.badge-success{
+  background: $green; 
+}
+
+.badge-danger{
+  background: $red;
+}
+
+.badge-warning{
+  background: $yellow; 
+}
+
+.badge-primary{
+  background: $blue;
+}
+
+.badge-info{
+  background: $light-blue;
+}
+
+.badge-gray{
+  background: $gray; 
+}
+
+/*Labels*/
+.label-warning{
+  background-color: $yellow; 
+}
+
+.label-danger{
+  background-color: $red; 
+}
+
+.label-primary{
+  background-color: $green;
+}
+
+.label-success{
+  background-color: $blue;
+}
+
+.label-info{
+  background-color: $light-blue;
+}
+
+.label-gray{
+  background-color: $gray;
+}

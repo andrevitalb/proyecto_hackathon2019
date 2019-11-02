@@ -1,0 +1,392 @@
+  @@include('./_head.html', {
+    "title": "Wizard"
+  })
+
+  @@include('./_head_end.html')
+
+<body>
+  <div id="main-wrapper" class="main-wrapper">
+    <!--Preloader-->
+    <div id="preloader" class="preloader table-wrapper">
+      <div class="table-row">
+        <div class="table-cell">
+          <div class="la-ball-scale-multiple la-3x">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul id="gn-menu" class="navbar gn-menu-main">
+      <li class="gn-trigger">
+        <a id="menu-toggle" class="menu-toggle gn-icon gn-icon-menu">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="cross">
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+        <nav class="gn-menu-wrapper">
+          <div class="gn-scroller">
+            <ul class="gn-menu metismenu">
+              <li class="gn-search-item">
+                <input placeholder="Search" type="search" class="gn-search">
+                <a class="search-icon"><i class="fa fa-search"></i><span>Search</span></a>
+              </li>
+              <li>
+                <a href="index.html" aria-expanded="false"><i class="fa fa-th"></i>Dashboards<span class="fa arrow"></span></a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a href="index.html">Dashboard v1</a></li>
+                  <li><a href="dashboard_2.html">Dashboard v2</a></li>
+                  <li><a href="dashboard_3.html">Dashboard v3</a></li>
+                </ul>
+              </li>
+
+
+              <li>
+                <a href="calendar.html"><i class="fa fa-calendar-o"></i>Calendar<span class="label label-warning pull-right">9</span></a>
+              </li>
+
+              <li>
+                <a href="mailbox.html" aria-expanded="false">
+                  <i class="fa fa-envelope-o"></i>Email
+                  <span class="fa arrow"></span>
+                </a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a href="mailbox.html">Mailbox</a></li>
+                  <li><a href="email-inbox.html">Inbox</a></li>
+                  <li><a href="email-compose.html">Email Compose</a></li>
+                  <li><a href="email-view.html">Email View</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="widgets.html">
+                  <i class="fa fa-th-list"></i>Widgets
+                  <span class="label label-danger pull-right">16</span>
+                </a>
+              </li>
+              <li>
+                <a href="typography.html">
+                  <i class="fa fa-font"></i>Typography
+                </a>
+              </li>
+              <li>
+                <a href="grids.html">
+                  <i class="fa fa-desktop"></i>Grid System
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-expanded="false"><i class="fa fa-table"></i>Tables<span class="fa arrow"></span></a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a href="tables.html">Tables</a></li>
+                  <li><a href="datatables.html">Data Tables</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" aria-expanded="false"><i class="fa fa-briefcase"></i>UI Kits<span class="fa arrow"></span></a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a href="colors.html">Colors</a></li>
+                  <li><a href="animations.html">Animations</a></li>
+                  <li><a href="icons.html">Icons</a></li>
+                  <li><a href="form-elements.html">Forms</a></li>
+                  <li><a href="sliders.html">Sliders</a></li>
+                  <li><a href="buttons.html">Buttons</a></li>
+                  <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                  <li><a href="nav-buttons.html">Nav buttons</a></li>
+                  <li><a href="notifications.html">Notifications</a></li>
+                  <li><a href="panels.html">Panels</a></li>
+                  <li><a href="tabs.html">Tabs</a></li>
+                  <li><a href="media.html">Media</a></li>
+                  <li><a href="components.html">Other components</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" aria-expanded="false"><i class="fa fa-edit"></i>Charts<span class="fa arrow"></span></a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a href="flotjs.html">Flot.js</a></li>
+                  <li><a href="chartjs.html">Chart.js</a></li>
+                  <li><a href="morrisjs.html">Morris.js</a></li>
+                </ul>
+              </li>
+              <li class="active">
+                <a href="#" aria-expanded="false"><i class="fa fa-file"></i>Other pages<span class="fa arrow"></span></a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a href="todo_list.html">Todo list</a></li>
+                  <li><a href="timeline.html">Timeline</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                  <li><a href="chat.html">Chat</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><a class="active" href="wizard.html">Wizard</a></li>
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="registration.html">Registration</a></li>
+                  <li><a href="404.html">404</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- /gn-scroller -->
+          <div class="bottom-bnts">
+            <a class="profile" href="profile.html"><i class="mdi mdi-account"></i></a>
+            <a class="fix-nav" href="#"><i class="mdi mdi-pin"></i></a>
+            <a class="logout" href="#"><i class="mdi mdi-power"></i></a>
+          </div>
+        </nav>
+      </li>
+      <li>
+        <a href="index.html" class="logo text-uppercase">Renaissance<i class="fa fa-toggle-on"></i></a>
+      </li>
+      <li class="top-clock">
+        <span class="current-time"></span>
+      </li>
+      <li class="container-fluid pull-right">
+        <ul class="nav navbar-right right-menu">
+          <li class="members-btn">
+            <a class="show-members">
+              <i class="fa fa-group"></i>
+            </a>
+          </li>
+          <li class="lang">
+            <select class="cs-select cs-skin-elastic">
+              <option value="english" data-class="flag-england cs-selected" selected>English</option>
+              <option value="german" data-class="flag-germany">German</option>
+              <option value="french" data-class="flag-france">French</option>
+            </select>
+          </li>
+          <li class="dropdown notifications">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i> <span class="label label-warning">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <h4 class="zero-m text-center">Notifications</h4>
+              </li>
+              <li>
+                <div class="messages">
+                  <div class="member-info">
+                    <img src="img/team/admin.png" alt="admin" class="img-circle pull-left">
+                    <span class="member-name">Sash Ficus</span>
+                    <p class="members-message zero-m">Research is done!</p>
+                  </div>
+                  <div class="member-info">
+                    <img src="img/team/member.png" alt="admin" class="img-circle pull-left">
+                    <span class="member-name">Vivien Hulk</span>
+                    <p class="members-message zero-m">Working hard</p>
+                  </div>
+                  <div class="member-info">
+                    <img src="img/team/admin.png" alt="admin" class="img-circle pull-left">
+                    <span class="member-name">Sash Ficus</span>
+                    <p class="members-message zero-m">Research is done!</p>
+                  </div>
+                  <div class="member-info">
+                    <img src="img/team/member.png" alt="admin" class="img-circle pull-left">
+                    <span class="member-name">Vivien Hulk</span>
+                    <p class="members-message zero-m">Working hard</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown some-btn">
+            <a class="fullscreen">
+              <i class="mdi mdi-fullscreen"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--Content-->
+    <div id="content" class="content container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h2>Wizard</h2>
+            <ol class="breadcrumb">
+              <li><a href="index.html">Home</a></li>
+              <li>Other pages</li>
+              <li class="active">Wizard</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div id="rootwizard" class="wizard-container">
+        <div class="progress">
+          <div class="progress-bar green-bg"></div>
+        </div>
+
+        <div class="tabbable">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">Step 1</a></li>
+            <li><a href="#tab2" data-toggle="tab">Step 2</a></li>
+            <li><a href="#tab3" data-toggle="tab">Step 3</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane big-box fade in active" id="tab1">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dignissimos enim similique, esse quasi molestias!</p>
+            </div>
+            <div class="tab-pane big-box fade" id="tab2">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dignissimos enim similique, esse quasi molestias! Lorem ipsum dolor sit.</p>
+            </div>
+            <div class="tab-pane big-box fade" id="tab3">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ratione obcaecati doloremque placeat dignissimos eum beatae magni repellendus cupiditate distinctio, quos!</p>
+            </div>
+            <ul class="pager wizard">
+              <li class="previous"><a class="btn btn-warning" href="#">Previous</a></li>
+              <li class="next"><a class="btn btn-warning" href="#">Next</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="rootwizard2" class="wizard-container">
+        <div class="progress">
+          <div class="progress-bar green-bg"></div>
+        </div>
+
+        <div class="tabbable">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab11" data-toggle="tab">Step 1</a></li>
+            <li><a href="#tab12" data-toggle="tab">Step 2</a></li>
+            <li><a href="#tab13" data-toggle="tab">Step 3</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane big-box fade in active" id="tab11">
+              <form id="commentForm" action="/">
+                <div class="form-group">
+                  <label for="exampleEmail">Your Email:</label>
+                  <input type="email" class="form-control" id="exampleEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="examplePassword">Name:</label>
+                  <input type="text" class="form-control" id="examplePassword" name="name" minlength="3" required>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane big-box fade" id="tab12">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ratione obcaecati doloremque placeat dignissimos eum beatae magni repellendus cupiditate distinctio, quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, doloremque!</p>
+            </div>
+            <div class="tab-pane big-box fade" id="tab13">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ratione obcaecati doloremque placeat dignissimos eum beatae magni repellendus cupiditate distinctio, quos!</p>
+            </div>
+            <ul class="pager wizard">
+              <li class="previous"><a class="btn btn-warning" href="#">Previous</a></li>
+              <li class="next"><a class="btn btn-warning" href="#">Next</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!--Footer-->
+      <div class="footer">© 2015 Copyright</div>
+    </div>
+
+
+
+    <!--Members Sidebar-->
+    <div id="members-sidebar" class="members-sidebar">
+      <h4 class="pull-left zero-m">Members</h4>
+      <span class="close-members-sidebar"><i class="fa fa-remove pull-right"></i></span>
+      <div class="clearfix"></div>
+      <ul class="nav">
+        <li>
+          <div class="messages">
+            <div class="member-info">
+              <img src="img/team/admin.png" alt="admin" class="img-circle pull-left">
+              <span class="member-name">Sash Ficus</span>
+              <p class="members-message zero-m">Sushi time)))</p>
+            </div>
+            <div class="member-info">
+              <img src="img/team/admin.png" alt="admin" class="img-circle pull-left">
+              <span class="member-name">Sash Ficus</span>
+              <p class="members-message zero-m">Working hard</p>
+            </div>
+          </div>
+        </li>
+        <li class="members-group">Work</li>
+        <li><span class="status online"></span>Sash Ficus</li>
+        <li><span class="status online"></span>Sash Ficus</li>
+        <li><span class="status not-available"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li class="members-group">Partner</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+      </ul>
+    </div>
+
+  </div>
+  
+  @@include('./_modals.html')
+
+  @@include('./_main_scripts.html')
+
+  <!--Bootstrap Wizard-->
+  <script src="bower_components/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+
+  <!--Jquery Validate-->
+  <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+
+  @@include('./_commonjs.html')
+
+  <script>
+    $(function () {
+      //Wizard 
+      $('#rootwizard').bootstrapWizard({
+        onTabShow: function (tab, navigation, index) {
+          var $total = navigation.find('li').length;
+          var $current = index + 1;
+          var $percent = ($current / $total) * 100;
+          $('#rootwizard').find('.progress-bar').css({
+            width: $percent + '%'
+          });
+        }
+      });
+
+      var $validator = $("#commentForm").validate();
+
+      $('#rootwizard2').bootstrapWizard({
+        'tabClass': 'nav nav-tabs',
+        'onNext': function (tab, navigation, index) {
+          var $valid = $("#commentForm").valid();
+          if (!$valid) {
+            $validator.focusInvalid();
+            return false;
+          }
+        },
+        'onTabClick': function (tab, navigation, index) {
+          var $valid = $("#commentForm").valid();
+          if (!$valid) {
+            $validator.focusInvalid();
+            return false;
+          }
+        },
+        onTabShow: function (tab, navigation, index) {
+          var $total = navigation.find('li').length;
+          var $current = index + 1;
+          var $percent = ($current / $total) * 100;
+          $('#rootwizard2').find('.progress-bar').css({
+            width: $percent + '%'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

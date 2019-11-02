@@ -1,0 +1,52 @@
+/*Member sidebar*/
+.members-sidebar {
+  background: $white;
+  padding: 20px;
+  overflow: hidden;
+  position: fixed;
+  top: 56px;
+  bottom: 0;
+  width: 240px !important;
+  z-index: 605;
+  right: -245px;
+  box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.13);
+  transition: all, .5s;
+  .messages{
+    margin-top: 30px;
+  }
+  .member-name{
+    font-weight: 500;
+  }
+  li{
+    padding: 10px 0;
+    font-weight: 400;
+    .status{
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 8px;
+      background-color: $light-gray;
+    }
+    .online{
+      background-color: #4caf50;
+    }
+    .not-available{
+      background-color: $yellow;
+    }
+  }
+  .members-group{
+    font-size: 16px;
+    padding-top: 30px;
+  }
+}
+
+.members-sidebar-open{
+  right: 0 !important;
+}
+
+.close-members-sidebar{
+  cursor: pointer;
+  font-size: 18px;
+}
+

@@ -1,0 +1,603 @@
+a, a:hover{
+  color: $blue;
+}
+
+/*Switcher*/
+.switcher {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.switcher + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+input.switcher + label {
+  padding: 2px;
+  width: 36px;
+  height: 14px;
+  background-color: #dddddd;
+  border-radius: 60px;
+}
+
+input.switcher-medium + label {
+  width: 50px;
+  height: 18px;
+}
+
+input.switcher-big + label {
+  width: 60px;
+  height: 20px;
+}
+
+input.switcher + label:before,
+input.switcher + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  bottom: 1px;
+  content: "";
+}
+input.switcher + label:before {
+  right: 1px;
+  background-color: #b9b8b8;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+input.switcher + label:after {
+  width: 20px;
+  height: 20px;
+  background-color: #f1f1f1;
+  border-radius: 100%;
+  margin-top: -4px;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.31);
+  transition: margin, .4s;
+}
+
+input.switcher-medium + label:after {
+  width: 25px;
+  height: 25px;
+  margin-top: -5px;
+}
+
+input.switcher-big + label:after {
+  width: 30px;
+  height: 30px;
+  margin-top: -6px;
+}
+
+input.switcher-medium:checked + label:after {
+  margin-left: 25px !important;
+}
+
+input.switcher-big:checked + label:after {
+  margin-left: 30px !important;
+}
+
+input.switcher-primary:checked + label:before {
+  background-color: lighten($blue, 20%);
+}
+input.switcher-primary:checked + label:after {
+  margin-left: 16px;
+  background-color: $blue;
+}
+input.switcher-success:checked + label:before {
+  background-color: lighten($green, 10%);
+}
+input.switcher-success:checked + label:after {
+  margin-left: 16px;
+  background-color: $green;
+}
+input.switcher-danger:checked + label:before {
+  background-color: lighten($red, 20%);
+}
+input.switcher-danger:checked + label:after {
+  margin-left: 16px;
+  background-color: $red;
+}
+input.switcher-warning:checked + label:before {
+  background-color: lighten($yellow, 20%);
+}
+input.switcher-warning:checked + label:after {
+  margin-left: 16px;
+  background-color: $yellow;
+}
+
+/*Checkboxes*/
+
+.checkbox {
+    i {
+    position: relative;
+    padding-left: 5px;
+    display: initial;
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      left: 0;
+      margin-left: -20px;
+      border: 1px solid $light-gray;
+      border-radius: 3px;
+      background-color: $white;
+      transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    }
+    &:after {
+      display: inline-block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 0;
+      margin-left: -20px;
+      padding-left: 3px;
+      padding-top: 1px;
+      font-size: 11px;
+      color: #555555;
+    }
+  }
+  &.checkbox-small i:before{
+    width: 12px;
+    height: 12px;
+    top: 3px;
+  }
+  &.checkbox-small i:after{
+    padding-top: 2px;
+    width: 11px;
+    height: 11px;
+    margin-left: -22px;
+  }
+  &.checkbox-big i:before{
+    width: 22px;
+    height: 22px;
+    top: -1px;
+  }
+  &.checkbox-big i:after{
+    padding-top: 0;
+    font-size: 18px;
+    top: -1px;
+    width: 19px;
+    height: 19px;
+    margin-left: -21px;
+  }
+}
+
+.checkbox input[type="checkbox"],
+.checkbox input[type="radio"] {
+  opacity: 0;
+  z-index: 1;
+}
+.checkbox input[type="checkbox"]:focus + i::before,
+.checkbox input[type="radio"]:focus + i::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.checkbox input[type="checkbox"]:checked + i::after,
+.checkbox input[type="radio"]:checked + i::after {
+  font-family: "FontAwesome";
+  font-style: normal;
+  content: "\f00c";
+}
+.checkbox input[type="checkbox"]:disabled + i,
+.checkbox input[type="radio"]:disabled + i {
+  opacity: 0.65;
+}
+.checkbox input[type="checkbox"]:disabled + i::before,
+.checkbox input[type="radio"]:disabled + i::before {
+  background-color: #eeeeee;
+  cursor: not-allowed;
+}
+.checkbox.checkbox-circle i::before {
+  border-radius: 50%;
+}
+.checkbox.checkbox-inline {
+  margin-top: 0;
+}
+
+.checkbox-primary input[type="checkbox"]:checked + i::before,
+.checkbox-primary input[type="radio"]:checked + i::before {
+  background-color: $green;
+  border-color: $green;
+}
+.checkbox-primary input[type="checkbox"]:checked + i::after,
+.checkbox-primary input[type="radio"]:checked + i::after {
+  color: $white;
+}
+
+.checkbox-danger input[type="checkbox"]:checked + i::before,
+.checkbox-danger input[type="radio"]:checked + i::before {
+  background-color: $red;
+  border-color: $red;
+}
+.checkbox-danger input[type="checkbox"]:checked + i::after,
+.checkbox-danger input[type="radio"]:checked + i::after {
+  color: $white;
+}
+
+.checkbox-info input[type="checkbox"]:checked + i::before,
+.checkbox-info input[type="radio"]:checked + i::before {
+  background-color: $light-blue;
+  border-color: $light-blue;
+}
+.checkbox-info input[type="checkbox"]:checked + i::after,
+.checkbox-info input[type="radio"]:checked + i::after {
+  color: $white;
+}
+
+.checkbox-warning input[type="checkbox"]:checked + i::before,
+.checkbox-warning input[type="radio"]:checked + i::before {
+  background-color: $yellow;
+  border-color: $yellow;
+}
+.checkbox-warning input[type="checkbox"]:checked + i::after,
+.checkbox-warning input[type="radio"]:checked + i::after {
+  color: $white;
+}
+
+.checkbox-success input[type="checkbox"]:checked + i::before,
+.checkbox-success input[type="radio"]:checked + i::before {
+  background-color: $blue;
+  border-color: $blue;
+}
+.checkbox-success input[type="checkbox"]:checked + i::after,
+.checkbox-success input[type="radio"]:checked + i::after {
+  color: $white;
+}
+
+.form-horizontal .checkbox{
+  padding-top: 0;
+  min-height: auto;
+}
+
+.form-inline .checkbox i::after{
+  top: -3px;
+}
+
+.radio {
+
+    i {
+    position: relative;
+    padding-left: 5px;
+    display: initial;
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      left: 0;
+      margin-left: -20px;
+      border: 1px solid $light-gray;
+      border-radius: 50%;
+      background-color: $white;
+      transition: border 0.15s ease-in-out;
+    }
+    &:after {
+      display: inline-block;
+      position: absolute;
+      content: " ";
+      width: 11px;
+      height: 11px;
+      left: 3px;
+      top: 2px;
+      margin-left: -20px;
+      border-radius: 50%;
+      background-color: #555555;
+      transform: scale(0, 0);
+      transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    }
+  }
+  &.radio-small i:before{
+    width: 14px;
+    height: 14px;
+    top: 2px;
+  }
+  &.radio-small i:after{
+    width: 10px;
+    height: 10px;
+    margin-left: -21px;
+    top: 4px;
+  }
+  &.radio-big i:before{
+    width: 22px;
+    height: 22px;
+    top: -1px;
+  }
+  &.radio-big i:after{
+    padding-top: 0;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    margin-left: -21px;
+  }
+}
+
+.radio input[type="radio"] {
+  opacity: 0;
+  z-index: 1;
+}
+.radio input[type="radio"]:focus + i::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.radio input[type="radio"]:checked + i::after {
+  transform: scale(1, 1);
+}
+.radio input[type="radio"]:disabled + i {
+  opacity: 0.65;
+}
+.radio input[type="radio"]:disabled + i::before {
+  cursor: not-allowed;
+}
+.radio.radio-inline {
+  margin-top: 0;
+}
+
+.radio-primary input[type="radio"] + i::after {
+  background-color: $green;
+}
+.radio-primary input[type="radio"]:checked + i::before {
+  border-color: $green;
+}
+.radio-primary input[type="radio"]:checked + i::after {
+  background-color: $green;
+}
+
+.radio-danger input[type="radio"] + i::after {
+  background-color: $red;
+}
+.radio-danger input[type="radio"]:checked + i::before {
+  border-color: $red;
+}
+.radio-danger input[type="radio"]:checked + i::after {
+  background-color: $red;
+}
+
+.radio-info input[type="radio"] + i::after {
+  background-color: $light-blue;
+}
+.radio-info input[type="radio"]:checked + i::before {
+  border-color: $light-blue;
+}
+.radio-info input[type="radio"]:checked + i::after {
+  background-color: $light-blue;
+}
+
+.radio-warning input[type="radio"] + i::after {
+  background-color: $yellow;
+}
+.radio-warning input[type="radio"]:checked + i::before {
+  border-color: $yellow;
+}
+.radio-warning input[type="radio"]:checked + i::after {
+  background-color: $yellow;
+}
+
+.radio-success input[type="radio"] + i::after {
+  background-color: $blue;
+}
+.radio-success input[type="radio"]:checked + i::before {
+  border-color: $blue;
+}
+.radio-success input[type="radio"]:checked + i::after {
+  background-color: $blue;
+}
+
+//Form
+.example-item{
+  margin-bottom: 20px;
+}
+label{
+ font-weight: 400;
+}
+
+.help-text{
+  padding: 3px 0;
+}
+
+.form-control.material{
+  padding-left: 0;
+  border: 0;
+  border-radius: 0;
+  background-image: linear-gradient($blue,$blue),linear-gradient(#d2d2d2,#d2d2d2);
+  background-size: 0 2px,100% 1px;
+  background-repeat: no-repeat;
+  background-position: center bottom,center calc(100% - 1px);
+  background-color: transparent;
+  box-shadow: none;
+  &:focus{
+    outline: none;
+    animation: input-highlight .5s forwards;
+    box-shadow: none;
+  }
+}
+
+@keyframes(input-highlight){
+  0% {
+    background-size: 0 2px, 100% 1px;
+  }
+  100% {
+    background-size: 100% 2px, 100% 1px;
+  }
+}
+
+
+//Progress
+.progress-widget{
+  &.table-striped>tbody>tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+  }
+  &.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: $white;
+  }
+  tr td, tr th{
+    vertical-align: middle !important;
+    padding: 8px 20px !important;
+  }
+  tr td + td{
+    width: 25%;
+    font-weight: 400;
+  }
+  thead{
+    background-color: #f9f9f9;
+    border-top: 1px solid $light-gray;
+  }
+  .progress{
+    margin-bottom: 0;
+  }
+}
+
+.progress-bar-sm{
+  height: 6px;
+  border-radius: 3px;
+}
+
+.progress-bar-xs{
+  height: 2px;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.progress-bar-info{
+  background-color: $blue;
+}
+
+.progress-bar-danger{
+  background-color: $red;
+}
+
+.progress-bar-success{
+  background-color: $green;
+}
+
+.progress-bar-warning{
+  background-color: $yellow;
+}
+
+
+
+
+
+//Breadcrumbs
+.breadcrumb{
+  border-radius: 0;
+  background-color: transparent;
+  &.breadcrumb-arrow>li+li:before {
+    content: "\00bb\00a0";
+  }
+  a{
+    color: $blue;
+    i{
+      margin-right: 5px;
+      font-size: 16px;
+    }
+  }
+}
+
+//Pagination
+.pagination li{
+  display: none;
+  &:first-of-type, &:last-of-type{
+    display: inline;
+  }
+  a{
+    border-radius: 0;
+  }
+}
+.pagination li.active a{
+  background: $blue;
+  border-color: $blue !important;
+  &:hover, &:focus{
+    background: $blue;
+    color: $white;
+  }
+}
+
+.pagination li a, .pager li a{
+  color: $text-color;
+  transition: none !important;
+  box-shadow: none !important;
+  z-index: 1 !important;
+  line-height: 1.3333333 !important;
+  border: 1px solid #ddd !important;
+  &:hover, &:focus{
+    color: $text-color;
+    background: $white;
+  }
+}
+
+.pagination-lg li a{
+  font-size: 18px !important;
+}
+
+.pagination-sm li a{
+  font-size: 12px !important;
+}
+
+.pagination.divided li{
+  margin: 0 3px;
+  a, span{
+    border-radius: 3px;
+    border: 0 !important;
+  }
+  a{
+    box-shadow: 0 1px 1.5px 1px rgba(0,0,0,.12) !important;
+  }
+  &:first-of-type, &:last-of-type{
+    display: inline-block;
+  }
+}
+
+.pagination.move-btns{
+  max-width: 768px;
+  width: 100%;
+  li:first-of-type{
+    float: left;
+  }
+  li:last-of-type{
+    float: right;
+  }
+}
+
+.pagination.animated-btns{
+  li:first-of-type a, li:last-of-type a{
+    padding: 0 12px;
+    overflow: hidden;
+    height: 31px;
+    line-height: 31px !important;
+    i{
+      display: block;
+      height: 100%;
+      line-height: 32px;
+      transition: transform 0.3s;
+    }
+    span{
+      transition: transform 0.3s;
+      padding: 0 12px;
+      overflow: hidden;
+      height: 31px;
+      display: inline-block;
+    }
+    &:hover i{
+      transform: translateY(-100%);
+    }
+    &:hover span{
+      transform: translateY(-100%);
+    }
+  }
+}
+
+
+.pager .disabled>a, .pager .disabled>a:focus, .pager .disabled>a:hover, .pager .disabled>span{
+  color: $text-color !important;
+}
+
+

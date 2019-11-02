@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Renaissance Theme Documentation</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+
+  <style>
+    .jumbotron .row {
+      padding-top: 60px;
+    }
+    h4{
+      color: #5274e5;
+      padding-top: 30px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Renaissance - Documentation</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Renaissance - Responsive Admin Theme</h2>
+
+          <p>Thank you for purchasing Renaissance theme. If you have any questions about the template, please feel free to contact us via email: <a href="mailto:help.mvgroup@gmail.com">help.mvgroup@gmail.com</a>
+            <br/> Thanks very much!</p>
+          <small>
+                    <strong>Documentation created:</strong> 10/12/2015<br/>
+                    <strong>By:</strong> MV Group<br/>
+                    <strong>Theme Version:</strong> 1.3.0<br/>
+                </small>
+        </div>
+        <div class="col-md-6">
+          <img src="img/preview.png" alt="screen" class="img-responsive" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>
+                Table of Contents
+            </h2>
+        <ul>
+          <li><a href="#documentation">About template</a></li>
+          <li><a href="#folder_structure">Folder structure</a></li>
+          <li><a href="#layout_structure">Layout structure</a></li>
+          <li><a href="#tools">Building tools</a></li>
+          <li><a href="#styles">Customize Styles</a></li>
+          <li><a href="#credits">Credits</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <a name="documentation" class="anchor"></a>
+        <h3>About the template</h3>
+
+        <p>Renaissance is a responsive and multipurpose admin theme powered with Twitter Bootstrap v3.3.5 It can be used for for any type of web applications: custom admin panels, admin dashboards, CMS etc.. Renaissance has a clean and intuitive design which helps you to create an awesome and powerful project. Renaissance has a huge collection of plugins and UI components and works great on all major web browsers, tablets and phones.
+          <br/> Please note that this documentation is dedicated to the main element of the template. With each version, we will try to develop it. But if you have any questions going beyond what is described here don't hesitate to write to us.
+          <br/>
+          <br/> Enjoy using Renaissance and stay tuned to endless amazing updates! </p>
+
+        <div class="row">
+          <a name="folder_structure" class="anchor"></a>
+          <div class="col-md-6">
+            <h3>Structure</h3>
+            <h4>Folders and files</h4>
+
+            <p>All compiled files you can find in <code>build</code> folder.</p>
+            <div><pre class="prettyprint linenums">
+    <code>build/
+        ├── <strong>css/</strong>
+        ├── <strong>fonts/</strong>
+        ├── <strong>img/</strong>
+        ├── <strong>js/</strong>
+        ├── <strong>bower_components/</strong>
+        ├── 404.html
+        ├── animations.html
+        ├── breadcrumbs.html
+        ├── buttons.html
+        ├── calendar.html
+        ├── chartjs.html
+        ├── flotjs.html
+        ├── morrisjs.html
+        ├── chat.html
+        ├── colors.html
+        ├── components.html
+        ├── contacts.html
+        ├── dashboard_2.html
+        ├── dashboard_3.html
+        ├── datatables.html
+        ├── email-compose.html
+        ├── email-inbox.html
+        ├── email-view.html
+        ├── form-elements.html
+        ├── grids.html
+        ├── icons.html
+        ├── index.html
+        ├── login.html
+        ├── mailbox.html
+        ├── media.html
+        ├── nav-buttons.html
+        ├── notifications.html
+        ├── panels.html
+        ├── profile.html
+        ├── projects.html
+        ├── registration.html
+        ├── sliders.html
+        ├── tables.html
+        ├── tabs.html
+        ├── timeline.html
+        ├── todo_list.html
+        ├── typography.html
+        ├── widgets.html
+        ├── wizard.html</code></pre>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <h3>Main HTML elements</h3>
+
+            <p>Theme files have almost unchanging structure consisting of:</p>
+            <ol>
+              <li><code>#main-wrapper</code> main container of body elements.</li>
+              <li><code>.gn-menu-wrapper</code> left navigation <b>menu</b>.</li>
+              <li><code>.gn-menu-main</code> top navigation.</li>
+              <li><code>#content</code> main container for html elements.</li>
+              <li><code>.footer</code> main container for footer.</li>
+            </ol>
+
+            <h4>Folders structure</h4>
+            <div><pre class="prettyprint linenums">
+<code>Renaissance/
+    ├── <strong>Static_Full_Version/</strong> - contains all compiled files
+    ├── <strong>Documentation/</strong> - documentation how to use template
+    ├── <strong>Gulp/</strong> - all source files
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <a name="layout_structure" class="anchor"></a>
+          <div class="col-lg-12">
+            <h3>Layout structure</h3>
+
+            <p>Page <code>&lt;head /&gt;</code> contains Metadata, CSS files.</p>
+            <pre class="prettyprint linenums">
+        &lt;!DOCTYPE html>
+        &lt;head>
+
+            &lt;!-- Metadata --&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+            &lt;meta name="msapplication-tap-highlight" content="no" /&gt;
+
+            &lt;title&gt;Renaissance Theme | Page&lt;/title&gt;
+
+            &lt;!-- CSS Files --&gt;
+            &lt;link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"&gt;
+            &lt;link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"&gt;
+            &lt;link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.min.css"&gt;
+            &lt;link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.min.css"&gt;
+            &lt;link rel="stylesheet" href="bower_components/Waves/dist/waves.min.css"&gt;
+            &lt;link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"&gt;
+
+            &lt;link rel="stylesheet" href="js/selects/cs-select.css"&gt;
+            &lt;link rel="stylesheet" href="js/selects/cs-skin-elastic.css"&gt;
+
+            &lt;script src="js/menu/modernizr.custom.js"&gt;&lt;/script&gt;
+
+            &lt;link rel="stylesheet" href="css/style.css"&gt;
+
+            &lt;!--[if lt IE 9]&gt;
+              &lt;script src="bower_components/html5shiv/dist/html5shiv.min.js"&gt;&lt;/script&gt;
+              &lt;script src="bower_components/respondJs/dest/respond.min.js"&gt;&lt;/script&gt;
+            &lt;![endif]--&gt;
+
+        &lt;/head&gt;</pre>
+
+            <h4>Fixed main menu</h4>
+            <p>To fix main menu by default you can add <code>.mini-nav</code> class to your <code>body</code> tag</p>
+            <hr>
+            <h3>Main menu - navigation</h3>
+
+            <p>Navigation menu</p>
+            <pre class="prettyprint linenums">
+  &lt;nav class="gn-menu-wrapper"&gt;
+    &lt;div class="gn-scroller"&gt;
+    &lt;ul class="gn-menu metismenu"&gt;
+      &lt;li class="gn-search-item"&gt;
+      &lt;input placeholder="Search" type="search" class="gn-search"&gt;
+      &lt;a class="search-icon"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;span&gt;Search&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="active"&gt;
+      &lt;a href="index.html" aria-expanded="true"&gt;&lt;i class="fa fa-th"&gt;&lt;/i&gt;Dashboards&lt;span class="fa arrow"&gt;&lt;/span&gt;&lt;/a&gt;
+      &lt;ul class="gn-submenu collapse" aria-expanded="true"&gt;
+        &lt;li&gt;&lt;a href="index.html"&gt;Dashboard v1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="active" href="dashboard_2.html"&gt;Dashboard v2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="dashboard_3.html"&gt;Dashboard v3&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/li&gt;
+
+
+      &lt;li&gt;
+      &lt;a href="calendar.html"&gt;&lt;i class="fa fa-calendar-o"&gt;&lt;/i&gt;Calendar&lt;span class="label label-warning pull-right"&gt;9&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+
+      &lt;li&gt;
+      &lt;a href="mailbox.html" aria-expanded="false"&gt;
+        &lt;i class="fa fa-envelope-o"&gt;&lt;/i&gt;Email
+        &lt;span class="fa arrow"&gt;&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;ul class="gn-submenu collapse" aria-expanded="false"&gt;
+        &lt;li&gt;&lt;a href="mailbox.html"&gt;Mailbox&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="email-inbox.html"&gt;Inbox&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="email-compose.html"&gt;Email Compose&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="email-view.html"&gt;Email View&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;a href="widgets.html"&gt;
+        &lt;i class="fa fa-th-list"&gt;&lt;/i&gt;Widgets
+        &lt;span class="label label-danger pull-right"&gt;16&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;a href="typography.html"&gt;
+        &lt;i class="fa fa-font"&gt;&lt;/i&gt;Typography
+      &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;a href="grids.html"&gt;
+        &lt;i class="fa fa-desktop"&gt;&lt;/i&gt;Grid System
+      &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;a href="#" aria-expanded="false"&gt;&lt;i class="fa fa-table"&gt;&lt;/i&gt;Tables&lt;span class="fa arrow"&gt;&lt;/span&gt;&lt;/a&gt;
+      &lt;ul class="gn-submenu collapse" aria-expanded="false"&gt;
+        &lt;li&gt;&lt;a href="tables.html"&gt;Tables&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="datatables.html"&gt;Data Tables&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;a href="#" aria-expanded="false"&gt;&lt;i class="fa fa-briefcase"&gt;&lt;/i&gt;UI Kits&lt;span class="fa arrow"&gt;&lt;/span&gt;&lt;/a&gt;
+      &lt;ul class="gn-submenu collapse" aria-expanded="false"&gt;
+        &lt;li&gt;&lt;a href="colors.html"&gt;Colors&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="animations.html"&gt;Animations&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="icons.html"&gt;Icons&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="form-elements.html"&gt;Forms&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="sliders.html"&gt;Sliders&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="buttons.html"&gt;Buttons&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="breadcrumbs.html"&gt;Breadcrumbs&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="nav-buttons.html"&gt;Nav buttons&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="notifications.html"&gt;Notifications&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="panels.html"&gt;Panels&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="tabs.html"&gt;Tabs&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="media.html"&gt;Media&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="components.html"&gt;Other components&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;a href="#" aria-expanded="false"&gt;&lt;i class="fa fa-edit"&gt;&lt;/i&gt;Charts&lt;span class="fa arrow"&gt;&lt;/span&gt;&lt;/a&gt;
+      &lt;ul class="gn-submenu collapse" aria-expanded="false"&gt;
+        &lt;li&gt;&lt;a href="flotjs.html"&gt;Flot.js&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="chartjs.html"&gt;Chart.js&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="morrisjs.html"&gt;Morris.js&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;a href="#" aria-expanded="false"&gt;&lt;i class="fa fa-file"&gt;&lt;/i&gt;Other pages&lt;span class="fa arrow"&gt;&lt;/span&gt;&lt;/a&gt;
+      &lt;ul class="gn-submenu collapse" aria-expanded="false"&gt;
+        &lt;li&gt;&lt;a href="todo_list.html"&gt;Todo list&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="timeline.html"&gt;Timeline&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="contacts.html"&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="profile.html"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="chat.html"&gt;Chat&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="projects.html"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="wizard.html"&gt;Wizard&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="login.html"&gt;Login&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="registration.html"&gt;Registration&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="404.html"&gt;404&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- /gn-scroller --&gt;
+    &lt;div class="bottom-bnts"&gt;
+    &lt;a class="profile" href="#"&gt;&lt;i class="mdi mdi-account"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="fix-nav" href="#"&gt;&lt;i class="mdi mdi-pin"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="logout" href="#"&gt;&lt;i class="mdi mdi-power"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;</pre>
+            <hr>
+
+            <h3>Top menu</h3>
+
+            <p>Menu for notifications and primary functions.</p>
+            <pre class="prettyprint linenums">
+    &lt;ul id="gn-menu" class="gn-menu-main"&gt;
+      &lt;li class="gn-trigger"&gt;
+        &lt;a id="menu-toggle" class="gn-icon gn-icon-menu"&gt;
+          &lt;div id="hamburger"&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div id="cross"&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+        &lt;nav class="gn-menu-wrapper"&gt;
+          &lt;!-- Left menu goes here --&gt;
+        &lt;/nav&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href="index.html" class="logo"&gt;Renaissance&lt;i class="fa fa-toggle-on"&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="top-clock"&gt;
+        &lt;span class="current-time"&gt;&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li class="pull-right"&gt;
+        &lt;ul class="nav navbar-right right-menu"&gt;
+          &lt;li class="members-btn"&gt;
+            &lt;a class="show-members" href="#"&gt;
+              &lt;i class="fa fa-group"&gt;&lt;/i&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="lang"&gt;
+            &lt;select class="cs-select cs-skin-elastic"&gt;
+              &lt;option value="english" data-class="flag-england" selected&gt;English&lt;/option&gt;
+              &lt;option value="german" data-class="flag-germany"&gt;German&lt;/option&gt;
+              &lt;option value="french" data-class="flag-france"&gt;French&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/li&gt;
+          &lt;li class="dropdown notifications"&gt;
+            &lt;a class="dropdown-toggle" data-toggle="dropdown"&gt;
+              &lt;i class="fa fa-bell-o"&gt;&lt;/i&gt; &lt;span class="label label-warning"&gt;4&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;ul class="dropdown-menu"&gt;
+              &lt;li&gt;
+                &lt;h4 class="zero-m text-center"&gt;Notifications&lt;/h4&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;div class="messages"&gt;
+                  &lt;div class="member-info"&gt;
+                    &lt;img src="img/team/admin.png" alt="admin" class="img-circle pull-left"&gt;
+                    &lt;span class="member-name"&gt;Sash Ficus&lt;/span&gt;
+                    &lt;p class="members-message zero-m"&gt;Research is done!&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class="member-info"&gt;
+                    &lt;img src="img/team/member.png" alt="admin" class="img-circle pull-left"&gt;
+                    &lt;span class="member-name"&gt;Vivien Hulk&lt;/span&gt;
+                    &lt;p class="members-message zero-m"&gt;Working hard&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class="member-info"&gt;
+                    &lt;img src="img/team/admin.png" alt="admin" class="img-circle pull-left"&gt;
+                    &lt;span class="member-name"&gt;Sash Ficus&lt;/span&gt;
+                    &lt;p class="members-message zero-m"&gt;Research is done!&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class="member-info"&gt;
+                    &lt;img src="img/team/member.png" alt="admin" class="img-circle pull-left"&gt;
+                    &lt;span class="member-name"&gt;Vivien Hulk&lt;/span&gt;
+                    &lt;p class="members-message zero-m"&gt;Working hard&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class="dropdown some-btn"&gt;
+            &lt;a class="fullscreen"&gt;
+              &lt;i class="mdi mdi-fullscreen"&gt;&lt;/i&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+          </pre>
+            <hr>
+            <h3>Content</h3>
+
+            <p>Main content wrapper with page content.</p>
+            <pre class="prettyprint linenums">
+          &lt;!--Content--&gt;
+          &lt;div id="content"&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col-lg-6"&gt;
+                &lt;div class="content-box"&gt;
+                  &lt;!-- Content goes here --&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="col-lg-6"&gt;
+                &lt;div class="content-box"&gt;
+                  &lt;!-- Content goes here --&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          </pre>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <a name="tools" class="anchor"></a>
+          <div class="col-lg-12">
+           <h3>Working with Gulp</h3>
+            <p>First, you must download and <strong>install node.js</strong> (which includes npm). <strong>npm</strong> stands for node packaged modules and is a way to manage development dependencies through <a href="https://nodejs.org/">Node.js</a>. You can check it in your terminal window using these commands <code>node --version</code> and <code>npm --version</code>.</p>
+
+            <h4>Installing Gulp</h4>
+            <p><a href="http://gulpjs.com/">Gulp</a> is a JavaScript task runner (Automation), save yourself from repetitive tasks. It's how we compile our code, run tests, and more.</p>
+
+            <ul>
+              <li>Install gulp globally with <code>npm install --global gulp</code>.</li>
+              <li>Then run <code>npm install</code>. npm will look at the <code>package.json</code> file and automatically install the necessary local dependencies listed there.</li>
+              <li>After that run <code>bower install</code>. Bower will look at the <code>bower.json</code> file and automatically install the necessary dependencies.</li>
+              <li>When completed, you'll be able to run the various Gulp commands provided from the command line.</li>
+            </ul>
+
+            <h4>Gulp Commands</h4>
+            <p>We have defined all the task by default. To run default task use <code>gulp</code> command in your command line. You can modify or add your task in <code>gulpfile.js</code>.</p>
+
+            <p>Other commands</p>
+            <ul>
+              <li><strong>gulp mainfiles</strong> will get all main files from <code>bower.json</code></li>
+              <li><strong>gulp html</strong> will compile all html files</li>
+              <li><strong>gulp js</strong> complied js file</li>
+              <li><strong>gulp img</strong> will copy all images and place them to build folder</li>
+              <li><strong>gulp fonts</strong> will copy all fonts and place them to build folder</li>
+              <li><strong>gulp scss</strong> complied sass files</li>
+              <li><strong>gulp browser-sync</strong> started local webserver</li>
+              <li><strong>gulp watch</strong> checking changes in files and fires particular task</li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="row">
+          <a name="styles" class="anchor"></a>
+          <div class="col-lg-12">
+            <h3>Customize Styles</h3>
+            <h4>Using CSS</h4>
+            <p>All style changes, fixes, and improvements made for Renaissance will typically be added to <code>css</code> folder. The customize styles for 3rd plugins are in each plugin folders under <code>bower_components</code> folder.</p>
+
+            <p>To prevent losing your changes, you should add all of your customizations to a new stylesheet and include it separately in your pages. <strong>Note</strong> Also you must disable all <code>gulp scss</code> tasks in <code>gulpfile.js</code>.</p>
+
+            <h4>Using SASS</h4>
+            <p>SASS is powerful CSS pre-processor system. It will give you more accesibility to customize your styles. </p>
+
+            <p>All custom <code>scss</code> styles you can find in <code>src/scss</code> folder.</p>
+
+            <p>If you want to find some more information about SASS click <a href="http://sass-lang.com/">here</a>.</p>
+
+          </div>
+        </div>
+        <div class="row">
+          <a name="credits" class="anchor"></a>
+          <div class="col-lg-12">
+            <h3>Credits</h3>
+            <div class="table-responsive">
+               <table class="table table-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Description</th>
+                      <th>Url</th>
+                      <th>License</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Gulp.js</th>
+                      <td>The streaming build system</td>
+                      <td><a href="http://gulpjs.com/">http://gulpjs.com</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Bower</th>
+                      <td>package manager</td>
+                      <td><a href="http://bower.io">http://bower.io</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>SASS</th>
+                      <td>css pre-processor system</td>
+                      <td><a href="http://sass-lang.com">http://sass-lang.com</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Twitter Bootstrap</th>
+                      <td>css front-end framework</td>
+                      <td><a href="http://getbootstrap.com">http://getbootstrap.com</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>AnimateCSS</th>
+                      <td>Collection of CSS3 animations</td>
+                      <td><a href="https://daneden.github.io/animate.css">https://daneden.github.io/animate.css</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Bootstrap 3 Datepicker</th>
+                      <td>datepicker</td>
+                      <td><a href="https://eonasdan.github.io/bootstrap-datetimepicker/">https://eonasdan.github.io/bootstrap-datetimepicker/</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Bootstrap Wizard</th>
+                      <td>wizard</td>
+                      <td><a href="https://github.com/VinceG/twitter-bootstrap-wizard">https://github.com/VinceG/twitter-bootstrap-wizard</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>C3.js</th>
+                      <td>D3-based reusable chart library</td>
+                      <td><a href="http://c3js.org">http://c3js.org</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>D3.js</th>
+                      <td>JavaScript library for manipulating documents based on data</td>
+                      <td><a href="http://d3js.org">http://d3js.org</a></td>
+                      <td>BSD</td>
+                    </tr>
+                    <tr>
+                      <th>DataTables</th>
+                      <td>datatables for bootstrap</td>
+                      <td><a href="https://www.datatables.net/manual/styling/bootstrap">https://www.datatables.net/manual/styling/bootstrap</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Easypiechart</th>
+                      <td>Jquery pie charts</td>
+                      <td><a href="http://rendro.github.io/easy-pie-chart">http://rendro.github.io/easy-pie-chart</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Flot</th>
+                      <td>simple but powerful chart plugin</td>
+                      <td><a href="https://flotcharts.org">https://flotcharts.org</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Font Awesome</th>
+                      <td>The iconic font and CSS toolkit</td>
+                      <td><a href="http://fortawesome.github.io/Font-Awesome/">http:/http://fortawesome.github.io/Font-Awesome/</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Google Material Icons</th>
+                      <td>Material Icons</td>
+                      <td><a href="https://materialdesignicons.com">https://materialdesignicons.com</a></td>
+                      <td>OFL</td>
+                    </tr>
+                    <tr>
+                      <th>FullCalendar</th>
+                      <td>A JavaScript event calendar</td>
+                      <td><a href="http://fullcalendar.io/">http://fullcalendar.io/</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>HTML5 Shiv</th>
+                      <td>basic HTML5 styling for old browsers</td>
+                      <td><a href="https://github.com/afarkas/html5shiv">https://github.com/afarkas/html5shiv</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Ion.RangeSlider</th>
+                      <td>Easy, flexible and responsive range slider</td>
+                      <td><a href="http://ionden.com/a/plugins/ion.rangeSlider">http://ionden.com/a/plugins/ion.rangeSlider</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Jasny Bootstrap</th>
+                      <td>additional components for bootstrap framework</td>
+                      <td><a href="http://www.jasny.net/bootstrap">http://www.jasny.net/bootstrap</a></td>
+                      <td>Apache 2.0 license</td>
+                    </tr>
+                    <tr>
+                      <th>Jquery</th>
+                      <td>fast, small, and feature-rich JavaScript library</td>
+                      <td><a href="https://jquery.com">https://jquery.com</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Jquery UI</th>
+                      <td>set of user interface interactions, effects, widgets, and themes built on top of the jQuery</td>
+                      <td><a href="https://jqueryui.com">https://jqueryui.com</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>jQuery Validation</th>
+                      <td>Form validation with jQuery</td>
+                      <td><a href="http://jqueryvalidation.org">http://jqueryvalidation.org</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Jqvmap</th>
+                      <td>jQuery Vector Maps</td>
+                      <td><a href="http://jqvmap.com">http://jqvmap.com</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Meteocons</th>
+                      <td>set of weather icons</td>
+                      <td><a href="http://www.alessioatzeni.com/meteocons">http://www.alessioatzeni.com/meteocons</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>MetisMenu</th>
+                      <td>A jQuery menu plugin</td>
+                      <td><a href="https://github.com/onokumus/metisMenu">https://github.com/onokumus/metisMenu</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>MomentJs</th>
+                      <td>display dates in JavaScript</td>
+                      <td><a href="http://momentjs.com">http://momentjs.com</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Google material color</th>
+                      <td>collection of colors</td>
+                      <td><a href="https://github.com/danlevan/google-material-color">https://github.com/danlevan/google-material-color</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Respond.js</th>
+                      <td>polyfill for min/max-width CSS3 Media Queries</td>
+                      <td><a href="https://github.com/scottjehl/Respond">https://github.com/scottjehl/Respond</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Simple Weather</th>
+                      <td>current weather data for any location</td>
+                      <td><a href="http://simpleweatherjs.com">http://simpleweatherjs.com</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>jQuery slimScroll</th>
+                      <td>nice scrollbar</td>
+                      <td><a href="http://rocha.la/jQuery-slimScroll">http://rocha.la/jQuery-slimScroll</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Smoke</th>
+                      <td>additional components for bootstrap</td>
+                      <td><a href="http://alfredobarron.github.io/smoke/#/">http://alfredobarron.github.io/smoke/#/</a></td>
+                      <td>LGPL</td>
+                    </tr>
+                    <tr>
+                      <th>Sparkline</th>
+                      <td>small inline charts</td>
+                      <td><a href="http://omnipotent.net/jquery.sparkline/#s-about">http://omnipotent.net/jquery.sparkline/#s-about</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Morris.js</th>
+                      <td>good-looking charts shouldn't be difficult</td>
+                      <td><a href="http://morrisjs.github.io/morris.js/">http://morrisjs.github.io/morris.js/</a></td>
+                      <td>BSD</td>
+                    </tr>
+                    <tr>
+                      <th>Chart.js</th>
+                      <td>Simple, clean and engaging charts for designers and developers</td>
+                      <td><a href="http://www.chartjs.org">http://www.chartjs.org</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Summernote</th>
+                      <td>WYSIWYG Editor on Bootstrap</td>
+                      <td><a href="http://summernote.org">http://summernote.org</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Sweet Alerts</th>
+                      <td>alerts</td>
+                      <td><a href="http://t4t5.github.io/sweetalert">http://t4t5.github.io/sweetalert</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Waves</th>
+                      <td>Click effect for buttons</td>
+                      <td><a href="http://fian.my.id/Waves">http://fian.my.id/Waves</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Zabuto Calendar</th>
+                      <td>Jquery calendar</td>
+                      <td><a href="https://github.com/zabuto/calendar">https://github.com/zabuto/calendar</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Modernizr</th>
+                      <td>Good testing tool</td>
+                      <td><a href="https://modernizr.com">https://modernizr.com</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Custom Select Elements</th>
+                      <td>styling select element</td>
+                      <td><a href="http://tympanus.net/codrops/2014/07/10/inspiration-for-custom-select-elements">http://tympanus.net/codrops/2014/07/10/inspiration-for-custom-select-elements</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Custom Notifications</th>
+                      <td>ideas for website notifications</td>
+                      <td><a href="http://tympanus.net/codrops/2014/07/23/notification-styles-inspiration">http://tympanus.net/codrops/2014/07/23/notification-styles-inspiration</a></td>
+                      <td>MIT</td>
+                    </tr>
+                    <tr>
+                      <th>Custom Menu</th>
+                      <td>inspiration for website menu</td>
+                      <td><a href="http://tympanus.net/codrops/2013/07/30/google-nexus-website-menu">http://tympanus.net/codrops/2013/07/30/google-nexus-website-menu</a></td>
+                      <td>MIT</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p>&copy; MV Group 2015 | Renaissance Theme</p>
+      </footer>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/google-code-prettify/prettify.js"></script>
+
+  <script>
+    $(function () {
+      window.prettyPrint && prettyPrint();
+    })
+  </script>
+
+</body>
+
+</html>

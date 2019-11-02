@@ -1,0 +1,64 @@
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+h6 {
+  font-size: 10px;
+}
+
+.text-primary{
+  color: $blue; 
+}
+
+.text-success{
+  color: $green; 
+}
+
+.text-warning{
+  color: $yellow; 
+}
+
+.text-danger{
+  color: $red; 
+}
+
+.text-info{
+  color: $light-blue; 
+}
+
+a.text-primary:hover{
+  color: darken($blue, 3%); 
+}
+
+a.text-success:hover{
+  color: darken($green, 3%); 
+}
+
+a.text-warning:hover{
+  color: darken($yellow, 3%); 
+}
+
+a.text-danger:hover{
+  color: darken($red, 3%); 
+}
+
+a.text-info:hover{
+  color: darken($light-blue, 3%); 
+}

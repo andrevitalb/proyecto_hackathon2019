@@ -1,0 +1,823 @@
+  @@include('./_head.html', {
+    "title": "Other Components"
+  })
+
+  @@include('./_head_end.html')
+
+<body>
+  <!--Preloader-->
+  <div id="preloader" class="preloader table-wrapper">
+    <div class="table-row">
+      <div class="table-cell">
+        <div class="la-ball-scale-multiple la-3x">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="main-wrapper" class="main-wrapper">
+
+    <ul id="gn-menu" class="navbar gn-menu-main">
+      <li class="gn-trigger">
+        <a id="menu-toggle" class="menu-toggle gn-icon gn-icon-menu">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="cross">
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+        <nav class="gn-menu-wrapper">
+          <div class="gn-scroller">
+            <ul class="gn-menu metismenu">
+              <li class="gn-search-item">
+                <input placeholder="Search" type="search" class="gn-search">
+                <a class="search-icon"><i class="fa fa-search"></i><span>Search</span></a>
+              </li>
+              <li>
+                <a href="index.html" aria-expanded="false"><i class="fa fa-th"></i>Dashboards<span class="fa arrow"></span></a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a href="index.html">Dashboard v1</a></li>
+                  <li><a href="dashboard_2.html">Dashboard v2</a></li>
+                  <li><a href="dashboard_3.html">Dashboard v3</a></li>
+                </ul>
+              </li>
+
+
+              <li>
+                <a href="calendar.html"><i class="fa fa-calendar-o"></i>Calendar<span class="label label-warning pull-right">9</span></a>
+              </li>
+
+              <li>
+                <a href="mailbox.html" aria-expanded="false">
+                  <i class="fa fa-envelope-o"></i>Email
+                  <span class="fa arrow"></span>
+                </a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a href="mailbox.html">Mailbox</a></li>
+                  <li><a href="email-inbox.html">Inbox</a></li>
+                  <li><a href="email-compose.html">Email Compose</a></li>
+                  <li><a href="email-view.html">Email View</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="widgets.html">
+                  <i class="fa fa-th-list"></i>Widgets
+                  <span class="label label-danger pull-right">16</span>
+                </a>
+              </li>
+              <li>
+                <a href="typography.html">
+                  <i class="fa fa-font"></i>Typography
+                </a>
+              </li>
+              <li>
+                <a href="grids.html">
+                  <i class="fa fa-desktop"></i>Grid System
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-expanded="false"><i class="fa fa-table"></i>Tables<span class="fa arrow"></span></a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a href="tables.html">Tables</a></li>
+                  <li><a href="datatables.html">Data Tables</a></li>
+                </ul>
+              </li>
+              <li class="active">
+                <a href="#" aria-expanded="true"><i class="fa fa-briefcase"></i>UI Kits<span class="fa arrow"></span></a>
+                <ul class="gn-submenu collapse" aria-expanded="true">
+                  <li><a href="colors.html">Colors</a></li>
+                  <li><a href="animations.html">Animations</a></li>
+                  <li><a href="icons.html">Icons</a></li>
+                  <li><a href="form-elements.html">Forms</a></li>
+                  <li><a href="sliders.html">Sliders</a></li>
+                  <li><a href="buttons.html">Buttons</a></li>
+                  <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                  <li><a href="nav-buttons.html">Nav buttons</a></li>
+                  <li><a href="notifications.html">Notifications</a></li>
+                  <li><a href="panels.html">Panels</a></li>
+                  <li><a href="tabs.html">Tabs</a></li>
+                  <li><a href="media.html">Media</a></li>
+                  <li><a class="active" href="components.html">Other components</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" aria-expanded="false"><i class="fa fa-edit"></i>Charts<span class="fa arrow"></span></a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a href="flotjs.html">Flot.js</a></li>
+                  <li><a href="chartjs.html">Chart.js</a></li>
+                  <li><a href="morrisjs.html">Morris.js</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" aria-expanded="false"><i class="fa fa-file"></i>Other pages<span class="fa arrow"></span></a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a href="todo_list.html">Todo list</a></li>
+                  <li><a href="timeline.html">Timeline</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                  <li><a href="chat.html">Chat</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><a href="wizard.html">Wizard</a></li>
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="registration.html">Registration</a></li>
+                  <li><a href="404.html">404</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- /gn-scroller -->
+          <div class="bottom-bnts">
+            <a class="profile" href="profile.html"><i class="mdi mdi-account"></i></a>
+            <a class="fix-nav" href="#"><i class="mdi mdi-pin"></i></a>
+            <a class="logout" href="#"><i class="mdi mdi-power"></i></a>
+          </div>
+        </nav>
+      </li>
+      <li>
+        <a href="index.html" class="logo text-uppercase">Renaissance<i class="fa fa-toggle-on"></i></a>
+      </li>
+      <li class="top-clock">
+        <span class="current-time"></span>
+      </li>
+      <li class="container-fluid pull-right">
+        <ul class="nav navbar-right right-menu">
+          <li class="members-btn">
+            <a class="show-members">
+              <i class="fa fa-group"></i>
+            </a>
+          </li>
+          <li class="lang">
+            <select class="cs-select cs-skin-elastic">
+              <option value="english" data-class="flag-england cs-selected" selected>English</option>
+              <option value="german" data-class="flag-germany">German</option>
+              <option value="french" data-class="flag-france">French</option>
+            </select>
+          </li>
+          <li class="dropdown notifications">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i> <span class="label label-warning">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <h4 class="zero-m text-center">Notifications</h4>
+              </li>
+              <li>
+                <div class="messages">
+                  <div class="member-info">
+                    <img src="img/team/admin.png" alt="admin" class="img-circle pull-left">
+                    <span class="member-name">Sash Ficus</span>
+                    <p class="members-message zero-m">Research is done!</p>
+                  </div>
+                  <div class="member-info">
+                    <img src="img/team/member.png" alt="admin" class="img-circle pull-left">
+                    <span class="member-name">Vivien Hulk</span>
+                    <p class="members-message zero-m">Working hard</p>
+                  </div>
+                  <div class="member-info">
+                    <img src="img/team/admin.png" alt="admin" class="img-circle pull-left">
+                    <span class="member-name">Sash Ficus</span>
+                    <p class="members-message zero-m">Research is done!</p>
+                  </div>
+                  <div class="member-info">
+                    <img src="img/team/member.png" alt="admin" class="img-circle pull-left">
+                    <span class="member-name">Vivien Hulk</span>
+                    <p class="members-message zero-m">Working hard</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown some-btn">
+            <a class="fullscreen">
+              <i class="mdi mdi-fullscreen"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--Content-->
+    <div id="content" class="content container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h2>Other components</h2>
+            <ol class="breadcrumb">
+              <li><a href="index.html">Home</a></li>
+              <li>UI Kits</li>
+              <li class="active">Other components</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content-box box-shadow big-box">
+            <div class="jumbotron">
+              <div class="container">
+                <h1>Jumbotron</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolore commodi, magnam culpa illo. Est veritatis iure soluta eum eius obcaecati corrupti, iste voluptatibus officia.</p>
+                <p><a class="btn btn-primary btn-lg waves waves-button" href="#">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div id="carousel1" class="carousel slide box-shadow white-bg" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel1" data-slide-to="1"></li>
+              <li data-target="#carousel1" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <div class="carousel-caption">
+                  <h3>Mobile header first</h3>
+                  <small><em>Mobile/Tablet/Desktop</em></small>
+                </div>
+              </div>
+              <div class="item">
+                <div class="carousel-caption">
+                  <h3>Mobile header first</h3>
+                  <small><em>Mobile/Tablet/Desktop</em></small>
+                </div>
+              </div>
+              <div class="item">
+                <div class="carousel-caption">
+                  <h3>Mobile header first</h3>
+                  <small><em>Mobile/Tablet/Desktop</em></small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel1" role="button" data-slide="prev">
+              <span class="fa fa-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel1" role="button" data-slide="next">
+              <span class="fa fa-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div id="carousel2" class="carousel slide box-shadow green-bg" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel2" data-slide-to="1"></li>
+              <li data-target="#carousel2" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <div class="carousel-caption">
+                  <h3>Nice and easy to use</h3>
+                  <small><em>Full documents</em></small>
+                </div>
+              </div>
+              <div class="item">
+                <div class="carousel-caption">
+                  <h3>Nice and easy to use</h3>
+                  <small><em>Full documents</em></small>
+                </div>
+              </div>
+              <div class="item">
+                <div class="carousel-caption">
+                  <h3>Nice and easy to use</h3>
+                  <small><em>Full documents</em></small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel2" role="button" data-slide="prev">
+              <span class="fa fa-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel2" role="button" data-slide="next">
+              <span class="fa fa-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content-box box-shadow big-box">
+            <h4><strong>Collapsible Group</strong></h4>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Collapsible Group Item #1
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque veritatis molestiae quas nihil ex, eius illo debitis iure vero magnam totam iste eum provident minima mollitia soluta velit repellendus animi voluptatibus fugiat alias. Facilis, reprehenderit architecto. Veniam temporibus doloribus laborum, voluptate, libero natus eaque quaerat vitae. Illo doloremque provident consequatur.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Collapsible Group Item #2
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos ratione iste, nemo consectetur labore amet, laborum esse atque commodi velit deserunt aperiam magnam et consequatur veritatis quam adipisci nostrum illum. Nesciunt ut nulla commodi quo, dolores fugit itaque atque totam eos dolore repudiandae vel non illum culpa, debitis quasi facilis. Dignissimos quam nemo minus, neque quisquam.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Collapsible Group Item #3
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit adipisci sapiente, suscipit inventore doloribus aliquid! Fugiat accusamus provident aspernatur maiores repellendus consectetur, itaque, laboriosam repudiandae dolorem, possimus similique sunt sapiente vero quas quasi cumque, minus. Tempore itaque placeat iste, quo nostrum, cumque nulla asperiores eligendi.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="content-box box-shadow">
+            <h4 class="zero-m big-box"><strong>Tasks</strong></h4>
+            <div class="table-responsive">
+              <table class="table table-striped progress-widget zero-m">
+                <thead>
+                  <tr>
+                    <th>Progress</th>
+                    <th>Item</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        </div>
+                      </div>
+                    </td>
+                    <td>App prototype design</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                          <span class="sr-only">85% Complete</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Reading</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success" style="width: 35%">
+                          <span class="sr-only">35% Complete (success)</span>
+                        </div>
+                        <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+                          <span class="sr-only">20% Complete (warning)</span>
+                        </div>
+                        <div class="progress-bar progress-bar-danger" style="width: 10%">
+                          <span class="sr-only">10% Complete (danger)</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Stacked</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="progress progress-bar-sm">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                        </div>
+                      </div>
+                    </td>
+                    <td>Design documents</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="progress progress-bar-sm">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" style="width: 38%">
+                        </div>
+                      </div>
+                    </td>
+                    <td>UI toolkit</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="progress progress-bar-sm">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100" style="width: 27%">
+                        </div>
+                      </div>
+                    </td>
+                    <td>Testing</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="content-box box-shadow">
+            <h4 class="zero-m big-box"><strong>Stats</strong></h4>
+            <div class="table-responsive">
+              <table class="table table-striped progress-widget zero-m">
+                <thead>
+                  <tr>
+                    <th>Progress</th>
+                    <th>Item</th>
+                    <th class="text-right">Percents</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="bar"></div>
+                    </td>
+                    <td>App downloads</td>
+                    <td class="text-right"><span><i class="fa fa-arrow-circle-o-up blue"></i> 65%</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="pie"></div>
+                    </td>
+                    <td>Social connection</td>
+                    <td class="text-right"><span><i class="fa fa-arrow-circle-o-up green"></i> 78%</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="line"></div>
+                    </td>
+                    <td>Revenue</td>
+                    <td class="text-right"><span><i class="fa fa-arrow-circle-o-down yellow"></i> 46%</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="discrete"></div>
+                    </td>
+                    <td>Customer increase</td>
+                    <td class="text-right"><span><i class="fa fa-arrow-circle-o-down red"></i> 32%</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="content-box big-box">
+            <h4><strong>Wells</strong></h4>
+            <h5>Default well</h5>
+            <div class="well">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequatur accusantium ipsum laboriosam eum voluptas!</div>
+            <h5>Optional classes</h5>
+            <div class="well well-lg">Look, I'm in a large well!</div>
+            <div class="well well-sm">Look, I'm in a small well!</div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="content-box big-box">
+            <h4><strong>Badges</strong></h4>
+            <p>
+              To add a badge style you have to add <code>.badge</code> class to element. To change a color of badge you can add extra class like <code>.badge-info</code>.
+            </p>
+            <p>
+              <span class="badge">Default</span>
+            </p>
+            <p>
+              <span class="badge badge-success">Success</span>
+            </p>
+            <p>
+              <span class="badge badge-danger">Danger</span>
+            </p>
+            <p>
+              <span class="badge badge-warning">Warning</span>
+            </p>
+            <p>
+              <span class="badge badge-primary">Primary</span>
+            </p>
+            <p>
+              <span class="badge badge-info">Info</span>
+            </p>
+            <p>
+              <span class="badge badge-gray">Gray</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="content-box big-box">
+            <h4><strong>Labels</strong></h4>
+            <p>
+              To add a label style you have to add <code>.label</code> class to element. To change a color of label you can add extra class like <code>.label-danger</code>.
+            </p>
+            <p>
+              <span class="label label-default">Default</span>
+            </p>
+            <p>
+              <span class="label label-success">Success</span>
+            </p>
+            <p>
+              <span class="label label-danger">Danger</span>
+            </p>
+            <p>
+              <span class="label label-warning">Warning</span>
+            </p>
+            <p>
+              <span class="label label-primary">Primary</span>
+            </p>
+            <p>
+              <span class="label label-info">Info</span>
+            </p>
+            <p>
+              <span class="label label-gray">Gray</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content-box big-box">
+            <h4><strong>List group</strong></h4>
+            <div class="row">
+              <div class="col-md-6">
+                <h5>Basic example</h5>
+                <ul class="list-group">
+                  <li class="list-group-item">Cras justo odio</li>
+                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Morbi leo risus</li>
+                  <li class="list-group-item">Porta ac consectetur ac</li>
+                  <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h5>Badges</h5>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <span class="badge badge-info">14</span> Lorem ipsum dolor sit amet.
+                  </li>
+                  <li class="list-group-item">
+                    <span class="badge badge-gray">8</span> Lorem ipsum dolor sit amet.
+                  </li>
+                  <li class="list-group-item">
+                    <span class="badge badge-warning">6</span> Lorem ipsum dolor sit.
+                  </li>
+                  <li class="list-group-item">
+                    <span class="badge badge-success">2</span> Lorem ipsum dolor sit amet, consectetur.
+                  </li>
+                  <li class="list-group-item">
+                    <span class="badge badge-danger">18</span> Lorem ipsum dolor.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h5>Linked Items</h5>
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    Cras justo odio
+                  </a>
+                  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                  <a href="#" class="list-group-item">Morbi leo risus</a>
+                  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                  <a href="#" class="list-group-item">Vestibulum at eros</a>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h5>Disabled Items</h5>
+                <div class="list-group">
+                  <a href="#" class="list-group-item disabled">
+                    Cras justo odio
+                  </a>
+                  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                  <a href="#" class="list-group-item">Morbi leo risus</a>
+                  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                  <a href="#" class="list-group-item">Vestibulum at eros</a>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h5>Button Items</h5>
+                <div class="list-group">
+                  <button type="button" class="list-group-item">Cras justo odio</button>
+                  <button type="button" class="list-group-item">Dapibus ac facilisis in</button>
+                  <button type="button" class="list-group-item">Morbi leo risus</button>
+                  <button type="button" class="list-group-item">Porta ac consectetur ac</button>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h5>Contextual classes</h5>
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-success">Dapibus ac facilisis in</a>
+                  <a href="#" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a>
+                  <a href="#" class="list-group-item list-group-item-warning">Porta ac consectetur ac</a>
+                  <a href="#" class="list-group-item list-group-item-danger">Vestibulum at eros</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content-box big-box">
+            <h4><strong>Modals</strong></h4>
+            <div class="text-center">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary waves" data-toggle="modal" data-target="#myModal">
+                Launch demo modal
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis deserunt neque quidem quisquam fugit dolore ea nobis quam ducimus ipsa similique, non debitis ratione modi nulla, in totam itaque quos error aliquam, nihil sapiente maiores.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default waves" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary waves">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Large modal -->
+              <button type="button" class="btn btn-primary waves" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
+              <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis deserunt neque quidem quisquam fugit dolore ea nobis quam ducimus ipsa similique, non debitis ratione modi nulla, in totam itaque quos error aliquam, nihil sapiente maiores.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default waves" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary waves">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Small modal -->
+              <button type="button" class="btn btn-primary waves" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+              <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis deserunt neque quidem quisquam fugit dolore ea nobis quam ducimus ipsa similique, non debitis ratione modi nulla, in totam itaque quos error aliquam, nihil sapiente maiores.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default waves" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary waves">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Footer-->
+      <div class="footer">© 2015 Copyright</div>
+    </div>
+
+
+
+    <!--Members Sidebar-->
+    <div id="members-sidebar" class="members-sidebar">
+      <h4 class="pull-left zero-m">Members</h4>
+      <span class="close-members-sidebar"><i class="fa fa-remove pull-right"></i></span>
+      <div class="clearfix"></div>
+      <ul class="nav">
+        <li>
+          <div class="messages">
+            <div class="member-info">
+              <img src="img/team/admin.png" alt="admin" class="img-circle pull-left">
+              <span class="member-name">Sash Ficus</span>
+              <p class="members-message zero-m">Sushi time)))</p>
+            </div>
+            <div class="member-info">
+              <img src="img/team/admin.png" alt="admin" class="img-circle pull-left">
+              <span class="member-name">Sash Ficus</span>
+              <p class="members-message zero-m">Working hard</p>
+            </div>
+          </div>
+        </li>
+        <li class="members-group">Work</li>
+        <li><span class="status online"></span>Sash Ficus</li>
+        <li><span class="status online"></span>Sash Ficus</li>
+        <li><span class="status not-available"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li class="members-group">Partner</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+        <li><span class="status"></span>Sash Ficus</li>
+      </ul>
+    </div>
+
+  </div>
+  
+  @@include('./_modals.html')
+
+  @@include('./_main_scripts.html')
+
+  <!--Sparkline Charts-->
+  <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+
+
+  @@include('./_commonjs.html')
+
+
+  <script>
+    $(function () {
+      $("#bar").sparkline([12, 32, 9, 11, 14, 24, 19, 6, 8, 13, 22, 12, 32, 9, 11, 14, 24, 19, 6, 8, 13, 22], {
+        barColor: "#42b382",
+        negBarColor: "#e4ad06",
+        type: 'bar'
+      });
+
+      $("#pie").sparkline([4, 6, 4], {
+        type: 'pie',
+        sliceColors: ["#ffc107", "#63A8EB", "#E9585B"]
+      });
+
+      $("#line").sparkline([5, 6, 7, 9, 9, 5, 3, 2, 2, 4, 6, 7, 5, 6, 7, 9, 9, 5, 3, 2, 2, 4, 6, 7], {
+        type: 'line',
+        spotColor: "#ffc107",
+        spotRadius: 2.5,
+        lineWidth: 2,
+        lineColor: "#42b382",
+        fillColor: "#ffffff",
+        highlightSpotColor: '#E9585B',
+        highlightLineColor: '#E9585B',
+        defaultPixelsPerValue: 5
+      });
+
+      $("#discrete").sparkline([4, 6, 7, 7, 4, 3, 2, 1, 4, 4, 4, 6, 7, 7, 4, 3, 2, 1, 4, 4], {
+        type: 'discrete',
+        lineColor: "#63A8EB",
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
