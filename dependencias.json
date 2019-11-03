@@ -2,7 +2,7 @@
 	"dependencias":
 	[
 		{
-			"nombre": "coordinacion_general_publica",
+			"nombre": "coordinacion_general_juridica",
 			"tramites": 
 			[
 				{
@@ -19,13 +19,7 @@
 					],
 					"duracion": 10
 				},
-				{
-					"nombre_tramite": "Expedición Copias Certificadas",
-					"costo": 83,
-					"etiquetas": ["copia", "certificacion", "certificada"],
-					"documentos_tramite": 
-					["Carta Solicitud", "Credencial de Elector", "Copia Credencial de Elector"]
-				}
+				
 			]
 		},
 		{
@@ -44,7 +38,10 @@
 				},
 				{
 					"nombre_tramite": "Expedición Copias Certificadas",
-					"etiquetas": ["copias", "copia", "certificacion", "certificadas", "certificada"]
+					"costo": 83,
+					"etiquetas": ["copia", "certificacion", "certificada"],
+					"documentos_tramite": 
+					["Carta Solicitud", "Credencial de Elector"]
 				}
 			]
 		},
@@ -68,7 +65,7 @@
 					"etiquetas": ["predio", "posesion", "legal", "agua"],
 					"documentos_tramite":
 					[
-						"Carta Solicitud de la Población en General"
+						"Carta Solicitud"
 					],
 					"duracion": 10
 				}
@@ -84,9 +81,9 @@
 					"etiquetas": ["alcohol","venta", "permiso", "publico"],
 					"documentos_tramite":
 					[
-						"Copia de la Credencial de Elector del propietario",
+						"Credencial de Elector",
 						"Licencia de funcionamiento expedida por la Dirección de Desarrollo Económico",
-						"Copia del Comprobante de domicilio del expendio"
+						"Comprobante de domicilio"
 
 					],
 					"duracion": 3
@@ -97,7 +94,7 @@
 					"etiquetas": ["reparacion","lamparas", "alumbrado", "publico"],
 					"documentos_tramite":
 					[
-						"Copia de la Credencial de Elector"
+						"Credencial de Elector"
 					],
 					"duracion": 8
 				}
@@ -124,8 +121,7 @@
 					"etiquetas": ["delito","victimas", "atención", "denuncia"],
 					"documentos_tramite":
 					[
-						"Identificación Oficial",
-						"Copia de Identificación Oficial"
+						"Identificación Oficial"
 					],
 					"duracion": 0.1
 				}
@@ -142,8 +138,8 @@
 					"documentos_tramite":
 					[
 						"CURP",
-						"Copia de la Credencial de Elector",
-						"Copia del Comprobante de domicilio",
+						"Credencial de Elector",
+						"Comprobante de domicilio",
 						"Teléfono",
 						"RFC"
 
@@ -156,7 +152,7 @@
 					"etiquetas": ["construccion", "licencia", "permiso","construccion"],
 					"documentos_tramite":
 					[
-						"Copia de la Credencial de Elector"
+						"Credencial de Elector"
 					],
 					"duracion": 8
 				}
