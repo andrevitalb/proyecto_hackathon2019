@@ -1,4 +1,14 @@
-<!doctype html>
+<?php
+    $hostname = "localhost";
+    $username = "kioskodi_vital";
+    $password = "pjXd=j_!n02N";
+    $databaseName = "kioskodi_kioskodigital";
+
+    $connect = mysqli_connect($hostname, $username, $password, $databaseName);
+    mysqli_set_charset ($connect, "utf8");
+    date_default_timezone_set('America/Mexico_City');
+?>
+<!DOCTYPE HTML>
 <html class="no-js" lang="en">
     <head>
         <title>Kiosko Digital Zacatecas</title>
@@ -41,8 +51,8 @@
         <header>
             <nav class="navbar navbar-default bootsnav navbar-fixed-top header-light background-transparent white-link navbar-expand-lg">
                 <div class="container nav-header-container">
-                    <div class="col-auto pl-lg-0">
-                        <a href="index.html" title="Kiosko Digital" class="logo"><img src="assets/img/logo.png" data-rjs="assets/img/logo@2x.png" class="logo-dark" alt="Pofo"><img src="assets/img/logo-white.png" data-rjs="assets/img/logo-white@2x.png" alt="Kiosko Digital" class="logo-light default"></a>
+                    <div class="col-auto pl-lg-0" id = "logoCont">
+                        <a href="index.html" title="Kiosko Digital" class="logo"><img src="assets/img/logo.png" alt="Kiosko Digital" class="logo-light default"></a>
                     </div>
 
                     <div class="col accordion-menu pr-0 pr-md-3">
@@ -58,7 +68,7 @@
                                 <li class="dropdown megamenu-fw"><a href="#about">Acerca de</a></li>
                                 <li class="dropdown megamenu-fw"><a href="#services">Trámites</a></li>
                                 <li class="dropdown megamenu-fw"><a href="#contact">Contacto</a></li>
-                                <li class="dropdown megamenu-fw"><a href="#help">Ayuda</a></li>
+                                <li class="dropdown megamenu-fw"><a href="#ayuda">Ayuda</a></li>
                             </ul>
                         </div>
                     </div>
@@ -107,10 +117,10 @@
         </section>
 
         <!-- Resultados de búsqueda / Trámites -->
-        <section class="wow fadeIn">
+        <section class="wow fadeIn" id = "services">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 text-center margin-100px-bottom md-margin-70px-bottom sm-margin-50px-bottom">
+                    <div class="col-12 text-center margin-30px-bottom">
                         <p class="alt-font margin-5px-bottom text-uppercase text-medium-gray text-small">Generación de  solicitudes</p>
                         <h5 class="text-uppercase alt-font text-extra-dark-gray margin-20px-bottom font-weight-700 md-width-100">Trámites y Servicios</h5>
                         <span class="separator-line-horrizontal-medium-light2 bg-deep-pink d-table mx-auto width-100px"></span>
@@ -118,61 +128,249 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-12 col-lg-7 margin-40px-bottom">
+                    <div class="col-12 margin-40px-bottom margin-40px-top">
                         <div class="position-relative overflow-hidden w-100">
                             <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase">Dependendencia 1</span>
                         </div>
                     </div>
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem">
+                        <div class="position-relative overflow-hidden">
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
+                            <div class="blog-box">
+                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 1</span>
+                                </div>
+                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.2s">
+                        <div class="position-relative overflow-hidden">
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
+                            <div class="blog-box">
+                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 2</span>
+                                </div>
+                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.4s">
+                        <div class="position-relative overflow-hidden">
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
+                            <div class="blog-box">
+                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 3</span>
+                                </div>
+                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.2s">
+                        <div class="position-relative overflow-hidden">
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
+                            <div class="blog-box">
+                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 4</span>
+                                </div>
+                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.4s">
+                        <div class="position-relative overflow-hidden">
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
+                            <div class="blog-box">
+                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 5</span>
+                                </div>
+                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="row">
-                    <div class="col-12 col-md-4 sm-margin-15px-bottom wow fadeIn">
+                    <div class="col-12 margin-40px-bottom margin-40px-top">
+                        <div class="position-relative overflow-hidden w-100">
+                            <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase">Dependendencia 2</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem">
                         <div class="position-relative overflow-hidden">
-                            <img src="http://placehold.it/640x150" class="w-100" alt="">
-                            <div class="opacity-extra-medium bg-extra-dark-gray"></div>
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
                             <div class="blog-box">
                                 <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">About Author</span>
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 1</span>
                                 </div>
                                 <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small">About Me</a>
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 sm-margin-15px-bottom wow fadeIn" data-wow-delay="0.2s">
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn caca serviceItem" data-wow-delay="0.2s">
                         <div class="position-relative overflow-hidden">
-                            <img src="http://placehold.it/640x462" class="w-100" alt="">
-                            <div class="opacity-extra-medium bg-extra-dark-gray"></div>
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
                             <div class="blog-box">
                                 <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Contact Me</span>
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 2</span>
                                 </div>
                                 <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small">Contact Me</a>
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.4s">
                         <div class="position-relative overflow-hidden">
-                            <img src="http://placehold.it/640x462" class="w-100" alt="">
-                            <div class="opacity-extra-medium bg-extra-dark-gray"></div>
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
                             <div class="blog-box">
                                 <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Follow Instagram</span>
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 3</span>
                                 </div>
                                 <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small">Follow Me</a>
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.2s">
+                        <div class="position-relative overflow-hidden">
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
+                            <div class="blog-box">
+                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 4</span>
+                                </div>
+                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.4s">
+                        <div class="position-relative overflow-hidden">
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
+                            <div class="blog-box">
+                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 5</span>
+                                </div>
+                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.6s">
+                        <div class="position-relative overflow-hidden">
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
+                            <div class="blog-box">
+                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 6</span>
+                                </div>
+                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.2s">
+                        <div class="position-relative overflow-hidden">
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
+                            <div class="blog-box">
+                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 7</span>
+                                </div>
+                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.4s">
+                        <div class="position-relative overflow-hidden">
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
+                            <div class="blog-box">
+                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 8</span>
+                                </div>
+                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.6s">
+                        <div class="position-relative overflow-hidden">
+                            <div class="w-100 serviceItemBg"></div>
+                            <div class="opacity-medium bg-extra-dark-gray"></div>
+                            <div class="blog-box">
+                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 9</span>
+                                </div>
+                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
+                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 wow fadeInUp" id="solRequest">
+                        <div class="content-box big-box box-shadow">
+                            <form class = "row">
+                                <div class="col-3">
+                                    <label for="exampleInputEmail1">Documento 1</label>
+                                    <input type="file" class="form-control-file" id="File1">
+                                </div>
+                                <div class="col-3">
+                                    <label for="exampleInputPassword1">Documento 2</label>
+                                    <input type="file" class="form-control-file" id="File2">
+                                </div>
+                                <div class="col-3">
+                                    <label for="exampleInputPassword1">Documento 3</label>
+                                    <input type="file" class="form-control-file" id="File3">
+                                </div>
+                                <div class="col-3">
+                                    <label for="exampleInputPassword1">Documento 4</label>
+                                    <input type="file" class="form-control-file" id="File4">
+                                </div>
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+                                </div>
+                            </form> 
+                         </div>      
+                    </div>   
                 </div>
             </div>
         </section>
 
         <!-- Contacto -->
-        <section class="wow fadeIn bg-extra-dark-gray">
+        <section class="wow fadeIn" id = "contact">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 text-center margin-100px-bottom md-margin-70px-bottom sm-margin-50px-bottom">
@@ -195,124 +393,149 @@
                 </form>
             </div>     
         </section>
+        <!-- Ayuda -->
+        <section class="wow fadeIn bg-dark-gray" id ="help">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center margin-100px-bottom md-margin-70px-bottom sm-margin-50px-bottom">
+                        <h3 class="alt-font margin-5px-bottom text-uppercase text-black text-small">¿Cómo Usar?</h3>
+                        <h2 class="text-uppercase alt-font text-white-2 margin-20px-bottom font-weight-700 md-width-100">Ayuda</h2>
+                        <span class="separator-line-horrizontal-medium-light2 bg-deep-pink d-table mx-auto width-100px"></span>
+                    </div>
+                </div>
 
-        <!-- start footer --> 
-        <footer class="footer-standard-dark bg-extra-dark-gray"> 
-            <div class="footer-widget-area padding-five-tb sm-padding-30px-tb">
+                <div class="row">
+                    <div class="col-4 wow fadeInRight">
+                        <div><h2 class=" text-white-2 ">01.</h2></div>
+                        <p class=" text-white-2 text-medium">Al entrar en la página principal, realizar una búsqueda con una palabra clave que se asocie con el trámite o servicio que necesita realizar.</p>
+                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+                        </div>
+                    <div class="col-8">
+                    <img src="assets/img/help1.jpg">
+                    </div>  
+                </div> 
+
+            <div class="row"><br><br></div>
+
+            <div class="row">
+            <div class="col-4 wow fadeInRight">
+            <div>
+            <h2 class=" text-white-2 ">02.</h2>
+            </div>
+            <p class=" text-white-2 text-medium">Después, seleccionar el trámite que desea, basado en la dependencia a la que pertenece.</p>
+            <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+            </div>
+            <div class="col-8">
+            <img src="assets/img/help1.jpg">
+            </div>  
+            </div> 
+
+            <div class="row"><br><br></div>
+
+            <div class="row">
+            <div class="col-4 wow fadeInRight">
+            <div>
+            <h2 class=" text-white-2 ">03.</h2>
+            </div>
+            <p class=" text-white-2 text-medium">Llenar y subir los datos y archivos requeridos.</p>
+            <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+            </div>
+            <div class="col-8">
+            <img src="assets/img/help1.jpg">
+            </div>  
+            </div> 
+
+            <div class="row"><br><br></div>
+
+            <div class="row">
+            <div class="col-4 wow fadeInRight">
+            <div>
+            <h2 class=" text-white-2 ">04.</h2>
+            </div>
+            <p class=" text-white-2 text-medium">Una vez que ha revisado que no hay errores, dar click en "Enviar" para registrar su trámite.</p>
+            <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+            </div>
+            <div class="col-8">
+            <img src="assets/img/help1.jpg">
+            </div>  
+            </div> 
+
+            <div class="row"><br><br></div>
+
+            <div class="row">
+            <div class="col-4 wow fadeInRight">
+            <div>
+            <h2 class=" text-white-2 ">05.</h2>
+            </div>
+            <p class=" text-white-2 text-medium">Esperar la respuesta por parte de la dependencia corespondiente, para scualquier aclaración, se le contactará por medio de correo electrónico.</p>
+            <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+            </div>
+            <div class="col-8">
+            <img src="assets/img/help1.jpg">
+            </div>  
+            </div> 
+
+            <div class="row"><br><br></div>
+
+            </div>
+        </section>
+        <footer class="footer-clean-dark bg-extra-dark-gray padding-five-tb sm-padding-30px-tb"> 
+            <div class="footer-widget-area padding-30px-bottom" style="text-align: center;">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray md-no-border-right md-margin-30px-bottom sm-text-center">
-                            <!-- start logo -->
-                            <a href="index.html" class="margin-20px-bottom d-inline-block"><img class="footer-logo" src="assets/img/logo-white.png" data-rjs="assets/img/logo-white@2x.png" alt=""></a>
-                            <!-- end logo -->
-                            <p class="text-small width-95 sm-width-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <!-- start social media -->
-                            <div class="social-icon-style-8 d-inline-block vertical-align-middle">
-                                <ul class="small-icon no-margin-bottom">
-                                    <li><a class="facebook text-white-2" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                                    <li><a class="twitter text-white-2" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a class="google text-white-2" href="https://plus.google.com" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
-                                    <li><a class="instagram text-white-2" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram no-margin-right" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- end social media -->
+                        <div class="col-lg-4 widget text-left text-md-center text-lg-left md-margin-50px-bottom sm-margin-30px-bottom">
+                            <a href="index.html" class="d-inline-block"><img class="footer-logo" src="assets/img/logo.png" data-rjs="assets/img/logo.png" alt="Zacatecas"></a>
                         </div>
-                        <!-- start additional links -->
-                        <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray padding-45px-left md-padding-15px-left md-no-border-right md-margin-30px-bottom text-center text-md-left">
-                            <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-10px-bottom font-weight-600">Additional Links</div>
+
+                        <div class="col-md-4 widget sm-margin-30px-bottom">
+                            <div class="widget-title alt-font text-extra-small text-uppercase text-white-2 margin-15px-bottom font-weight-600">contact information</div>
+                            
+                            <div class="text-small line-height-24 text-medium-gray">Email: <a href="mailto:sales@domain.com" class="text-medium-gray">sales@domain.com</a></div>
+                            <div class="text-small line-height-24 text-medium-gray">Phone: +44 (0) 123 456 7890</div>
+                        </div>
+
+                        <div class="col-md-4 widget sm-margin-30px-bottom">
+                            <div class="widget-title alt-font text-extra-small text-white-2 text-uppercase margin-15px-bottom font-weight-600">On social networks</div>
                             <ul class="list-unstyled">
-                                <li><a class="text-small" href="home-classic-corporate.html">Home Classic Corporate</a></li>
-                                <li><a class="text-small" href="home-creative-business.html">Home Creative Business</a></li>
-                                <li><a class="text-small" href="home-creative-designer.html">Home Creative Designer</a></li>
-                                <li><a class="text-small" href="home-portfolio-minimal.html">Home Portfolio Minimal</a></li>
-                                <li><a class="text-small" href="home-portfolio-parallax.html">Home Portfolio  parallax</a></li>
-                                <li><a class="text-small" href="home-portfolio-personal.html">Home Portfolio Personal</a></li>
-                            </ul>
+                                <li class="w-50 float-left"><a href="https://www.facebook.com/" target="_blank" class="text-medium-gray text-small">Facebook</a></li>
+                                <li class="w-50 float-left"><a href="https://www.pinterest.com/" target="_blank" class="text-medium-gray text-small">Pinterest</a></li>
+                                <li class="w-50 float-left"><a href="https://www.twitter.com/" target="_blank" class="text-medium-gray text-small">Twitter</a></li></ul>
                         </div>
-                        <!-- end additional links -->
-                        <!-- start contact information -->
-                        <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray padding-45px-left md-padding-15px-left md-clear-both md-no-border-right sm-margin-30px-bottom text-center text-md-left">
-                            <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-10px-bottom font-weight-600">Contact Info</div>
-                            <p class="text-small d-block margin-15px-bottom width-80 sm-width-100">POFO Design Agency<br> 301 The Greenhouse, Custard Factory, London, E2 8DY.</p>
-                            <div class="text-small">Email: <a href="mailto:sales@domain.com">sales@domain.com</a></div>
-                            <div class="text-small">Phone: +44 (0) 123 456 7890</div>
-                            <a href="contact-us-modern.html" class="text-small text-uppercase text-decoration-underline">View Direction</a>
-                        </div>
-                        <!-- end contact information -->
-                        <!-- start instagram -->
-                        <div class="col-lg-3 col-md-6 widget padding-45px-left md-padding-15px-left text-center text-md-left">
-                            <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-20px-bottom font-weight-600">Instagram portfolio</div>
-                            <div class="instagram-follow-api">
-                                <ul id="instaFeed-footer"></ul>
-                            </div>
-                        </div>
-                        <!-- end instagram -->
                     </div>
                 </div>
             </div>
-            <div class="bg-dark-footer padding-50px-tb text-center sm-padding-30px-tb">
-                <div class="container">
+            <div class="container">
+                <div class="border-color-medium-dark-gray border-top padding-30px-top">
                     <div class="row">
-                        <!-- start copyright -->
-                        <div class="col-md-6 text-md-left text-small text-center">&copy; 2019 POFO is Proudly Powered by <a href="http://www.ThemeZaa.com" target="_blank" class="text-dark-gray">ThemeZaa</a></div>
-                        <div class="col-md-6 text-md-right text-small text-center">
-                            <a href="javascript:void(0);" class="text-dark-gray">Term and Condition</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" class="text-dark-gray">Privacy Policy</a>
-                        </div>
-                        <!-- end copyright -->
+                        <div class="col-12 text-small text-center text-medium-gray">© 2019 <strong>Kiosko Digital</strong>. Todos los derechos reservados. Sitio desarrollado por <a href="javascript:void(0);" target="_blank" class="text-dark-gray">Gallos</a><br><a href="javascript:void(0);" class="text-dark-gray">Términos y Condiciones</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" class="text-dark-gray">Aviso de Privacidad</a></div>
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- end footer -->
-        <!-- start scroll to top -->
+
         <a class="scroll-top-arrow" href="javascript:void(0);"><i class="ti-arrow-up"></i></a>
-        <!-- end scroll to top -->
-        <!-- javascript libraries -->
+
         <script type="text/javascript" src="assets/js/jquery.js"></script>
-        <!--<script type="text/javascript" src="assets/js/modernizr.js"></script>-->
         <script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
         <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
         <script type="text/javascript" src="assets/js/skrollr.min.js"></script>
         <script type="text/javascript" src="assets/js/smooth-scroll.js"></script>
         <script type="text/javascript" src="assets/js/jquery.appear.js"></script>
-        <!-- menu navigation -->
         <script type="text/javascript" src="assets/js/bootsnav.js"></script>
         <script type="text/javascript" src="assets/js/jquery.nav.js"></script>
-        <!-- animation -->
         <script type="text/javascript" src="assets/js/wow.min.js"></script>
-        <!-- page scroll -->
         <script type="text/javascript" src="assets/js/page-scroll.js"></script>
-        <!-- swiper carousel -->
         <script type="text/javascript" src="assets/js/swiper.min.js"></script>
-        <!-- counter -->
         <script type="text/javascript" src="assets/js/jquery.count-to.js"></script>
-        <!-- parallax -->
         <script type="text/javascript" src="assets/js/jquery.stellar.js"></script>
-        <!-- magnific popup -->
         <script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
-        <!-- portfolio with shorting tab -->
         <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
-        <!-- images loaded -->
         <script type="text/javascript" src="assets/js/imagesloaded.pkgd.min.js"></script>
-        <!-- pull menu -->
         <script type="text/javascript" src="assets/js/classie.js"></script>
         <script type="text/javascript" src="assets/js/hamburger-menu.js"></script>
-        <!-- counter -->
         <script type="text/javascript" src="assets/js/counter.js"></script>
-        <!-- fit video -->
-        <script type="text/javascript" src="assets/js/jquery.fitvids.js"></script>
-
-        <!-- skill bars -->
         <script type="text/javascript" src="assets/js/skill.bars.jquery.js"></script> 
-        <!-- justified gallery -->
         <script type="text/javascript" src="assets/js/justified-gallery.min.js"></script>
-        <!--pie chart-->
-        <script type="text/javascript" src="assets/js/jquery.easypiechart.min.js"></script>
-        <!-- instagram -->
-        <script type="text/javascript" src="assets/js/instafeed.min.js"></script>
-        <!-- retina -->
-        <script type="text/javascript" src="assets/js/retina.min.js"></script>
-        <!-- revolution -->
         <script type="text/javascript" src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
         <script type="text/javascript" src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
         <!-- revolution slider extensions (load below extensions JS files only on local file systems to make the slider work! The following part can be removed on server for on demand loading) -->
@@ -327,5 +550,31 @@
         <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>-->
         <!-- setting -->
         <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript">
+            var x = 0;
+
+            $(document).ready(function(){
+                $(".serviceItem").on( "click", function() {
+                    if(x == 0) {
+                      $('#solRequest').css('display', 'block');
+                      x = 1;
+                    } else {
+                      $('#solRequest').css('display', '0');
+                      x = 0;
+                    }
+                });
+
+                $('#searchButton').click(function () {
+                    if($('#main_searchBar').val() == "") notifFilter();
+                    else {
+                        var filter = $('#main_searchBar').val();
+                        $('.serviceItem').css('display', 'none');
+                        $('.serviceItem').parent().css('display', 'none');
+                        $('.' + filter).parent().css('display', 'block');
+                        $('.' + filter).css('display', 'block');
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
