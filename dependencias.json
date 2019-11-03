@@ -31,11 +31,9 @@
 					"costo": 0,
 					"etiquetas":
 					[
-						"Reembolso",
-					 	"devolucion",
+						"Reembolso",					 	
 					  	"pago",
-					  	"duplicado",
-					  	"duplicidad",
+					  	"duplicado",					  	
 					  	"indedbido"
 					], 
 					"documentos_tramite":
