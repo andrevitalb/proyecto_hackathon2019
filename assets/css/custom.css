@@ -79,6 +79,15 @@ Yellow:
 	   Services
 ---------------------*/
 
+#services .bg-extra-dark-gray { background-color: #21234A; }
+#services .serviceItemBg {
+	height: 6rem;
+	background-image: url(../img/tramite.jpg);
+	background-position: top center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
 #services .btn i { 
 	margin-left: 0 !important; 
 	font-size: 20px;
