@@ -30,6 +30,19 @@ Yellow:
 		Navbar
 ---------------------*/
 
+#logoCont { text-align: left !important; }
+
+.logo { 
+	text-align: left !important;
+	display: inline-block;
+}
+
+.logo img {
+	width: 12rem !important;
+	max-height: 200px !important;
+	display: inline-block;
+}
+
 @media(min-width: 767px){
 	#showRightPush{ display: none; } 
 }
@@ -91,4 +104,13 @@ Yellow:
 #services .btn i { 
 	margin-left: 0 !important; 
 	font-size: 20px;
+}
+
+/*---------------------
+		Footer
+---------------------*/
+
+.footer-logo {
+	max-height: 200px !important;
+	width: 12rem;
 }

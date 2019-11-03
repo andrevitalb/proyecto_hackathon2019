@@ -1607,7 +1607,7 @@
     nav.navbar.bootsnav.sidebar-nav .nav.navbar-left-sidebar .dropdown li:first-child {margin-top: 0}
     nav.navbar.bootsnav.sidebar-nav ul.nav li.dropdown ul.dropdown-menu  li {opacity: 1; visibility: visible}
     nav.navbar.bootsnav.sidebar-nav ul.nav li.dropdown ul.dropdown-menu  > li > a {color: #232323; margin: 0;}
-    nav.navbar.bootsnav.sidebar-nav ul.nav li.dropdown ul.dropdown-menu  > li.active > ul > li.active > a {color: #ff214f;}
+    nav.navbar.bootsnav.sidebar-nav ul.nav li.dropdown ul.dropdown-menu  > li.active > ul > li.active > a {color: #FFCC33;}
     nav.navbar.bootsnav.sidebar-nav ul.nav li.dropdown ul.dropdown-menu  > li > a .fas{display: none}
     nav.navbar.bootsnav.sidebar-nav ul.nav li.dropdown.show ul.dropdown-menu  > li > a {border-bottom: 1px solid #ededed !important}
     nav.navbar.bootsnav.sidebar-nav ul.nav li.dropdown.show ul.dropdown-menu  > li > ul.third-level > li > a {border-bottom: 0 !important; font-size: 11px; padding: 6px 0 0 0;}
@@ -1667,7 +1667,7 @@
     nav.navbar.bootsnav.sidebar-nav .navbar-left-sidebar > li > a, .sidebar-part2 nav.navbar.bootsnav .navbar-left-sidebar > li > a {margin: 0; padding: 15px 15px 15px 0}
     nav.navbar.bootsnav.sidebar-nav .nav.navbar-left-sidebar li a, .sidebar-part2 nav.navbar.bootsnav .nav.navbar-left-sidebar li a {border-bottom: 0 !important;}
     nav.navbar.bootsnav.sidebar-nav .nav.navbar-left-sidebar .dropdown.show .second-level,nav.navbar.bootsnav.sidebar-nav .nav.navbar-left-sidebar .dropdown.show .second-level .dropdown .third-level, .sidebar-part2 nav.navbar.bootsnav .nav.navbar-left-sidebar .dropdown.show .second-level, .sidebar-part2 nav.navbar.bootsnav .nav.navbar-left-sidebar .dropdown.show .second-level .dropdown .third-level {display:block !important; left: 0; width: 100%; height: auto; visibility: visible; opacity: 1 !important; background: transparent; padding: 0 0 0 8px !important}
-    header .sidebar-part2 nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li a:hover {border: 0; color: #ff214f}
+    header .sidebar-part2 nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li a:hover {border: 0; color: #FFCC33}
     .sidebar-part1 { position: inherit; width: 50px; float: left; }
     .sidebar-part3 { position: absolute; right: 0; bottom: inherit; top: 0; }
     .left-nav { height: 50px; width: 100%;}

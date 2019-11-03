@@ -44,10 +44,10 @@ nav.navbar.bootsnav.navbar-full li.dropdown ul{padding: 5px 15px !important}
 nav.navbar.bootsnav.navbar-full li.dropdown ul.dropdown-menu {top: 0px !important; left: auto; margin: 0; top: 10px; padding:10px 20px; position: relative; float: none; background: inherit; border: 0; box-shadow: none;}
 nav.navbar.bootsnav.navbar-full li.dropdown ul.dropdown-menu li{margin: 5px 0; }
 nav.navbar.bootsnav.navbar-full li.dropdown ul.dropdown-menu li a {color: #232323 !important;  border: none !important; padding: 0; font-size: 14px !important; font-weight: normal}
-nav.navbar.bootsnav.navbar-full li.dropdown ul.dropdown-menu li a:hover {color: #ff214f !important;}
+nav.navbar.bootsnav.navbar-full li.dropdown ul.dropdown-menu li a:hover {color: #FFCC33 !important;}
 nav.navbar.bootsnav.navbar-full ul > li a {padding-left: 35px;position: relative;}
-nav.navbar.bootsnav.navbar-full ul > li a:hover, nav.navbar.bootsnav.navbar-full ul li.dropdown.open a{color:#ff214f; }
-nav.navbar.bootsnav.navbar-full ul > li a:hover:after, nav.navbar.bootsnav.navbar-full ul li.dropdown.open a:after{background: #ff214f}
+nav.navbar.bootsnav.navbar-full ul > li a:hover, nav.navbar.bootsnav.navbar-full ul li.dropdown.open a{color:#FFCC33; }
+nav.navbar.bootsnav.navbar-full ul > li a:hover:after, nav.navbar.bootsnav.navbar-full ul li.dropdown.open a:after{background: #FFCC33}
 nav.navbar.bootsnav.navbar-full ul > li a::after {background: #dbdbdb none repeat scroll 0 0; content: ""; display: inline-block; height: 4px;left: 0;position: absolute;top: 14px;width: 18px;}
 nav.navbar.bootsnav.navbar-full ul > li.dropdown ul.dropdown-menu li a:after{display: none}
 nav.navbar.bootsnav.navbar-full ul > li.dropdown ul.dropdown-menu{padding-left: 50px !important}
