@@ -331,12 +331,39 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-12 wow fadeInUp" id="solRequest">
+                        <div class="content-box big-box box-shadow">
+                            <form class = "row">
+                                <div class="col-3">
+                                    <label for="exampleInputEmail1">Documento 1</label>
+                                    <input type="file" class="form-control-file" id="File1">
+                                </div>
+                                <div class="col-3">
+                                    <label for="exampleInputPassword1">Documento 2</label>
+                                    <input type="file" class="form-control-file" id="File2">
+                                </div>
+                                <div class="col-3">
+                                    <label for="exampleInputPassword1">Documento 3</label>
+                                    <input type="file" class="form-control-file" id="File3">
+                                </div>
+                                <div class="col-3">
+                                    <label for="exampleInputPassword1">Documento 4</label>
+                                    <input type="file" class="form-control-file" id="File4">
+                                </div>
+                                <div class="col">
+                                <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+
+                                </div>
+                              
+                            </form> 
+                         </div>      
+                    </div>   
                 </div>
             </div>
         </section>
 
         <!-- Contacto -->
-        <section class="wow fadeIn bg-extra-dark-gray" id = "contact">
+        <section class="wow fadeIn" id = "contact">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 text-center margin-100px-bottom md-margin-70px-bottom sm-margin-50px-bottom">
@@ -393,56 +420,30 @@
                 </div>
             </div>
         </footer>
-        <!-- end footer -->
-        <!-- start scroll to top -->
+
         <a class="scroll-top-arrow" href="javascript:void(0);"><i class="ti-arrow-up"></i></a>
-        <!-- end scroll to top -->
-        <!-- javascript libraries -->
+
         <script type="text/javascript" src="assets/js/jquery.js"></script>
-        <!--<script type="text/javascript" src="assets/js/modernizr.js"></script>-->
         <script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
         <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
         <script type="text/javascript" src="assets/js/skrollr.min.js"></script>
         <script type="text/javascript" src="assets/js/smooth-scroll.js"></script>
         <script type="text/javascript" src="assets/js/jquery.appear.js"></script>
-        <!-- menu navigation -->
         <script type="text/javascript" src="assets/js/bootsnav.js"></script>
         <script type="text/javascript" src="assets/js/jquery.nav.js"></script>
-        <!-- animation -->
         <script type="text/javascript" src="assets/js/wow.min.js"></script>
-        <!-- page scroll -->
         <script type="text/javascript" src="assets/js/page-scroll.js"></script>
-        <!-- swiper carousel -->
         <script type="text/javascript" src="assets/js/swiper.min.js"></script>
-        <!-- counter -->
         <script type="text/javascript" src="assets/js/jquery.count-to.js"></script>
-        <!-- parallax -->
         <script type="text/javascript" src="assets/js/jquery.stellar.js"></script>
-        <!-- magnific popup -->
         <script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
-        <!-- portfolio with shorting tab -->
         <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
-        <!-- images loaded -->
         <script type="text/javascript" src="assets/js/imagesloaded.pkgd.min.js"></script>
-        <!-- pull menu -->
         <script type="text/javascript" src="assets/js/classie.js"></script>
         <script type="text/javascript" src="assets/js/hamburger-menu.js"></script>
-        <!-- counter -->
         <script type="text/javascript" src="assets/js/counter.js"></script>
-        <!-- fit video -->
-        <script type="text/javascript" src="assets/js/jquery.fitvids.js"></script>
-
-        <!-- skill bars -->
         <script type="text/javascript" src="assets/js/skill.bars.jquery.js"></script> 
-        <!-- justified gallery -->
         <script type="text/javascript" src="assets/js/justified-gallery.min.js"></script>
-        <!--pie chart-->
-        <script type="text/javascript" src="assets/js/jquery.easypiechart.min.js"></script>
-        <!-- instagram -->
-        <script type="text/javascript" src="assets/js/instafeed.min.js"></script>
-        <!-- retina -->
-        <script type="text/javascript" src="assets/js/retina.min.js"></script>
-        <!-- revolution -->
         <script type="text/javascript" src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
         <script type="text/javascript" src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
         <!-- revolution slider extensions (load below extensions JS files only on local file systems to make the slider work! The following part can be removed on server for on demand loading) -->
@@ -457,5 +458,20 @@
         <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>-->
         <!-- setting -->
         <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript">
+            var x = 0;
+
+            $(document).ready(function(){
+                $(".serviceItem").on( "click", function() {
+                    if(x == 0) {
+                      $('#solRequest').css('height', 'auto');
+                      x = 1;
+                    } else {
+                      $('#solRequest').css('height', '0');
+                      x = 0;
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

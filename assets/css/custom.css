@@ -51,7 +51,12 @@ Yellow:
 		Header
 ---------------------*/
 
-#mainHeader{ background-image: url(../img/bg.jpg); }
+#mainHeader{ 
+	background-image: url(../img/bg.jpg); 
+	height: 100vh;
+}
+
+#mainHeader * { max-height: 100vh; }
 #main_searchContainer { background-color: rgba(26, 30, 75, .7); }
 
 #main_searchContainer * {
@@ -92,7 +97,11 @@ Yellow:
 	   Services
 ---------------------*/
 
+#services .serviceItem { transition: all .3s ease-in-out; }
+#services .serviceItem:hover { cursor: pointer; }
 #services .bg-extra-dark-gray { background-color: #21234A; }
+#services .serviceItem:hover .bg-extra-dark-gray { background-color: #FFCC33; }
+
 #services .serviceItemBg {
 	height: 6rem;
 	background-image: url(../img/tramite.jpg);
@@ -105,6 +114,22 @@ Yellow:
 	margin-left: 0 !important; 
 	font-size: 20px;
 }
+
+#solRequest { display: none; }
+
+/*---------------------
+		Contact
+---------------------*/
+
+#contact {
+	background-color: #21234A;
+}
+
+/*---------------------
+		Help
+---------------------*/
+
+#help img { width: 100%; }
 
 /*---------------------
 		Footer
