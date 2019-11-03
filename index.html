@@ -219,7 +219,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.2s">
+                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn caca serviceItem" data-wow-delay="0.2s">
                         <div class="position-relative overflow-hidden">
                             <div class="w-100 serviceItemBg"></div>
                             <div class="opacity-medium bg-extra-dark-gray"></div>
@@ -354,7 +354,6 @@
                                 <button type="submit" class="btn btn-primary mb-2">Enviar</button>
 
                                 </div>
-                              
                             </form> 
                          </div>      
                     </div>   
@@ -464,11 +463,21 @@
             $(document).ready(function(){
                 $(".serviceItem").on( "click", function() {
                     if(x == 0) {
-                      $('#solRequest').css('height', 'auto');
+                      $('#solRequest').css('display', 'block');
                       x = 1;
                     } else {
-                      $('#solRequest').css('height', '0');
+                      $('#solRequest').css('display', '0');
                       x = 0;
+                    }
+                });
+
+                $('#searchButton').click(function () {
+                    if($('#main_searchBar').val() == "") notifFilter();
+                    else {
+                        var filter = $('#main_searchBar').val();
+                        $('.serviceItem').css('display', 'none');
+                        $('.serviceItem').css('display', 'none');
+                        $('.' + filter).css('display', 'block');
                     }
                 });
             });
