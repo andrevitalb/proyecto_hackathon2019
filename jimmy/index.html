@@ -133,13 +133,13 @@
                     <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
                         <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 1</span>
                     </div>
-                    <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                        <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
+                    <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100" id="tr1">
+                        <a  class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-<div class="col-lg-12">
+<div class="col-lg-12" id="upDoc1">
     <div class="content-box big-box box-shadow">
         <form class = "row">
             <div class="col-3">
@@ -498,15 +498,21 @@ text-align: center;
 <script type="text/javascript" src="../assets/js/main.js"></script>
 
 <script type="text/javascript">
+    var x = 0;
+    $('#upDoc1').hide();
+
     $(document).ready(function(){
-        $("#mostrar").on( "click", function() {
-            $('#target').show(); //muestro mediante id
-            $('.target').show(); //muestro mediante clase
+        $("#tr1").on( "click", function() {
+            if(x==0)
+            {
+              $('#upDoc1').show();
+              x=1;
+            }else
+            {
+              $('#upDoc1').hide();
+              x=0;
+            }
          });
-        $("#ocultar").on( "click", function() {
-            $('#target').hide(); //oculto mediante id
-            $('.target').hide(); //muestro mediante clase
-        });
     });
 </script>
 </body>
