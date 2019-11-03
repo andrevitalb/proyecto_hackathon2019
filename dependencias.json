@@ -29,6 +29,7 @@
 				{
 					"nombre_tramite": "Devolución por pago indedbido o duplicidad.",
 					"costo": 0,
+					"etiquetas": ["Reembolso", "devolucion", "pago", "duplicado", "duplicidad", "indedbido"], 
 					"documentos_tramite":
 					[
 						"Recibos Originales",
