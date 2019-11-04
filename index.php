@@ -98,7 +98,9 @@
             <nav class="navbar navbar-default bootsnav navbar-fixed-top header-light background-transparent white-link navbar-expand-lg">
                 <div class="container nav-header-container">
                     <div class="col-auto pl-lg-0" id = "logoCont">
-                        <a href="index.html" title="Kiosko Digital" class="logo"><img src="assets/img/logo.png" alt="Kiosko Digital" class="logo-light default"></a>
+                        <a href="index.html" title="Kiosko Digital" class="logo">
+                            <img src="assets/img/logo.png" alt="Kiosko Digital" class="logo-color default">
+                        </a>
                     </div>
 
                     <div class="col accordion-menu pr-0 pr-md-3">
