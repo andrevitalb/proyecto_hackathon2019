@@ -57,7 +57,11 @@ Yellow:
 }
 
 #mainHeader * { max-height: 100vh; }
-#main_searchContainer { background-color: rgba(26, 30, 75, .7); }
+#main_searchContainer { 
+	background-color: rgba(26, 30, 75, .7); 
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
 
 #main_searchContainer * {
 	background-color: transparent; 
@@ -128,6 +132,7 @@ Yellow:
 ---------------------*/
 
 #help img { width: 100%; }
+.helpStep { margin: 3rem 0; }
 
 /*---------------------
 		Footer

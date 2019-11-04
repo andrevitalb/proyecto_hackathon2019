@@ -7,6 +7,51 @@
     $connect = mysqli_connect($hostname, $username, $password, $databaseName);
     mysqli_set_charset ($connect, "utf8");
     date_default_timezone_set('America/Mexico_City');
+
+    $queryDepends = "Select dependencias_nombre from dependencias order by dependencias_nombre";
+    $resultDepends = mysqli_query($connect, $queryDepends);
+
+    function filter($cadena){
+        $cadena = utf8_encode($cadena);
+
+        $cadena = str_replace(
+            array('á', 'à', 'ä', 'â', 'ª', 'Á', 'À', 'Â', 'Ä'),
+            array('a', 'a', 'a', 'a', 'a', 'A', 'A', 'A', 'A'),
+            $cadena
+        );
+
+        $cadena = str_replace(
+            array('é', 'è', 'ë', 'ê', 'É', 'È', 'Ê', 'Ë'),
+            array('e', 'e', 'e', 'e', 'E', 'E', 'E', 'E'),
+            $cadena
+        );
+
+        $cadena = str_replace(
+            array('í', 'ì', 'ï', 'î', 'Í', 'Ì', 'Ï', 'Î'),
+            array('i', 'i', 'i', 'i', 'I', 'I', 'I', 'I'),
+            $cadena
+        );
+
+        $cadena = str_replace(
+            array('ó', 'ò', 'ö', 'ô', 'Ó', 'Ò', 'Ö', 'Ô'),
+            array('o', 'o', 'o', 'o', 'O', 'O', 'O', 'O'),
+            $cadena
+        );
+
+        $cadena = str_replace(
+            array('ú', 'ù', 'ü', 'û', 'Ú', 'Ù', 'Û', 'Ü'),
+            array('u', 'u', 'u', 'u', 'U', 'U', 'U', 'U'),
+            $cadena
+        );
+
+        $cadena = str_replace(
+            array('ñ', 'Ñ', 'ç', 'Ç'),
+            array('n', 'N', 'c', 'C'),
+            $cadena
+        );
+
+        return $cadena;
+    }
 ?>
 <!DOCTYPE HTML>
 <html class="no-js" lang="en">
@@ -19,6 +64,7 @@
         <meta name="description" content="">
 
         <!-- Favicon -->
+        <link rel="icon" href="assets/img/favicon.ico">
         <link rel="shortcut icon" href="assets/img/favicon.png">
         <link rel="apple-touch-icon" href="assets/img/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png">
@@ -93,10 +139,10 @@
                     <div class="slider-text-middle-main">
                         <div class="slider-text-middle">
                             <div class="col-12 col-md-9 float-right bg-deep-pink-opacity padding-six-lr lg-padding-seven-lr padding-five-tb sm-padding-30px-all last-paragraph-no-margin row" id = "main_searchContainer">
-                                <input type = "text" class="col-9 margin-15px-lr no-margin-bottom" placeholder = "Tu trámite..." id = "main_searchBar" required></input>
-                                <button target="_blank" class="col-2" id ="searchButton"><i class="fas fa-search"></i></button>
+                                <input type = "text" class="col-12 col-md-9 margin-15px-lr no-margin-bottom" placeholder = "Tu trámite..." id = "main_searchBar" required></input>
+                                <button class="col-12 col-md-2" id ="searchButton"><i class="fas fa-search"></i></button>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,244 +173,78 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-12 margin-40px-bottom margin-40px-top">
-                        <div class="position-relative overflow-hidden w-100">
-                            <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase">Dependendencia 1</span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 1</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.2s">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 2</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.4s">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 3</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.2s">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 4</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.4s">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 5</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    $depends;
+                    $countDepends = 1;
 
-                <div class="row">
-                    <div class="col-12 margin-40px-bottom margin-40px-top">
-                        <div class="position-relative overflow-hidden w-100">
-                            <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase">Dependendencia 2</span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 1</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn caca serviceItem" data-wow-delay="0.2s">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 2</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.4s">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 3</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.2s">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 4</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.4s">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 5</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.6s">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 6</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.2s">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 7</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.4s">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 8</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 margin-15px-bottom wow fadeIn serviceItem" data-wow-delay="0.6s">
-                        <div class="position-relative overflow-hidden">
-                            <div class="w-100 serviceItemBg"></div>
-                            <div class="opacity-medium bg-extra-dark-gray"></div>
-                            <div class="blog-box">
-                                <div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">Trámite 9</span>
-                                </div>
-                                <div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                    <a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    $trams;
+
+                    while($deps = mysqli_fetch_array($resultDepends)){
+                        $depends .= '<div class="row"><div class="col-12 margin-40px-bottom margin-40px-top"><div class="position-relative overflow-hidden w-100"><span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase">'.$deps[0].'</span></div></div>';
+
+                        $queryTrams = "Select tramites_link, tramites_nombre, tramites_dependencia, tramites_nDocumentos, tramites_costo, tramites_duracion, tramites_nEtiquetas, tramites_etiqueta1, tramites_etiqueta2, tramites_etiqueta3, tramites_etiqueta4 from tramites where tramites_dependencia = ".$countDepends++;
+                        $resultTrams = mysqli_query($connect, $queryTrams);
+
+                        while($trams = mysqli_fetch_array($resultTrams)) {
+                            if($trams[0] != 'NULL'){
+                                $tag1 = filter(strtolower($trams[7]));
+                                $tag2 = filter(strtolower($trams[8]));
+                                $tag3 = filter(strtolower($trams[9]));
+                                $tag4 = filter(strtolower($trams[10]));
+
+                                $depends .= '<div class="col-12 col-md-4 margin-15px-bottom wow fadeIn '.$tag1;
+
+                                if($trams[8] != NULL) $depends .= ' '.$tag2;
+                                if($trams[9] != NULL) $depends .= ' '.$tag3;
+                                if($trams[10] != NULL) $depends .= ' '.$tag4;
+
+                                $depends .= ' serviceItem"><div class="position-relative overflow-hidden"><div class="w-100 serviceItemBg"></div><div class="opacity-medium bg-extra-dark-gray"></div><div class="blog-box"><div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100"><span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">'.$trams[1].'</span></div><div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100"><a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a></div></div></div></div>';
+                            }
+                        }
+                        $depends .= '</div>';
+                    }
+                    echo $depends;
+                ?>
 
                 <div class="row">
                     <div class="col-lg-12 wow fadeInUp" id="solRequest">
                         <div class="content-box big-box box-shadow">
-                            <form class = "row">
-                                <div class="col-3">
-                                    <label for="exampleInputEmail1">Documento 1</label>
-                                    <input type="file" class="form-control-file" id="File1">
-                                </div>
-                                <div class="col-3">
-                                    <label for="exampleInputPassword1">Documento 2</label>
-                                    <input type="file" class="form-control-file" id="File2">
-                                </div>
-                                <div class="col-3">
-                                    <label for="exampleInputPassword1">Documento 3</label>
-                                    <input type="file" class="form-control-file" id="File3">
-                                </div>
-                                <div class="col-3">
-                                    <label for="exampleInputPassword1">Documento 4</label>
-                                    <input type="file" class="form-control-file" id="File4">
-                                </div>
-                                <div class="col">
-                                    <button type="submit" class="btn btn-primary mb-2">Enviar</button>
-                                </div>
-                            </form> 
-                         </div>      
-                    </div>   
+                        <form class = "row justify-content-center">
+                            <div class="col-12 col-md-9">
+                                <input type="text" placeholder="Nombre(s)" id="nombreUsuario" required>
+                            </div>
+
+                            <div class="col-12 col-md-9">
+                                <input type="text" placeholder="Numero de teléfono" id="phoneUsuario" required>
+                            </div>
+
+                            <div class="col-12 col-md-9">
+                                <input type="email" id="emailUsuario" placeholder="Correo electrónico" required>
+                            </div>
+
+                            <div class="col-12 col-md-9">
+                                <label for="exampleInputPassword1">Documento 1</label>
+                                <input type="file" class="form-control-file" id="File1">
+                            </div>
+
+                            <div class="col-3">
+                                <label for="exampleInputPassword1">Documento 2</label>
+                                <input type="file" class="form-control-file" id="File2">
+                            </div>
+                            <div class="col-3">
+                                <label for="exampleInputPassword1">Documento 3</label>
+                                <input type="file" class="form-control-file" id="File3">
+                            </div>
+                            <div class="col-3">
+                                <label for="exampleInputPassword1">Documento 4</label>
+                                <input type="file" class="form-control-file" id="File4">
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+                            </div>
+                        </form>
+                     </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -372,9 +252,9 @@
         <!-- Contacto -->
         <section class="wow fadeIn" id = "contact">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center margin-100px-bottom md-margin-70px-bottom sm-margin-50px-bottom">
-                        <p class="alt-font margin-5px-bottom text-uppercase text-medium-gray text-small">¿Alguna duda?</p>
+                <div class="row">
+                    <div class="col-12 text-center margin-30px-bottom">
+                        <p class="alt-font margin-5px-bottom text-uppercase text-medium-gray text-small">¿Tienes alguna duda?</p>
                         <h5 class="text-uppercase alt-font text-white-2 margin-20px-bottom font-weight-700 md-width-100">Contáctanos</h5>
                         <span class="separator-line-horrizontal-medium-light2 bg-deep-pink d-table mx-auto width-100px"></span>
                     </div>
@@ -391,95 +271,67 @@
                         </div>
                     </div>
                 </form>
-            </div>     
+            </div>
         </section>
+
         <!-- Ayuda -->
-        <section class="wow fadeIn bg-dark-gray" id ="help">
+        <section class="wow fadeIn" id ="help">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center margin-100px-bottom md-margin-70px-bottom sm-margin-50px-bottom">
-                        <h3 class="alt-font margin-5px-bottom text-uppercase text-black text-small">¿Cómo Usar?</h3>
-                        <h2 class="text-uppercase alt-font text-white-2 margin-20px-bottom font-weight-700 md-width-100">Ayuda</h2>
+                <div class="row">
+                    <div class="col-12 text-center margin-30px-bottom">
+                        <p class="alt-font margin-5px-bottom text-uppercase text-medium-gray text-small">¿Cómo se usa?</p>
+                        <h5 class="text-uppercase alt-font text-extra-dark-gray margin-20px-bottom font-weight-700 md-width-100">Ayuda</h5>
                         <span class="separator-line-horrizontal-medium-light2 bg-deep-pink d-table mx-auto width-100px"></span>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-4 wow fadeInRight">
-                        <div><h2 class=" text-white-2 ">01.</h2></div>
-                        <p class=" text-white-2 text-medium">Al entrar en la página principal, realizar una búsqueda con una palabra clave que se asocie con el trámite o servicio que necesita realizar.</p>
+                    <div class="col-12 col-md-4 wow fadeInRight helpStep">
+                        <div><h2 class="text-medium-gray">01.</h2></div>
+                        <p class="text-dark-gray text-medium">Al entrar en la página principal, realizar una búsqueda con una palabra clave que se asocie con el trámite o servicio que necesita realizar.</p>
                         <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
-                        </div>
-                    <div class="col-8">
-                    <img src="assets/img/help1.jpg">
-                    </div>  
-                </div> 
+                    </div>
+                    <div class="col-12 col-md-8"><img src="assets/img/help1.jpg"></div>
+                </div>
 
-            <div class="row"><br><br></div>
+                <div class="row">
+                    <div class="col-12 col-md-8"><img src="assets/img/help2.jpg"></div>
+                    <div class="col-12 col-md-4 wow fadeInRight helpStep">
+                        <div><h2 class="text-medium-gray">02.</h2></div>
+                        <p class="text-dark-gray text-medium">Después, seleccionar el trámite que desea, basado en la dependencia a la que pertenece.</p>
+                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+                    </div>
+                </div>
 
-            <div class="row">
-            <div class="col-4 wow fadeInRight">
-            <div>
-            <h2 class=" text-white-2 ">02.</h2>
-            </div>
-            <p class=" text-white-2 text-medium">Después, seleccionar el trámite que desea, basado en la dependencia a la que pertenece.</p>
-            <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
-            </div>
-            <div class="col-8">
-            <img src="assets/img/help1.jpg">
-            </div>  
-            </div> 
+                <div class="row">
+                    <div class="col-12 col-md-4 wow fadeInRight helpStep">
+                        <div><h2 class="text-medium-gray">03.</h2></div>
+                        <p class="text-dark-gray text-medium">Llenar y subir los datos y archivos requeridos.</p>
+                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+                    </div>
+                    <div class="col-12 col-md-8"><img src="assets/img/help3.jpg"></div>
+                </div>
 
-            <div class="row"><br><br></div>
+                <div class="row">
+                    <div class="col-12 col-md-8"><img src="assets/img/help4.jpg"></div>
+                    <div class="col-12 col-md-4 wow fadeInRight helpStep">
+                        <div><h2 class="text-medium-gray">04.</h2></div>
+                        <p class="text-dark-gray text-medium">Una vez que ha revisado que no hay errores, dar click en "Enviar" para registrar su trámite.</p>
+                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+                    </div>
+                </div>
 
-            <div class="row">
-            <div class="col-4 wow fadeInRight">
-            <div>
-            <h2 class=" text-white-2 ">03.</h2>
-            </div>
-            <p class=" text-white-2 text-medium">Llenar y subir los datos y archivos requeridos.</p>
-            <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
-            </div>
-            <div class="col-8">
-            <img src="assets/img/help1.jpg">
-            </div>  
-            </div> 
-
-            <div class="row"><br><br></div>
-
-            <div class="row">
-            <div class="col-4 wow fadeInRight">
-            <div>
-            <h2 class=" text-white-2 ">04.</h2>
-            </div>
-            <p class=" text-white-2 text-medium">Una vez que ha revisado que no hay errores, dar click en "Enviar" para registrar su trámite.</p>
-            <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
-            </div>
-            <div class="col-8">
-            <img src="assets/img/help1.jpg">
-            </div>  
-            </div> 
-
-            <div class="row"><br><br></div>
-
-            <div class="row">
-            <div class="col-4 wow fadeInRight">
-            <div>
-            <h2 class=" text-white-2 ">05.</h2>
-            </div>
-            <p class=" text-white-2 text-medium">Esperar la respuesta por parte de la dependencia corespondiente, para scualquier aclaración, se le contactará por medio de correo electrónico.</p>
-            <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
-            </div>
-            <div class="col-8">
-            <img src="assets/img/help1.jpg">
-            </div>  
-            </div> 
-
-            <div class="row"><br><br></div>
-
+                <div class="row">
+                    <div class="col-12 wow fadeInRight helpStep">
+                        <div><h2 class="text-medium-gray">05.</h2></div>
+                        <p class="text-dark-gray text-medium">Esperar la respuesta por parte de la dependencia corespondiente, para scualquier aclaración, se le contactará por medio de correo electrónico.</p>
+                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+                    </div>
+                </div>
             </div>
         </section>
-        <footer class="footer-clean-dark bg-extra-dark-gray padding-five-tb sm-padding-30px-tb"> 
+
+        <footer class="footer-clean-dark bg-extra-dark-gray padding-five-tb sm-padding-30px-tb">
             <div class="footer-widget-area padding-30px-bottom" style="text-align: center;">
                 <div class="container">
                     <div class="row">
@@ -489,7 +341,7 @@
 
                         <div class="col-md-4 widget sm-margin-30px-bottom">
                             <div class="widget-title alt-font text-extra-small text-uppercase text-white-2 margin-15px-bottom font-weight-600">contact information</div>
-                            
+
                             <div class="text-small line-height-24 text-medium-gray">Email: <a href="mailto:sales@domain.com" class="text-medium-gray">sales@domain.com</a></div>
                             <div class="text-small line-height-24 text-medium-gray">Phone: +44 (0) 123 456 7890</div>
                         </div>
@@ -499,7 +351,8 @@
                             <ul class="list-unstyled">
                                 <li class="w-50 float-left"><a href="https://www.facebook.com/" target="_blank" class="text-medium-gray text-small">Facebook</a></li>
                                 <li class="w-50 float-left"><a href="https://www.pinterest.com/" target="_blank" class="text-medium-gray text-small">Pinterest</a></li>
-                                <li class="w-50 float-left"><a href="https://www.twitter.com/" target="_blank" class="text-medium-gray text-small">Twitter</a></li></ul>
+                                <li class="w-50 float-left"><a href="https://www.twitter.com/" target="_blank" class="text-medium-gray text-small">Twitter</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -534,39 +387,30 @@
         <script type="text/javascript" src="assets/js/classie.js"></script>
         <script type="text/javascript" src="assets/js/hamburger-menu.js"></script>
         <script type="text/javascript" src="assets/js/counter.js"></script>
-        <script type="text/javascript" src="assets/js/skill.bars.jquery.js"></script> 
+        <script type="text/javascript" src="assets/js/skill.bars.jquery.js"></script>
         <script type="text/javascript" src="assets/js/justified-gallery.min.js"></script>
         <script type="text/javascript" src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
         <script type="text/javascript" src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
-        <!-- revolution slider extensions (load below extensions JS files only on local file systems to make the slider work! The following part can be removed on server for on demand loading) -->
-        <!--<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>-->
-        <!-- setting -->
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script type="text/javascript">
             var x = 0;
 
             $(document).ready(function(){
-                $(".serviceItem").on( "click", function() {
-                    if(x == 0) {
-                      $('#solRequest').css('display', 'block');
-                      x = 1;
-                    } else {
-                      $('#solRequest').css('display', '0');
-                      x = 0;
-                    }
+                $(".serviceItem").click(function() {
+                    $('#solRequest').css('display', 'block');
+                    x = 1;
+                    $('.serviceItem').css('display', 'none');
+                    $('.serviceItem').parent().css('display', 'none');
+                    $(this).parent().css('display', 'block');
+                    $(this).css('display', 'block');
                 });
 
                 $('#searchButton').click(function () {
                     if($('#main_searchBar').val() == "") notifFilter();
                     else {
+                        $([document.documentElement, document.body]).animate({
+                            scrollTop: $("#services").offset().top
+                        }, 600);
                         var filter = $('#main_searchBar').val();
                         $('.serviceItem').css('display', 'none');
                         $('.serviceItem').parent().css('display', 'none');
