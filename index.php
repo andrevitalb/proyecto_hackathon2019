@@ -99,7 +99,8 @@
                 <div class="container nav-header-container">
                     <div class="col-auto pl-lg-0" id = "logoCont">
                         <a href="index.html" title="Kiosko Digital" class="logo">
-                            <img src="assets/img/logo.png" alt="Kiosko Digital" class="logo-color default">
+                            <img src="assets/img/logo_white.png" alt="Kiosko Digital" class="logo-white default">
+                            <img src="assets/img/logo.png" alt="Kiosko Digital" class="logo-dark">
                         </a>
                     </div>
 
@@ -326,7 +327,7 @@
                 <div class="row helpStep">
                     <div class="col-12 wow fadeInRight">
                         <div><h2 class="text-medium-gray">05.</h2></div>
-                        <p class="text-dark-gray text-medium">Esperar la respuesta por parte de la dependencia corespondiente, para scualquier aclaración, se le contactará por medio de correo electrónico.</p>
+                        <p class="text-dark-gray text-medium">Esperar la respuesta por parte de la dependencia corespondiente, para cualquier aclaración, se le contactará por medio de correo electrónico.</p>
                         <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
                     </div>
                 </div>
