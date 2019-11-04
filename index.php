@@ -287,8 +287,8 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-12 col-md-4 wow fadeInRight helpStep">
+                <div class="row helpStep">
+                    <div class="col-12 col-md-4 wow fadeInRight">
                         <div><h2 class="text-medium-gray">01.</h2></div>
                         <p class="text-dark-gray text-medium">Al entrar en la página principal, realizar una búsqueda con una palabra clave que se asocie con el trámite o servicio que necesita realizar.</p>
                         <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
@@ -296,17 +296,17 @@
                     <div class="col-12 col-md-8"><img src="assets/img/help1.jpg"></div>
                 </div>
 
-                <div class="row">
+                <div class="row helpStep">
                     <div class="col-12 col-md-8"><img src="assets/img/help2.jpg"></div>
-                    <div class="col-12 col-md-4 wow fadeInRight helpStep">
+                    <div class="col-12 col-md-4 wow fadeInRight">
                         <div><h2 class="text-medium-gray">02.</h2></div>
                         <p class="text-dark-gray text-medium">Después, seleccionar el trámite que desea, basado en la dependencia a la que pertenece.</p>
                         <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-12 col-md-4 wow fadeInRight helpStep">
+                <div class="row helpStep">
+                    <div class="col-12 col-md-4 wow fadeInRight">
                         <div><h2 class="text-medium-gray">03.</h2></div>
                         <p class="text-dark-gray text-medium">Llenar y subir los datos y archivos requeridos.</p>
                         <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
@@ -314,17 +314,17 @@
                     <div class="col-12 col-md-8"><img src="assets/img/help3.jpg"></div>
                 </div>
 
-                <div class="row">
+                <div class="row helpStep">
                     <div class="col-12 col-md-8"><img src="assets/img/help4.jpg"></div>
-                    <div class="col-12 col-md-4 wow fadeInRight helpStep">
+                    <div class="col-12 col-md-4 wow fadeInRight">
                         <div><h2 class="text-medium-gray">04.</h2></div>
                         <p class="text-dark-gray text-medium">Una vez que ha revisado que no hay errores, dar click en "Enviar" para registrar su trámite.</p>
                         <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-12 wow fadeInRight helpStep">
+                <div class="row helpStep">
+                    <div class="col-12 wow fadeInRight">
                         <div><h2 class="text-medium-gray">05.</h2></div>
                         <p class="text-dark-gray text-medium">Esperar la respuesta por parte de la dependencia corespondiente, para scualquier aclaración, se le contactará por medio de correo electrónico.</p>
                         <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
