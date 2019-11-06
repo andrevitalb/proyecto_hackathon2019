@@ -97,10 +97,10 @@
         <header>
             <nav class="navbar navbar-default bootsnav navbar-fixed-top header-light background-transparent white-link navbar-expand-lg">
                 <div class="container nav-header-container">
-                    <div class="col-auto pl-lg-0" id = "logoCont">
+                    <div class="col-auto pl-lg-0">
                         <a href="index.html" title="Kiosko Digital" class="logo">
-                            <img src="assets/img/logo_white.png" alt="Kiosko Digital" class="logo-white default">
                             <img src="assets/img/logo.png" alt="Kiosko Digital" class="logo-dark">
+                            <img src="assets/img/logo_white.png" alt="Kiosko Digital" class="logo-white default">
                         </a>
                     </div>
 
@@ -113,7 +113,7 @@
                         </button>
                         <div class="navbar-collapse collapse justify-content-end" id="navbar-collapse-toggle-1">
                             <ul id="accordion" class="nav navbar-nav no-margin alt-font text-normal" data-in="fadeIn" data-out="fadeOut">
-                                <li class="dropdown megamenu-fw"><a href="#top">Inicio</a></li>
+                                <li class="dropdown megamenu-fw"><a href="#mainHeader">Inicio</a></li>
                                 <li class="dropdown megamenu-fw"><a href="#about_us">Acerca de</a></li>
                                 <li class="dropdown megamenu-fw"><a href="#services">Trámites</a></li>
                                 <li class="dropdown megamenu-fw"><a href="#help">Ayuda</a></li>
@@ -201,7 +201,7 @@
                                 if($trams[9] != NULL) $depends .= ' '.$tag3;
                                 if($trams[10] != NULL) $depends .= ' '.$tag4;
 
-                                $depends .= ' serviceItem"><div class="position-relative overflow-hidden"><div class="w-100 serviceItemBg"></div><div class="opacity-medium bg-extra-dark-gray"></div><div class="blog-box"><div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100"><span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">'.$trams[1].'</span></div><div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100"><a href="#" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a></div></div></div></div>';
+                                $depends .= ' serviceItem"><div class="position-relative overflow-hidden"><div class="w-100 serviceItemBg"></div><div class="opacity-medium bg-extra-dark-gray"></div><div class="blog-box"><div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100"><span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">'.$trams[1].'</span></div><div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100"><a href="#services" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a></div></div></div></div>';
                             }
                         }
                         $depends .= '</div>';
@@ -210,48 +210,50 @@
                 ?>
 
                 <div class="row">
-                    <div class="col-lg-12 wow fadeInUp" id="solRequest">
-                        <div class="content-box big-box box-shadow">
-                        <form class = "row justify-content-center">
-                            <div class="col-12 col-md-9">
-                                <input type="text" placeholder="Nombre(s)" id="nombreUsuario" required>
-                            </div>
+                    <div class="col-12 margin-35px-top wow fadeInUp" id="solRequest">
+                        <div class="content-box">
+                            <form class = "row justify-content-center col-12 col-md-9 margin-auto big-box box-shadow">
+                                <div class="col-12 solInputHolder">
+                                    <input type="text" placeholder="Nombre" id="nombreUsuario" required>
+                                </div>
 
-                            <div class="col-12 col-md-9">
-                                <input type="text" placeholder="Numero de teléfono" id="phoneUsuario" required>
-                            </div>
+                                <div class="col-12 col-md-6 solInputHolder">
+                                    <input type="number" placeholder="Número de teléfono" id="phoneUsuario" required>
+                                </div>
 
-                            <div class="col-12 col-md-9">
-                                <input type="email" id="emailUsuario" placeholder="Correo electrónico" required>
-                            </div>
+                                <div class="col-12 col-md-6 solInputHolder">
+                                    <input type="email" id="emailUsuario" placeholder="Correo electrónico" required>
+                                </div>
 
-                            <div class="col-12 col-md-9">
-                                <label for="exampleInputPassword1">Documento 1</label>
-                                <input type="file" class="form-control-file" id="File1">
-                            </div>
+                                <div class="col-12 col-md-6 solInputHolder">
+                                    <label for="exampleInputPassword1">Documento 1</label>
+                                    <input type="file" class="form-control-file" id="File1">
+                                </div>
 
-                            <div class="col-3">
-                                <label for="exampleInputPassword1">Documento 2</label>
-                                <input type="file" class="form-control-file" id="File2">
-                            </div>
-                            <div class="col-3">
-                                <label for="exampleInputPassword1">Documento 3</label>
-                                <input type="file" class="form-control-file" id="File3">
-                            </div>
-                            <div class="col-3">
-                                <label for="exampleInputPassword1">Documento 4</label>
-                                <input type="file" class="form-control-file" id="File4">
-                            </div>
-                            <div class="col">
-                                <button type="submit" class="btn btn-primary mb-2">Enviar</button>
-                            </div>
-                        </form>
-                     </div>
+                                <div class="col-12 col-md-6 solInputHolder">
+                                    <label for="exampleInputPassword1">Documento 2</label>
+                                    <input type="file" class="form-control-file" id="File2">
+                                </div>
+                                <div class="col-12 col-md-6 solInputHolder">
+                                    <label for="exampleInputPassword1">Documento 3</label>
+                                    <input type="file" class="form-control-file" id="File3">
+                                </div>
+                                <div class="col-12 col-md-6 solInputHolder">
+                                    <label for="exampleInputPassword1">Documento 4</label>
+                                    <input type="file" class="form-control-file" id="File4">
+                                </div>
+
+                                <div class="col-12 col-md-4 solInputHolder">
+                                    <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Ayuda -->
         <section class="wow fadeIn" id ="help">
             <div class="container">
                 <div class="row">
@@ -333,14 +335,12 @@
             </div>
         </section>
 
-        <!-- Ayuda -->
-
         <footer class="footer-clean-dark bg-extra-dark-gray padding-five-tb sm-padding-30px-tb">
             <div class="footer-widget-area padding-30px-bottom" style="text-align: center;">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 widget text-left text-md-center text-lg-left md-margin-50px-bottom sm-margin-30px-bottom">
-                            <a href="index.html" class="d-inline-block"><img class="footer-logo" src="assets/img/logo.png" data-rjs="assets/img/logo.png" alt="Zacatecas"></a>
+                            <a href="index.html" class="d-inline-block"><img class="footer-logo" src="assets/img/logo_white.png" alt="Kiosko Digital"></a>
                         </div>
 
                         <div class="col-md-4 widget sm-margin-30px-bottom">
@@ -398,6 +398,27 @@
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script type="text/javascript">
             var x = 0;
+            var runPlaceholder;
+
+            function searchAnim(){
+                var baseText = "Tu trámite";
+                var animText = "...";
+                var array = animText.split("");
+                var currPlaceholder = baseText;
+                var i = 0;
+
+                runPlaceholder = setInterval(function(){
+                    if(i < array.length){
+                        currPlaceholder += array[i++];
+                        $('#main_searchBar').attr('placeholder', currPlaceholder);
+                    }
+                    else {
+                        i = 0;
+                        currPlaceholder = baseText;
+                        $('#main_searchBar').attr('placeholder', currPlaceholder);
+                    }
+                }, 450);
+            }
 
             $(document).ready(function(){
                 $(".serviceItem").click(function() {
@@ -422,6 +443,13 @@
                         $('.' + filter).css('display', 'block');
                     }
                 });
+
+                searchAnim();
+            });
+
+            $('#main_searchBar').click(function(){
+                $('#main_searchBar').attr('placeholder', 'Tu trámite...');
+                clearInterval(runPlaceholder);
             });
         </script>
     </body>

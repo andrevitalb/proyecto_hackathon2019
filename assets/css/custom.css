@@ -108,7 +108,26 @@ Yellow:
 	font-size: 20px;
 }
 
-#solRequest { display: none; }
+/*#solRequest { display: none; }*/
+
+#solRequest form {
+	padding: 2rem;
+	border-radius: 15px;
+}
+
+#solRequest input {
+	border: none;
+	border-bottom: 1.5px solid #ccc;
+}
+
+#solRequest .solInputHolder {
+	padding: 10px;
+}
+
+#solRequest button {
+	width: 100%;
+	border-radius: 15px;
+}
 
 /*---------------------
 		Contact
