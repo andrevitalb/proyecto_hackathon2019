@@ -2283,9 +2283,9 @@ header.sticky nav.header-light-transparent .logo .logo-light, header.sticky nav.
 .navbar-top-scroll {position: absolute; top: 0; z-index: 5;}
 header.sticky nav.navbar-top-scroll {background-color: inherit;}
 header a.logo {display: inline-block; vertical-align: middle;}
-header a.logo img {max-height:26px;}
+header a.logo img {max-height:65px;}
 header .left-nav .sidebar-part1 a.logo img {max-height:inherit;}
-.logo-holder img {max-height: 26px;}
+.logo-holder img {max-height: 65px;}
 
 /* header animation */
 .navbar-top { position: fixed;top: 0; left: 0; right: 0; transition-duration: 0.3s; -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -o-transition-duration: 0.3s; }
@@ -2319,7 +2319,7 @@ header.header-appear nav.bootsnav.header-light-transparent .navbar-nav > li > a.
 header nav.navbar.white-link .navbar-nav > li > a.active, nav.navbar.bootsnav.white-link ul.nav > li > a.active, header nav.navbar.bootsnav ul.nav.white-link > li > a.active, header.header-appear nav.header-dark-transparent .navbar-nav > li > a.active, header.header-appear nav.header-dark .navbar-nav > li > a.active, header.sticky nav.header-dark .navbar-nav > li > a.active, header.sticky nav.header-dark-transparent .navbar-nav > li > a.active { color: rgba(255,255,255,0.6)}
 header.sticky nav.navbar-fixed-top.header-light-transparent.white-link .navbar-nav > li > a.active, header.sticky nav.navbar-fixed-top.header-light.white-link .navbar-nav > li > a.active {color: rgba(0,0,0,0.6)}
 
-header.sticky nav.navbar.white-link .navbar-nav > li > a.active, header.sticky nav.navbar.bootsnav.white-link ul.nav > li > a.active { color: rgba(0,0,0,0.6);}
+header.sticky nav.navbar.white-link .navbar-nav > li > a.active, header.sticky nav.navbar.bootsnav.white-link ul.nav > li > a.active { color: rgba(204, 102, 51, .8);}
 header.sticky nav.navbar.header-dark.white-link .navbar-nav > li > a.active, header.sticky nav.navbar.bootsnav.header-dark.white-link ul.nav > li > a.active { color: rgba(255,255,255,0.6);}
 
 header.header-appear nav.bootsnav.header-light-transparent .navbar-nav > li.dropdown.on > a, header.header-appear nav.bootsnav.header-light .navbar-nav > li.dropdown.on > a, header nav.navbar .navbar-nav > li.dropdown.on > a, nav.navbar.bootsnav ul.nav > li.dropdown.on > a {color: rgba(0,0,0,0.6)}

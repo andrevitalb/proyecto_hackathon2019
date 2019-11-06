@@ -30,19 +30,6 @@ Yellow:
 		Navbar
 ---------------------*/
 
-#logoCont { text-align: left !important; }
-
-.logo { 
-	text-align: left !important;
-	display: inline-block;
-}
-
-.logo img {
-	width: 12rem !important;
-	max-height: 200px !important;
-	display: inline-block;
-}
-
 @media(min-width: 767px){
 	#showRightPush{ display: none; } 
 }
@@ -52,7 +39,9 @@ Yellow:
 ---------------------*/
 
 #mainHeader{ 
-	background-image: url(../img/bg.jpg); 
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 	height: 100vh;
 }
 
@@ -125,12 +114,14 @@ Yellow:
 		Contact
 ---------------------*/
 
-#contact { background-color: #21234A; }
+/*#contact { background-color: #21234A; }*/
 
 /*---------------------
 		Help
 ---------------------*/
 
+
+#help { background-color: #21234A; }
 #help img { width: 100%; }
 .helpStep { margin: 6rem 0; }
 

@@ -114,10 +114,10 @@
                         <div class="navbar-collapse collapse justify-content-end" id="navbar-collapse-toggle-1">
                             <ul id="accordion" class="nav navbar-nav no-margin alt-font text-normal" data-in="fadeIn" data-out="fadeOut">
                                 <li class="dropdown megamenu-fw"><a href="#top">Inicio</a></li>
-                                <li class="dropdown megamenu-fw"><a href="#about">Acerca de</a></li>
+                                <li class="dropdown megamenu-fw"><a href="#about_us">Acerca de</a></li>
                                 <li class="dropdown megamenu-fw"><a href="#services">Trámites</a></li>
+                                <li class="dropdown megamenu-fw"><a href="#help">Ayuda</a></li>
                                 <li class="dropdown megamenu-fw"><a href="#contact">Contacto</a></li>
-                                <li class="dropdown megamenu-fw"><a href="#ayuda">Ayuda</a></li>
                             </ul>
                         </div>
                     </div>
@@ -252,13 +252,69 @@
             </div>
         </section>
 
+        <section class="wow fadeIn" id ="help">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center margin-30px-bottom">
+                        <p class="alt-font margin-5px-bottom text-uppercase text-medium-gray text-small">¿Cómo se usa?</p>
+                        <h5 class="text-uppercase alt-font text-white-2 margin-20px-bottom font-weight-700 md-width-100">Ayuda</h5>
+                        <span class="separator-line-horrizontal-medium-light2 bg-deep-pink d-table mx-auto width-100px"></span>
+                    </div>
+                </div>
+
+                <div class="row helpStep">
+                    <div class="col-12 col-md-4 wow fadeInLeft">
+                        <div><h2 class="text-white-2">01.</h2></div>
+                        <p class="text-light-gray text-medium">Al entrar en la página principal, realizar una búsqueda con una palabra clave que se asocie con el trámite o servicio que necesita realizar.</p>
+                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+                    </div>
+                    <div class="col-12 col-md-8 wow fadeInRight"><img src="assets/img/help1.jpg"></div>
+                </div>
+
+                <div class="row helpStep">
+                    <div class="col-12 col-md-8 wow fadeInLeft"><img src="assets/img/help2.jpg"></div>
+                    <div class="col-12 col-md-4 wow fadeInRight">
+                        <div><h2 class="text-white-2">02.</h2></div>
+                        <p class="text-light-gray text-medium">Después, seleccionar el trámite que desea, basado en la dependencia a la que pertenece.</p>
+                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+                    </div>
+                </div>
+
+                <div class="row helpStep">
+                    <div class="col-12 col-md-4 wow fadeInLeft">
+                        <div><h2 class="text-white-2">03.</h2></div>
+                        <p class="text-light-gray text-medium">Llenar y subir los datos y archivos requeridos.</p>
+                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+                    </div>
+                    <div class="col-12 col-md-8 wow fadeInRight"><img src="assets/img/help3.jpg"></div>
+                </div>
+
+                <div class="row helpStep">
+                    <div class="col-12 col-md-8 wow fadeInLeft"><img src="assets/img/help4.jpg"></div>
+                    <div class="col-12 col-md-4 wow fadeInRight">
+                        <div><h2 class="text-white-2">04.</h2></div>
+                        <p class="text-light-gray text-medium">Una vez que ha revisado que no hay errores, dar click en "Enviar" para registrar su trámite.</p>
+                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+                    </div>
+                </div>
+
+                <div class="row helpStep">
+                    <div class="col-12 wow fadeInUp">
+                        <div><h2 class="text-white-2">05.</h2></div>
+                        <p class="text-light-gray text-medium">Esperar la respuesta por parte de la dependencia corespondiente, para cualquier aclaración, se le contactará por medio de correo electrónico.</p>
+                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contacto -->
         <section class="wow fadeIn" id = "contact">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center margin-30px-bottom">
                         <p class="alt-font margin-5px-bottom text-uppercase text-medium-gray text-small">¿Tienes alguna duda?</p>
-                        <h5 class="text-uppercase alt-font text-white-2 margin-20px-bottom font-weight-700 md-width-100">Contáctanos</h5>
+                        <h5 class="text-uppercase alt-font text-extra-dark-gray margin-20px-bottom font-weight-700 md-width-100">Contáctanos</h5>
                         <span class="separator-line-horrizontal-medium-light2 bg-deep-pink d-table mx-auto width-100px"></span>
                     </div>
                 </div>
@@ -278,61 +334,6 @@
         </section>
 
         <!-- Ayuda -->
-        <section class="wow fadeIn" id ="help">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center margin-30px-bottom">
-                        <p class="alt-font margin-5px-bottom text-uppercase text-medium-gray text-small">¿Cómo se usa?</p>
-                        <h5 class="text-uppercase alt-font text-extra-dark-gray margin-20px-bottom font-weight-700 md-width-100">Ayuda</h5>
-                        <span class="separator-line-horrizontal-medium-light2 bg-deep-pink d-table mx-auto width-100px"></span>
-                    </div>
-                </div>
-
-                <div class="row helpStep">
-                    <div class="col-12 col-md-4 wow fadeInRight">
-                        <div><h2 class="text-medium-gray">01.</h2></div>
-                        <p class="text-dark-gray text-medium">Al entrar en la página principal, realizar una búsqueda con una palabra clave que se asocie con el trámite o servicio que necesita realizar.</p>
-                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
-                    </div>
-                    <div class="col-12 col-md-8"><img src="assets/img/help1.jpg"></div>
-                </div>
-
-                <div class="row helpStep">
-                    <div class="col-12 col-md-8"><img src="assets/img/help2.jpg"></div>
-                    <div class="col-12 col-md-4 wow fadeInRight">
-                        <div><h2 class="text-medium-gray">02.</h2></div>
-                        <p class="text-dark-gray text-medium">Después, seleccionar el trámite que desea, basado en la dependencia a la que pertenece.</p>
-                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
-                    </div>
-                </div>
-
-                <div class="row helpStep">
-                    <div class="col-12 col-md-4 wow fadeInRight">
-                        <div><h2 class="text-medium-gray">03.</h2></div>
-                        <p class="text-dark-gray text-medium">Llenar y subir los datos y archivos requeridos.</p>
-                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
-                    </div>
-                    <div class="col-12 col-md-8"><img src="assets/img/help3.jpg"></div>
-                </div>
-
-                <div class="row helpStep">
-                    <div class="col-12 col-md-8"><img src="assets/img/help4.jpg"></div>
-                    <div class="col-12 col-md-4 wow fadeInRight">
-                        <div><h2 class="text-medium-gray">04.</h2></div>
-                        <p class="text-dark-gray text-medium">Una vez que ha revisado que no hay errores, dar click en "Enviar" para registrar su trámite.</p>
-                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
-                    </div>
-                </div>
-
-                <div class="row helpStep">
-                    <div class="col-12 wow fadeInRight">
-                        <div><h2 class="text-medium-gray">05.</h2></div>
-                        <p class="text-dark-gray text-medium">Esperar la respuesta por parte de la dependencia corespondiente, para cualquier aclaración, se le contactará por medio de correo electrónico.</p>
-                        <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <footer class="footer-clean-dark bg-extra-dark-gray padding-five-tb sm-padding-30px-tb">
             <div class="footer-widget-area padding-30px-bottom" style="text-align: center;">

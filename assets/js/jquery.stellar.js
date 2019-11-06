@@ -400,7 +400,7 @@
 
 				// Save/restore the original top and left CSS values in case we destroy the instance
 				if (!$this.data('stellar-backgroundStartingLeft')) {
-					$this.data('stellar-backgroundStartingLeft', backgroundPosition[0]);
+					$this.data('stellar-backgroundStartingLeft', 0);
 					$this.data('stellar-backgroundStartingTop', backgroundPosition[1]);
 				} else {
 					setBackgroundPosition($this, $this.data('stellar-backgroundStartingLeft'), $this.data('stellar-backgroundStartingTop'));
