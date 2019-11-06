@@ -97,10 +97,10 @@
         <header>
             <nav class="navbar navbar-default bootsnav navbar-fixed-top header-light background-transparent white-link navbar-expand-lg">
                 <div class="container nav-header-container">
-                    <div class="col-auto pl-lg-0" id = "logoCont">
+                    <div class="col-auto pl-lg-0">
                         <a href="index.html" title="Kiosko Digital" class="logo">
-                            <img src="assets/img/logo_white.png" alt="Kiosko Digital" class="logo-white default">
                             <img src="assets/img/logo.png" alt="Kiosko Digital" class="logo-dark">
+                            <img src="assets/img/logo_white.png" alt="Kiosko Digital" class="logo-white default">
                         </a>
                     </div>
 
@@ -210,43 +210,44 @@
                 ?>
 
                 <div class="row">
-                    <div class="col-lg-12 wow fadeInUp" id="solRequest">
-                        <div class="content-box big-box box-shadow">
-                        <form class = "row justify-content-center">
-                            <div class="col-12 col-md-9">
-                                <input type="text" placeholder="Nombre(s)" id="nombreUsuario" required>
-                            </div>
+                    <div class="col-12 margin-35px-top wow fadeInUp" id="solRequest">
+                        <div class="content-box">
+                            <form class = "row justify-content-center col-12 col-md-9 margin-auto big-box box-shadow">
+                                <div class="col-12 solInputHolder">
+                                    <input type="text" placeholder="Nombre" id="nombreUsuario" required>
+                                </div>
 
-                            <div class="col-12 col-md-9">
-                                <input type="text" placeholder="Numero de teléfono" id="phoneUsuario" required>
-                            </div>
+                                <div class="col-12 col-md-6 solInputHolder">
+                                    <input type="text" placeholder="Número de teléfono" id="phoneUsuario" required>
+                                </div>
 
-                            <div class="col-12 col-md-9">
-                                <input type="email" id="emailUsuario" placeholder="Correo electrónico" required>
-                            </div>
+                                <div class="col-12 col-md-6 solInputHolder">
+                                    <input type="email" id="emailUsuario" placeholder="Correo electrónico" required>
+                                </div>
 
-                            <div class="col-12 col-md-9">
-                                <label for="exampleInputPassword1">Documento 1</label>
-                                <input type="file" class="form-control-file" id="File1">
-                            </div>
+                                <div class="col-12 col-md-6 solInputHolder">
+                                    <label for="exampleInputPassword1">Documento 1</label>
+                                    <input type="file" class="form-control-file" id="File1">
+                                </div>
 
-                            <div class="col-3">
-                                <label for="exampleInputPassword1">Documento 2</label>
-                                <input type="file" class="form-control-file" id="File2">
-                            </div>
-                            <div class="col-3">
-                                <label for="exampleInputPassword1">Documento 3</label>
-                                <input type="file" class="form-control-file" id="File3">
-                            </div>
-                            <div class="col-3">
-                                <label for="exampleInputPassword1">Documento 4</label>
-                                <input type="file" class="form-control-file" id="File4">
-                            </div>
-                            <div class="col">
-                                <button type="submit" class="btn btn-primary mb-2">Enviar</button>
-                            </div>
-                        </form>
-                     </div>
+                                <div class="col-12 col-md-6 solInputHolder">
+                                    <label for="exampleInputPassword1">Documento 2</label>
+                                    <input type="file" class="form-control-file" id="File2">
+                                </div>
+                                <div class="col-12 col-md-6 solInputHolder">
+                                    <label for="exampleInputPassword1">Documento 3</label>
+                                    <input type="file" class="form-control-file" id="File3">
+                                </div>
+                                <div class="col-12 col-md-6 solInputHolder">
+                                    <label for="exampleInputPassword1">Documento 4</label>
+                                    <input type="file" class="form-control-file" id="File4">
+                                </div>
+
+                                <div class="col-12 col-md-4 solInputHolder">
+                                    <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -289,16 +290,16 @@
                 </div>
 
                 <div class="row helpStep">
-                    <div class="col-12 col-md-4 wow fadeInRight">
+                    <div class="col-12 col-md-4 wow fadeInLeft">
                         <div><h2 class="text-medium-gray">01.</h2></div>
                         <p class="text-dark-gray text-medium">Al entrar en la página principal, realizar una búsqueda con una palabra clave que se asocie con el trámite o servicio que necesita realizar.</p>
                         <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
                     </div>
-                    <div class="col-12 col-md-8"><img src="assets/img/help1.jpg"></div>
+                    <div class="col-12 col-md-8 fadeInRight"><img src="assets/img/help1.jpg"></div>
                 </div>
 
                 <div class="row helpStep">
-                    <div class="col-12 col-md-8"><img src="assets/img/help2.jpg"></div>
+                    <div class="col-12 col-md-8 fadeInLeft"><img src="assets/img/help2.jpg"></div>
                     <div class="col-12 col-md-4 wow fadeInRight">
                         <div><h2 class="text-medium-gray">02.</h2></div>
                         <p class="text-dark-gray text-medium">Después, seleccionar el trámite que desea, basado en la dependencia a la que pertenece.</p>
@@ -307,16 +308,16 @@
                 </div>
 
                 <div class="row helpStep">
-                    <div class="col-12 col-md-4 wow fadeInRight">
+                    <div class="col-12 col-md-4 wow fadeInLeft">
                         <div><h2 class="text-medium-gray">03.</h2></div>
                         <p class="text-dark-gray text-medium">Llenar y subir los datos y archivos requeridos.</p>
                         <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
                     </div>
-                    <div class="col-12 col-md-8"><img src="assets/img/help3.jpg"></div>
+                    <div class="col-12 col-md-8 fadeInRight"><img src="assets/img/help3.jpg"></div>
                 </div>
 
                 <div class="row helpStep">
-                    <div class="col-12 col-md-8"><img src="assets/img/help4.jpg"></div>
+                    <div class="col-12 col-md-8 fadeInLeft"><img src="assets/img/help4.jpg"></div>
                     <div class="col-12 col-md-4 wow fadeInRight">
                         <div><h2 class="text-medium-gray">04.</h2></div>
                         <p class="text-dark-gray text-medium">Una vez que ha revisado que no hay errores, dar click en "Enviar" para registrar su trámite.</p>
@@ -325,7 +326,7 @@
                 </div>
 
                 <div class="row helpStep">
-                    <div class="col-12 wow fadeInRight">
+                    <div class="col-12 wow fadeInUp">
                         <div><h2 class="text-medium-gray">05.</h2></div>
                         <p class="text-dark-gray text-medium">Esperar la respuesta por parte de la dependencia corespondiente, para cualquier aclaración, se le contactará por medio de correo electrónico.</p>
                         <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-left "></div>
@@ -339,7 +340,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 widget text-left text-md-center text-lg-left md-margin-50px-bottom sm-margin-30px-bottom">
-                            <a href="index.html" class="d-inline-block"><img class="footer-logo" src="assets/img/logo.png" data-rjs="assets/img/logo.png" alt="Zacatecas"></a>
+                            <a href="index.html" class="d-inline-block"><img class="footer-logo" src="assets/img/logo_white.png" alt="Kiosko Digital"></a>
                         </div>
 
                         <div class="col-md-4 widget sm-margin-30px-bottom">

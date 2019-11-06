@@ -30,19 +30,6 @@ Yellow:
 		Navbar
 ---------------------*/
 
-#logoCont { text-align: left !important; }
-
-.logo { 
-	text-align: left !important;
-	display: inline-block;
-}
-
-.logo img {
-	width: 12rem !important;
-	max-height: 200px !important;
-	display: inline-block;
-}
-
 @media(min-width: 767px){
 	#showRightPush{ display: none; } 
 }
@@ -119,7 +106,26 @@ Yellow:
 	font-size: 20px;
 }
 
-#solRequest { display: none; }
+/*#solRequest { display: none; }*/
+
+#solRequest form {
+	padding: 2rem;
+	border-radius: 15px;
+}
+
+#solRequest input {
+	border: none;
+	border-bottom: 1.5px solid #ccc;
+}
+
+#solRequest .solInputHolder {
+	padding: 10px;
+
+}
+
+#solRequest button {
+	width: 100%;
+}
 
 /*---------------------
 		Contact
