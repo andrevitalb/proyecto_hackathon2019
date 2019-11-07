@@ -98,7 +98,7 @@
             <nav class="navbar navbar-default bootsnav navbar-fixed-top header-light background-transparent white-link navbar-expand-lg">
                 <div class="container nav-header-container">
                     <div class="col-auto pl-lg-0">
-                        <a href="index.html" title="Kiosko Digital" class="logo">
+                        <a href="index.php" title="Kiosko Digital" class="logo">
                             <img src="assets/img/logo.png" alt="Kiosko Digital" class="logo-dark">
                             <img src="assets/img/logo_white.png" alt="Kiosko Digital" class="logo-white default">
                         </a>
@@ -340,7 +340,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 widget text-left text-md-center text-lg-left md-margin-50px-bottom sm-margin-30px-bottom">
-                            <a href="index.html" class="d-inline-block"><img class="footer-logo" src="assets/img/logo_white.png" alt="Kiosko Digital"></a>
+                            <a href="index.php" class="d-inline-block"><img class="footer-logo" src="assets/img/logo_white.png" alt="Kiosko Digital"></a>
                         </div>
 
                         <div class="col-md-4 widget sm-margin-30px-bottom">
