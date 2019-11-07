@@ -190,10 +190,15 @@
 
                         while($trams = mysqli_fetch_array($resultTrams)) {
                             if($trams[0] != 'NULL'){
-                                $tag1 = filter(strtolower($trams[7]));
-                                $tag2 = filter(strtolower($trams[8]));
-                                $tag3 = filter(strtolower($trams[9]));
-                                $tag4 = filter(strtolower($trams[10]));
+                                // $tag1 = filter(strtolower($trams[7]));
+                                // $tag2 = filter(strtolower($trams[8]));
+                                // $tag3 = filter(strtolower($trams[9]));
+                                // $tag4 = filter(strtolower($trams[10]));
+
+                                $tag1 = strtolower($trams[7]);
+                                $tag2 = strtolower($trams[8]);
+                                $tag3 = strtolower($trams[9]);
+                                $tag4 = strtolower($trams[10]);
 
                                 $depends .= '<div class="col-12 col-md-4 margin-15px-bottom wow fadeIn '.$tag1;
 
