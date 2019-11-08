@@ -1,5 +1,5 @@
 /*-------------------------------
-			Colors  
+			Colors
 
 Blue:
 	HEX: #21234A
@@ -31,14 +31,14 @@ Yellow:
 ---------------------*/
 
 @media(min-width: 767px){
-	#showRightPush{ display: none; } 
+	#showRightPush{ display: none; }
 }
 
 /*---------------------
 		Header
 ---------------------*/
 
-#mainHeader{ 
+#mainHeader{
 	background-image: url(../img/bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -46,14 +46,14 @@ Yellow:
 }
 
 #mainHeader * { max-height: 100vh; }
-#main_searchContainer { 
-	background-color: rgba(26, 30, 75, .7); 
+#main_searchContainer {
+	background-color: rgba(26, 30, 75, .7);
 	margin-right: 0 !important;
 	margin-left: 0 !important;
 }
 
 #main_searchContainer * {
-	background-color: transparent; 
+	background-color: transparent;
 	font-size: 60px;
 	line-height: 65px;
 	font-weight: 600;
@@ -61,12 +61,12 @@ Yellow:
 	display: inline-block;
 }
 
-#main_searchBar { 
+#main_searchBar {
 	border-bottom: 2px solid #ccc;
 	color: #ccc;
 }
 
-#searchButton { 
+#searchButton {
 	color: #ddd;
 	transition: all .3s ease-in-out;
 	padding: 8px 15px;
@@ -103,12 +103,12 @@ Yellow:
 	background-size: cover;
 }
 
-#services .btn i { 
-	margin-left: 0 !important; 
+#services .btn i {
+	margin-left: 0 !important;
 	font-size: 20px;
 }
 
-/*#solRequest { display: none; }*/
+#solRequest { display: none; }
 
 #solRequest form {
 	padding: 2rem;
@@ -118,11 +118,21 @@ Yellow:
 #solRequest input {
 	border: none;
 	border-bottom: 1.5px solid #ccc;
+	margin: 0;
+}
+
+#solRequest .fileHolders {
+	width: 100%;
+	display: none;
 }
 
 #solRequest .solInputHolder {
-	padding: 10px;
+	padding: 15px 10px;
+	display: inline-flex;
+	margin-bottom: 15px;
 }
+
+#solRequest .solInputHolder > div { margin: auto 0; }
 
 #solRequest button {
 	width: 100%;

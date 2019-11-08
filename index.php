@@ -12,45 +12,12 @@
     $resultDepends = mysqli_query($connect, $queryDepends);
 
     function filter($cadena){
-        $cadena = utf8_encode($cadena);
-
-        $cadena = str_replace(
-            array('á', 'à', 'ä', 'â', 'ª', 'Á', 'À', 'Â', 'Ä'),
-            array('a', 'a', 'a', 'a', 'a', 'A', 'A', 'A', 'A'),
-            $cadena
-        );
-
-        $cadena = str_replace(
-            array('é', 'è', 'ë', 'ê', 'É', 'È', 'Ê', 'Ë'),
-            array('e', 'e', 'e', 'e', 'E', 'E', 'E', 'E'),
-            $cadena
-        );
-
-        $cadena = str_replace(
-            array('í', 'ì', 'ï', 'î', 'Í', 'Ì', 'Ï', 'Î'),
-            array('i', 'i', 'i', 'i', 'I', 'I', 'I', 'I'),
-            $cadena
-        );
-
-        $cadena = str_replace(
-            array('ó', 'ò', 'ö', 'ô', 'Ó', 'Ò', 'Ö', 'Ô'),
-            array('o', 'o', 'o', 'o', 'O', 'O', 'O', 'O'),
-            $cadena
-        );
-
-        $cadena = str_replace(
-            array('ú', 'ù', 'ü', 'û', 'Ú', 'Ù', 'Û', 'Ü'),
-            array('u', 'u', 'u', 'u', 'U', 'U', 'U', 'U'),
-            $cadena
-        );
-
-        $cadena = str_replace(
-            array('ñ', 'Ñ', 'ç', 'Ç'),
-            array('n', 'N', 'c', 'C'),
-            $cadena
-        );
-
-        return $cadena;
+        $originales = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ';
+        $modificadas = 'AAAAAAACEEEEIIIIDNOOOOOOUUUUYBSaaaaaaaceeeeiiiidnoooooouuuyybyRr';
+        $cadena = utf8_decode($cadena);
+        $cadena = strtr($cadena, utf8_decode($originales), $modificadas);
+        $cadena = strtolower($cadena);
+        return utf8_encode($cadena);
     }
 ?>
 <!DOCTYPE HTML>
@@ -179,39 +146,28 @@
                 <?php
                     $depends;
                     $countDepends = 1;
-
-                    $trams;
+                    $countTrams = 1;
 
                     while($deps = mysqli_fetch_array($resultDepends)){
                         $depends .= '<div class="row"><div class="col-12 margin-40px-bottom margin-40px-top"><div class="position-relative overflow-hidden w-100"><span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase">'.$deps[0].'</span></div></div>';
 
-                        $queryTrams = "Select tramites_link, tramites_nombre, tramites_dependencia, tramites_nDocumentos, tramites_costo, tramites_duracion, tramites_nEtiquetas, tramites_etiqueta1, tramites_etiqueta2, tramites_etiqueta3, tramites_etiqueta4 from tramites where tramites_dependencia = ".$countDepends++;
+                        $queryTrams = "Select tramites_link, tramites_nombre, tramites_dependencia, tramites_costo, tramites_duracion, tramites_etiqueta1, tramites_etiqueta2, tramites_etiqueta3, tramites_etiqueta4 from tramites where tramites_dependencia = ".$countDepends++;
                         $resultTrams = mysqli_query($connect, $queryTrams);
 
                         while($trams = mysqli_fetch_array($resultTrams)) {
                             if($trams[0] != 'NULL'){
-                                // $tag1 = filter(strtolower($trams[7]));
-                                // $tag2 = filter(strtolower($trams[8]));
-                                // $tag3 = filter(strtolower($trams[9]));
-                                // $tag4 = filter(strtolower($trams[10]));
-
-                                // $tag1 = strtolower($trams[7]);
-                                // $tag2 = strtolower($trams[8]);
-                                // $tag3 = strtolower($trams[9]);
-                                // $tag4 = strtolower($trams[10]);
-
-                                $tag1 = filter($trams[7]);
-                                $tag2 = filter($trams[8]);
-                                $tag3 = filter($trams[9]);
-                                $tag4 = filter($trams[10]);
+                                $tag1 = filter($trams[5]);
+                                $tag2 = filter($trams[6]);
+                                $tag3 = filter($trams[7]);
+                                $tag4 = filter($trams[8]);
 
                                 $depends .= '<div class="col-12 col-md-4 margin-15px-bottom wow fadeIn '.$tag1;
 
-                                if($trams[8] != NULL) $depends .= ' '.$tag2;
-                                if($trams[9] != NULL) $depends .= ' '.$tag3;
-                                if($trams[10] != NULL) $depends .= ' '.$tag4;
+                                if($trams[6] != NULL) $depends .= ' '.$tag2;
+                                if($trams[7] != NULL) $depends .= ' '.$tag3;
+                                if($trams[8] != NULL) $depends .= ' '.$tag4;
 
-                                $depends .= ' serviceItem"><div class="position-relative overflow-hidden"><div class="w-100 serviceItemBg"></div><div class="opacity-medium bg-extra-dark-gray"></div><div class="blog-box"><div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100"><span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">'.$trams[1].'</span></div><div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100"><a href="#services" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a></div></div></div></div>';
+                                $depends .= ' serviceItem" id = "tram'.$countTrams++.'"><div class="position-relative overflow-hidden"><div class="w-100 serviceItemBg"></div><div class="opacity-medium bg-extra-dark-gray"></div><div class="blog-box"><div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100"><span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">'.$trams[1].'</span></div><div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100"><a href="#services" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a></div></div></div></div>';
                             }
                         }
                         $depends .= '</div>';
@@ -235,23 +191,32 @@
                                     <input type="email" id="emailUsuario" placeholder="Correo electrónico" required>
                                 </div>
 
-                                <div class="col-12 col-md-6 solInputHolder">
-                                    <label for="exampleInputPassword1">Documento 1</label>
-                                    <input type="file" class="form-control-file" id="File1">
-                                </div>
+                                <?php
+                                    $tramDocs;
+                                    $docNameArray = array();
 
-                                <div class="col-12 col-md-6 solInputHolder">
-                                    <label for="exampleInputPassword1">Documento 2</label>
-                                    <input type="file" class="form-control-file" id="File2">
-                                </div>
-                                <div class="col-12 col-md-6 solInputHolder">
-                                    <label for="exampleInputPassword1">Documento 3</label>
-                                    <input type="file" class="form-control-file" id="File3">
-                                </div>
-                                <div class="col-12 col-md-6 solInputHolder">
-                                    <label for="exampleInputPassword1">Documento 4</label>
-                                    <input type="file" class="form-control-file" id="File4">
-                                </div>
+                                    $queryDocNames = "Select documentos_nombre from documentos order by documentos_ID";
+                                    $resultDocNames = mysqli_query($connect, $queryDocNames);
+
+                                    while($docNames = mysqli_fetch_array($resultDocNames)) array_push($docNameArray, $docNames[0]);
+
+                                    for($i = 0; $i < $countTrams - 1; $i++){
+                                        $tramDocs .= '<div class = "row fileHolders tram'.($i + 1) . '">';
+                                        $countDocs = 1;
+
+                                        $queryDocs = "Select tramdocs_documento, tramdocs_required from tramDocs where tramdocs_tramite = " . ($i + 1);
+                                        $resultDocs = mysqli_query($connect, $queryDocs);
+
+                                        while($docs = mysqli_fetch_array($resultDocs)) {
+                                            $tramDocs .= '<div class="col-12 col-md-6 solInputHolder"><div><label for="tram'.($i + 1).'doc'.$countDocs.'">'.$docNameArray[$docs[0] - 1].'</label><input type="file" class="form-control-file" id="tram'.($i + 1).'doc'.$countDocs++;
+                                            if($docs[1] == 1) $tramDocs .= '" required> *</div></div>';
+                                            else $tramDocs .= '"></div></div>';
+                                        }
+
+                                        $tramDocs .= '</div>';
+                                    }
+                                    echo $tramDocs;
+                                ?>
 
                                 <div class="col-12 col-md-4 solInputHolder">
                                     <button type="submit" class="btn btn-primary mb-2">Enviar</button>
@@ -430,6 +395,24 @@
                 }, 450);
             }
 
+            function norm(cad){
+                return cad.normalize('NFD').replace(/[\u0300-\u036f]/g,"");
+            }
+
+            function search(){
+                if($('#main_searchBar').val() == "") notifFilter();
+                else {
+                    $([document.documentElement, document.body]).animate({
+                        scrollTop: $("#services").offset().top
+                    }, 600);
+                    var filter = norm($('#main_searchBar').val());
+                    $('.serviceItem').css('display', 'none');
+                    $('.serviceItem').parent().css('display', 'none');
+                    $('.' + filter).parent().css('display', 'block');
+                    $('.' + filter).css('display', 'block');
+                }
+            }
+
             $(document).ready(function(){
                 $(".serviceItem").click(function() {
                     $('#solRequest').css('display', 'block');
@@ -438,20 +421,19 @@
                     $('.serviceItem').parent().css('display', 'none');
                     $(this).parent().css('display', 'block');
                     $(this).css('display', 'block');
+
+                    var id = $(this).attr('id');
+                    $('.fileHolders').css('display', 'none');
+                    $('.fileHolders input').prop("disabled", true);
+                    $('.' + id).css('display', 'block');
+                    $('.' + id + ' input').prop("disabled", false);
                 });
 
-                $('#searchButton').click(function () {
-                    if($('#main_searchBar').val() == "") notifFilter();
-                    else {
-                        $([document.documentElement, document.body]).animate({
-                            scrollTop: $("#services").offset().top
-                        }, 600);
-                        var filter = $('#main_searchBar').val();
-                        $('.serviceItem').css('display', 'none');
-                        $('.serviceItem').parent().css('display', 'none');
-                        $('.' + filter).parent().css('display', 'block');
-                        $('.' + filter).css('display', 'block');
-                    }
+                $('#searchButton').click(function(){search();});
+
+                $('#main_searchBar').keypress(function(e){
+                    var key = e.which;
+                    if(key == 13) search();
                 });
 
                 searchAnim();
