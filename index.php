@@ -167,7 +167,7 @@
                                 if($trams[7] != NULL) $depends .= ' '.$tag3;
                                 if($trams[8] != NULL) $depends .= ' '.$tag4;
 
-                                $depends .= ' serviceItem" id = "tram'.$countTrams++.'"><div class="position-relative overflow-hidden"><div class="w-100 serviceItemBg"></div><div class="opacity-medium bg-extra-dark-gray"></div><div class="blog-box"><div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100"><span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">'.$trams[1].'</span></div><div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100"><a href="#services" class="btn btn-white btn-rounded btn-small"><i class="far fa-long-arrow-alt-right"></i></a></div></div></div></div>';
+                                $depends .= ' serviceItem" id = "tram'.$countTrams++.'"><div class="position-relative overflow-hidden"><div class="w-100 serviceItemBg"></div><div class="opacity-medium bg-extra-dark-gray"></div><div class="blog-box"><div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100"><span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">'.$trams[1].'</span></div><div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100"><a href="#services" class="btn btn-white btn-rounded btn-small solLink"><i class="far fa-long-arrow-alt-right"></i></a></div></div></div></div>';
                             }
                         }
                         $depends .= '</div>';
@@ -416,7 +416,7 @@
             $(document).ready(function(){
                 var headerHeight = $('nav').outerHeight();
 
-                $('.nav.navbar-nav li a, .serviceItem, .serviceItem *').click(function(e) {
+                $('.nav.navbar-nav li a').click(function(e) {
                     var linkTo = $(this).attr('href');
 
                     $('html, body').animate({
@@ -426,6 +426,10 @@
                 });
 
                 $(".serviceItem").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $('#services').offset().top - headerHeight + 100
+                    }, 700);
+
                     $('#solRequest').css('display', 'block');
                     x = 1;
                     $('.serviceItem').css('display', 'none');
