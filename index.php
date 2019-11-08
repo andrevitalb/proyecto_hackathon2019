@@ -414,6 +414,17 @@
             }
 
             $(document).ready(function(){
+                var headerHeight = $('header').outerHeight();
+
+                $('.nav.navbar-nav li a').click(function(e) {
+                    var linkTo = $(this).attr('href');
+
+                    $('html, body').animate({
+                        scrollTop: $(linkTo).offset().top - headerHeight
+                    }, 700);
+                    e.preventDefault();
+                })
+
                 $(".serviceItem").click(function() {
                     $('#solRequest').css('display', 'block');
                     x = 1;
