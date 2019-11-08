@@ -195,10 +195,15 @@
                                 // $tag3 = filter(strtolower($trams[9]));
                                 // $tag4 = filter(strtolower($trams[10]));
 
-                                $tag1 = strtolower($trams[7]);
-                                $tag2 = strtolower($trams[8]);
-                                $tag3 = strtolower($trams[9]);
-                                $tag4 = strtolower($trams[10]);
+                                // $tag1 = strtolower($trams[7]);
+                                // $tag2 = strtolower($trams[8]);
+                                // $tag3 = strtolower($trams[9]);
+                                // $tag4 = strtolower($trams[10]);
+
+                                $tag1 = filter($trams[7]);
+                                $tag2 = filter($trams[8]);
+                                $tag3 = filter($trams[9]);
+                                $tag4 = filter($trams[10]);
 
                                 $depends .= '<div class="col-12 col-md-4 margin-15px-bottom wow fadeIn '.$tag1;
 
