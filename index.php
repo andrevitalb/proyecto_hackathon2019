@@ -414,16 +414,16 @@
             }
 
             $(document).ready(function(){
-                var headerHeight = $('header').outerHeight();
+                var headerHeight = $('nav').outerHeight();
 
-                $('.nav.navbar-nav li a').click(function(e) {
+                $('.nav.navbar-nav li a, .serviceItem, .serviceItem *').click(function(e) {
                     var linkTo = $(this).attr('href');
 
                     $('html, body').animate({
-                        scrollTop: $(linkTo).offset().top - headerHeight
+                        scrollTop: $(linkTo).offset().top - headerHeight + 15
                     }, 700);
                     e.preventDefault();
-                })
+                });
 
                 $(".serviceItem").click(function() {
                     $('#solRequest').css('display', 'block');
