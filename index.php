@@ -167,7 +167,7 @@
                                 if($trams[7] != NULL) $depends .= ' '.$tag3;
                                 if($trams[8] != NULL) $depends .= ' '.$tag4;
 
-                                $depends .= ' serviceItem" id = "tram'.$countTrams++.'"><div class="position-relative overflow-hidden"><div class="w-100 serviceItemBg"></div><div class="opacity-medium bg-extra-dark-gray"></div><div class="blog-box"><div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100"><span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">'.$trams[1].'</span></div><div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100"><a href="#services" class="btn btn-white btn-rounded btn-small solLink"><i class="far fa-long-arrow-alt-right"></i></a></div></div></div></div>';
+                                $depends .= ' serviceItem" id = "tram'.$countTrams.'"><div class="position-relative overflow-hidden"><div class="w-100 serviceItemBg"></div><div class="opacity-medium bg-extra-dark-gray"></div><div class="blog-box"><div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100"><span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">'.$trams[1].'</span></div><div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100"><a class="btn btn-white btn-rounded btn-small solLink"><i class="far fa-long-arrow-alt-right"></i></a></div></div></div></div><div class="col-12 col-md-4 margin-15px-bottom wow fadeIn tramDetails" id = "tram'.$countTrams++.'List"><ul><li><strong>Tiempo estimado de respuesta:</strong> '.$trams[4].' días</li><li><strong>Costo del trámite:</strong> $ '.$trams[3].'</li></ul></div>';
                             }
                         }
                         $depends .= '</div>';
@@ -372,7 +372,6 @@
         <script type="text/javascript" src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script type="text/javascript">
-            var x = 0;
             var runPlaceholder;
 
             function searchAnim(){
@@ -410,6 +409,7 @@
                     $('.serviceItem').parent().css('display', 'none');
                     $('.' + filter).parent().css('display', 'block');
                     $('.' + filter).css('display', 'block');
+                    $('#solRequest').css('display', 'none');
                 }
             }
 
@@ -426,12 +426,12 @@
                 });
 
                 $(".serviceItem").click(function() {
+                    $('#solRequest').css('display', 'block');
+
                     $('html, body').animate({
-                        scrollTop: $('#services').offset().top - headerHeight + 100
+                        scrollTop: $('#solRequest').offset().top - headerHeight - 5
                     }, 700);
 
-                    $('#solRequest').css('display', 'block');
-                    x = 1;
                     $('.serviceItem').css('display', 'none');
                     $('.serviceItem').parent().css('display', 'none');
                     $(this).parent().css('display', 'block');
@@ -442,6 +442,8 @@
                     $('.fileHolders input').prop("disabled", true);
                     $('.' + id).css('display', 'block');
                     $('.' + id + ' input').prop("disabled", false);
+                    $('.tramDetails').css('display', 'none');
+                    $('#' + id + 'List').css('display', 'inline-flex');
                 });
 
                 $('#searchButton').click(function(){search();});

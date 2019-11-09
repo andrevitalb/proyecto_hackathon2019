@@ -108,6 +108,16 @@ Yellow:
 	font-size: 20px;
 }
 
+#services .tramDetails { display: none; }
+
+#services .tramDetails ul {
+	display: inline-block;
+	margin: 0 auto;
+	margin-left: 10px;
+}
+
+#services .tramDetails li { font-size: 15px; }
+
 #solRequest { display: none; }
 
 #solRequest form {
