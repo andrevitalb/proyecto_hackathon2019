@@ -167,7 +167,17 @@
                                 if($trams[7] != NULL) $depends .= ' '.$tag3;
                                 if($trams[8] != NULL) $depends .= ' '.$tag4;
 
-                                $depends .= ' serviceItem" id = "tram'.$countTrams.'"><div class="position-relative overflow-hidden"><div class="w-100 serviceItemBg"></div><div class="opacity-medium bg-extra-dark-gray"></div><div class="blog-box"><div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100"><span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">'.$trams[1].'</span></div><div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100"><a class="btn btn-white btn-rounded btn-small solLink"><i class="far fa-long-arrow-alt-right"></i></a></div></div></div></div><div class="col-12 col-md-4 margin-15px-bottom wow fadeIn tramDetails" id = "tram'.$countTrams++.'List"><ul><li><strong>Tiempo estimado de respuesta:</strong> '.$trams[4].' días</li><li><strong>Costo del trámite:</strong> $ '.$trams[3].'</li></ul></div>';
+                                if($trams[3] == 0) $costo = "Gratuito";
+                                else {
+                                    $costo = "$ ";
+                                    if(($trams[3] % 1) == 0) $costo .=  $trams[3] . ".00";
+                                    else $costo .=  $trams[3];
+                                }
+
+                                if($trams[4] == 1) $duracion = "1 día";
+                                else $duracion = $trams[4] . " días";
+
+                                $depends .= ' serviceItem" id = "tram'.$countTrams.'"><div class="position-relative overflow-hidden"><div class="w-100 serviceItemBg"></div><div class="opacity-medium bg-extra-dark-gray"></div><div class="blog-box"><div class="blog-box-image d-flex flex-column justify-content-center align-items-center text-center h-100"><span class="text-white-2 text-uppercase alt-font font-weight-600 text-small letter-spacing-2">'.$trams[1].'</span></div><div class="blog-box-content d-flex flex-column justify-content-center align-items-center text-center h-100"><a class="btn btn-white btn-rounded btn-small solLink"><i class="far fa-long-arrow-alt-right"></i></a></div></div></div></div><div class="col-12 col-md-4 margin-15px-bottom wow fadeIn tramDetails" id = "tram'.$countTrams++.'List"><ul><li class = "infoTitle">Información del trámite:</li><li><strong>Tiempo estimado de resolución:</strong> '.$duracion.'</li><li><strong>Costo del trámite:</strong> '.$costo.'</li></ul></div>';
                             }
                         }
                         $depends .= '</div>';
@@ -180,15 +190,15 @@
                         <div class="content-box">
                             <form class = "row justify-content-center col-12 col-md-9 margin-auto big-box box-shadow">
                                 <div class="col-12 solInputHolder">
-                                    <input type="text" placeholder="Nombre" id="nombreUsuario" required>
+                                    <input type="text" placeholder="Nombre" id="nombreUsuario" required><span class = "requiredDoc">*</span>
                                 </div>
 
                                 <div class="col-12 col-md-6 solInputHolder">
-                                    <input type="number" placeholder="Número de teléfono" id="phoneUsuario" required>
+                                    <input type="number" placeholder="Número de teléfono" id="phoneUsuario" required><span class = "requiredDoc">*</span>
                                 </div>
 
                                 <div class="col-12 col-md-6 solInputHolder">
-                                    <input type="email" id="emailUsuario" placeholder="Correo electrónico" required>
+                                    <input type="email" id="emailUsuario" placeholder="Correo electrónico" required><span class = "requiredDoc">*</span>
                                 </div>
 
                                 <?php
@@ -209,7 +219,7 @@
 
                                         while($docs = mysqli_fetch_array($resultDocs)) {
                                             $tramDocs .= '<div class="col-12 col-md-6 solInputHolder"><div><label for="tram'.($i + 1).'doc'.$countDocs.'">'.$docNameArray[$docs[0] - 1].'</label><input type="file" class="form-control-file" id="tram'.($i + 1).'doc'.$countDocs++;
-                                            if($docs[1] == 1) $tramDocs .= '" required> *</div></div>';
+                                            if($docs[1] == 1) $tramDocs .= '" required><span class = "requiredDoc">*</span></div></div>';
                                             else $tramDocs .= '"></div></div>';
                                         }
 
@@ -407,9 +417,10 @@
                     var filter = norm($('#main_searchBar').val());
                     $('.serviceItem').css('display', 'none');
                     $('.serviceItem').parent().css('display', 'none');
-                    $('.' + filter).parent().css('display', 'block');
+                    $('.' + filter).parent().css('display', 'flex');
                     $('.' + filter).css('display', 'block');
                     $('#solRequest').css('display', 'none');
+                    $('.tramDetails').css('display', 'none');
                 }
             }
 
@@ -426,24 +437,31 @@
                 });
 
                 $(".serviceItem").click(function() {
-                    $('#solRequest').css('display', 'block');
-
+                    // Scroll to form
                     $('html, body').animate({
                         scrollTop: $('#solRequest').offset().top - headerHeight - 5
                     }, 700);
 
+                    // Hide other services
                     $('.serviceItem').css('display', 'none');
                     $('.serviceItem').parent().css('display', 'none');
-                    $(this).parent().css('display', 'block');
+                    $(this).parent().css('display', 'flex');
                     $(this).css('display', 'block');
 
+                    // Show form
+                    $('#solRequest').css('display', 'block');
+
                     var id = $(this).attr('id');
+
+                    // Show req files for service
                     $('.fileHolders').css('display', 'none');
                     $('.fileHolders input').prop("disabled", true);
                     $('.' + id).css('display', 'block');
                     $('.' + id + ' input').prop("disabled", false);
+
+                    // Show service info
                     $('.tramDetails').css('display', 'none');
-                    $('#' + id + 'List').css('display', 'inline-flex');
+                    $('#' + id + 'List').css('display', 'block');
                 });
 
                 $('#searchButton').click(function(){search();});

@@ -114,9 +114,23 @@ Yellow:
 	display: inline-block;
 	margin: 0 auto;
 	margin-left: 10px;
+	padding: 0;
 }
 
-#services .tramDetails li { font-size: 15px; }
+#services .tramDetails li {
+	font-size: 16px;
+	line-height: 19px;
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+#services .tramDetails li:not(.infoTitle) { padding-left: 15px; }
+
+#services .tramDetails .infoTitle { 
+	font-size: 21px;
+	line-height: 24px;
+	font-weight: 800;
+}
 
 #solRequest { display: none; }
 
@@ -143,6 +157,11 @@ Yellow:
 }
 
 #solRequest .solInputHolder > div { margin: auto 0; }
+
+#solRequest .requiredDoc { 
+	color: red;
+	font-weight: 800;
+}
 
 #solRequest button {
 	width: 100%;
