@@ -25,6 +25,8 @@ Yellow:
 	color: #fff;
 }
 
+.d-flex { display: flex; }
+.justify-content-center { justify-content: center !important; }
 
 /*---------------------
 		Navbar
@@ -192,3 +194,11 @@ Yellow:
 	max-height: 200px !important;
 	width: 12rem;
 }
+
+/*---------------------------- Dasboards ------------------------------*/
+
+.dbSection {
+	padding: 2rem;
+}
+
+.dbSection h4 { margin-bottom: 20px; }
