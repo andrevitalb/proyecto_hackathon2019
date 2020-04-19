@@ -1,68 +1,50 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="msapplication-tap-highlight" content="no" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="msapplication-tap-highlight" content="no" />
+        <title>DESARROLLADOR</title>
 
-  <title>DESARROLLADOR</title>
+        <link rel="stylesheet" href="../assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../assets/bower_components/mdi/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="../assets/bower_components/metisMenu/dist/metisMenu.min.css">
+        <link rel="stylesheet" href="../assets/bower_components/Waves/dist/waves.min.css">
+        <link rel="stylesheet" href="../assets/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" href="../assets/js/selects/cs-select.css">
+        <link rel="stylesheet" href="../assets/js/selects/cs-skin-elastic.css">
+        <link rel="stylesheet" href="../assets/bower_components/DataTables/media/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="../assets/bower_components/datatables-tabletools/css/dataTables.tableTools.css">
+        <link rel="stylesheet" href="../assets/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/bower_components/summernote/dist/summernote.css">
+        <link rel="stylesheet" href="../assets/js/selects/cs-skin-border.css">
+        <link rel="stylesheet" href="../assets/js/selects/cs-skin-rotate.css">
+        <link rel="stylesheet" href="../assets/js/selects/cs-skin-slide.css">
+        <link rel="stylesheet" href="../assets/css/dashboard_style.css">
+        <link rel="stylesheet" href="../assets/css/custom.css">
 
-  <link rel="stylesheet" href="../assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/bower_components/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../assets/bower_components/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="../assets/bower_components/metisMenu/dist/metisMenu.min.css">
-  <link rel="stylesheet" href="../assets/bower_components/Waves/dist/waves.min.css">
-  <link rel="stylesheet" href="../assets/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
-
-  <link rel="stylesheet" href="../assets/js/selects/cs-select.css">
-  <link rel="stylesheet" href="../assets/js/selects/cs-skin-elastic.css">
-
- <!-- datatables -->
-  <link rel="stylesheet" href="../assets/bower_components/DataTables/media/css/jquery.dataTables.css">
-  <link rel="stylesheet" href="../assets/bower_components/datatables-tabletools/css/dataTables.tableTools.css">
-
-  <link rel="stylesheet" href="../assets/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/bower_components/summernote/dist/summernote.css">
-
-  <link rel="stylesheet" href="../assets/js/selects/cs-skin-border.css">
-  <link rel="stylesheet" href="../assets/js/selects/cs-skin-rotate.css">
-  <link rel="stylesheet" href="../assets/js/selects/cs-skin-slide.css">
- 
-    <script src="../assets/js/menu/modernizr.custom.js"></script>
-
-  <link rel="stylesheet" href="../assets/css/dashboard_style.css">
-
-  
-</head>
-
-
-<body>
-  <!--Preloader-->
-  <div id="preloader" class="preloader table-wrapper">
-    <div class="table-row">
-      <div class="table-cell">
-        <div class="la-ball-scale-multiple la-3x">
-          <div></div>
-          <div></div>
-          <div></div>
+        <script src="../assets/js/menu/modernizr.custom.js"></script>
+    </head>
+    <body>
+        <div id="preloader" class="preloader table-wrapper">
+            <div class="table-row">
+                <div class="table-cell">
+                    <div class="la-ball-scale-multiple la-3x">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-<!--BARRA ARRIBA-->
-  <div id="main-wrapper" class="main-wrapper">
-    <div class="nav-cont">
+        <div id="main-wrapper" class="main-wrapper">
+            <div class="nav-cont">
                 <ul id="gn-menu" class="navbar gn-menu-main">
-                   
-                     <li class="container-fluid pull-right">
-                        <ul class="nav navbar-right right-menu">
-                            
-                        </ul> 
-                    
-                    </li>
+                    <li class="container-fluid pull-right"></li>
                     <li class="gn-trigger">
                         <a id="menu-toggle" class="menu-toggle gn-icon gn-icon-menu"></a>
                         <nav class="gn-menu-wrapper"></nav> 
@@ -70,31 +52,38 @@
                 </ul>
             </div>  
 
-<div id="content" class="content container-fluid">            
-<!-- 1RA Parte -->
-  <div class="col-lg-12">
-          <div class="content-box big-box box-shadow">
-            <h4><strong>Crear nuevo tipo de trámite</strong></h4>
-            <form class="content-form form-horizontal">
-              <div class="form-group">
-                <label for="nombreTramite" class="col-sm-2 control-label">Nombre del trámite</label>
-                <div class="col-sm-4">
-                  <input type="text" class="form-control material" id="nombreTramite" placeholder="Nombre del trámite">
-                </div>
-              </div>
+            <div id="content" class="content container-fluid">
+                <div class="content-box big-box box-shadow dbSection">
+                    <div class="row justify-content-center d-flex">
+                        <div class="col-12 col-md-10">
+                            <h4>Crear nuevo tipo de trámite</h4>
+                            
+                            <form class="content-form form-horizontal row">
+                                <div class="form-group col-12 col-md-6">
+                                    <label for="nombreTramite" class="col-12 col-md-5 control-label">Nombre del trámite</label>
+                                    <div class="col-12 col-md-7">
+                                        <input type="text" class="form-control material" id="nombreTramite" name = "nombreTramite" placeholder="Nombre del trámite">
+                                    </div>
+                                </div>
 
-              <div class="form-group">
-                <label for="dependencia" class="col-sm-2 control-label">Dependencia</label>
-                <div class="col-sm-4">
-                  <select class="form-control example-item">
-                  <option>Coordinación General Jurídica</option>
-                  <option>Secretaría De Finanzas</option>
-                  <option>Secretaría Del Agua Y Medio Ambiente</option>
-                  <option>Presidencia Municipal de Zacatecas</option>
-                  <option>Fiscalía General de Justicia</option>
-                </select>
+                                <div class="form-group col-12 col-md-6">
+                                    <label for="dependencia" class="col-12 col-md-5 control-label">Dependencia</label>
+                                    <div class="col-12 col-md-7">
+                                        <select class="form-control example-item">
+                                            <option>Coordinación General Jurídica</option>
+                                            <option>Secretaría De Finanzas</option>
+                                            <option>Secretaría Del Agua Y Medio Ambiente</option>
+                                            <option>Presidencia Municipal de Zacatecas</option>
+                                            <option>Fiscalía General de Justicia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
+
 
             <div class="form-group">
                 <label for="costo" class="col-sm-2 control-label">Costo</label>
